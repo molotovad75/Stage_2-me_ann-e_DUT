@@ -1,1 +1,12 @@
 @charset "ISO-8859-1";
+
+
+#Connexion_parents,#Connexion_pro{
+	padding-left: 20px;	
+	padding-right: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+#Connexion_parents{
+	margin-left: 1018px;
+}

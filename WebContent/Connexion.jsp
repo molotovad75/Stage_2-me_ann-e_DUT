@@ -12,7 +12,7 @@
 		<input type="button" id="Connexion_parents" value="Espace Parents"/>
 		<input type="button" id="Connexion_pro" value="Espace Pro" />
 		<h1>B&B - Connexion</h1>
-		
+		<p></p>
 		
 	</body>
 </html>
