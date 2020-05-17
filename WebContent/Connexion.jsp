@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="UTF-8"%>
     
 <!DOCTYPE html>
 <html>
@@ -9,6 +9,10 @@
 		<link href=".\CSS\style.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
-		<h1>Bienvenue chez B&B</h1>
+		<input type="button" id="Connexion_parents" value="Espace Parents"/>
+		<input type="button" id="Connexion_pro" value="Espace Pro" />
+		<h1>B&B - Connexion</h1>
+		
+		
 	</body>
 </html>
