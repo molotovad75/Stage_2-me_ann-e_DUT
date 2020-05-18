@@ -8,11 +8,17 @@
 		<title>Connexion</title>
 		<link href=".\CSS\style.css" rel="stylesheet" type="text/css" />
 	</head>
+	
 	<body>
-		<input type="button" id="Connexion_parents" value="Espace Parents"/>
-		<input type="button" id="Connexion_pro" value="Espace Pro" />
-		<h1>B&B - Connexion</h1>
-		<p></p>
+		<div id="btns_connexion">
+			<input type="submit" id="Connexion_parents" value="Espace Parents"/>
+			<input type="submit" id="Connexion_pro" value="Espace Pro" />
+		</div>
 		
+		
+		<div id="Corps">
+			<h1>B&B - Connexion</h1>
+			<p></p>
+		</div>
 	</body>
 </html>
