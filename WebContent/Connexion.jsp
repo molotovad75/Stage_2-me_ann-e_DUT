@@ -4,21 +4,48 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="ISO-8859-1">
+		<meta charset="UTF-8">
 		<title>Connexion</title>
 		<link href=".\CSS\style.css" rel="stylesheet" type="text/css" />
 	</head>
 	
 	<body>
 		<div id="btns_connexion">
-			<input type="submit" id="Connexion_parents" value="Espace Parents"/>
-			<input type="submit" id="Connexion_pro" value="Espace Pro" />
+			<label for="menu_options_co" class="Choix_Espaces">Espaces</label>
+			<input type="checkbox" id="menu_options_co" role="button" />
+			<img alt="" src="">
+			<div id="menu_choix">
+				<input type="button" id="Connexion_parents" value="Espace Parents"/>
+				<input type="button" id="Connexion_pro" value="Espace Pro" />
+			</div>
 		</div>
 		
 		
 		<div id="Corps">
-			<h1>B&B - Connexion</h1>
-			<p></p>
+			<h1>Espace de Connexion</h1>
+			<section id="form_connexion">
+				<div class="Identification_parents">
+					<p>J'ai un compte parent</p>
+					<p id="ident">Je m'identifie</p>
+					<input type="text" id="Id_parent" placeholder="Nom d'utilisateur"/><br><br>
+					<input type="password" id="mdp_parent" placeholder="Mot de passe utilisateur"/><br><br>
+					<input type="submit" id="Se_connecter" placeholder="Se connecter"/>
+					<a href="" id="mdp_oubli">Mot de passe oublié</a>
+				</div>	
+			
+				<div class="Identification_pro">
+					<p>J'ai un compte pro</p>
+					<p id="ident">Je m'identifie</p>
+					<input type="text" id="Id_pro" placeholder="Nom d'utilisateur pro"/><br><br>
+					<input type="password" id="mdp_pro" placeholder="Mot de passe utilisateur pro"/><br><br>
+					<input type="submit" id="Se_connecter" placeholder="Se connecter"/>
+					<a href="" id="mdp_oubli">Mot de passe oublié</a>
+				</div>
+			</section>
 		</div>
+		
+		<footer>
+			<p>Bottines et botillons Services  © </p>
+		</footer>
 	</body>
 </html>
