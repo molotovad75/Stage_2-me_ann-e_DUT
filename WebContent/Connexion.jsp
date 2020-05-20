@@ -13,7 +13,7 @@
 		<div id="btns_connexion">
 			<label for="menu_options_co" class="Choix_Espaces">Espaces</label>
 			<input type="checkbox" id="menu_options_co" role="button" />
-			<img alt="" src="">
+			<img alt="" src=".\Images\BOTTINES-BOTTILLONS-LOGO.png" id="logoBandB">
 			<div id="menu_choix">
 				<input type="button" id="Connexion_parents" value="Espace Parents"/>
 				<input type="button" id="Connexion_pro" value="Espace Pro" />
@@ -46,6 +46,7 @@
 		
 		<footer>
 			<p>Bottines et botillons Services  © </p>
+			<p>Pour en savoir plus sur nous visitez notre site<a href="https://www.bottinesetbottillons.fr" id="lien_site"> Bottines & Bottilons</a>.</p>
 		</footer>
 	</body>
 </html>

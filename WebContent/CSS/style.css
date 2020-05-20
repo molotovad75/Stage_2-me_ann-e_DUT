@@ -3,6 +3,7 @@
 html,body{
 	margin: 0;
 	height: 100%;
+	
 }
 
 #Connexion_parents,#Connexion_pro{
@@ -45,16 +46,146 @@ html,body{
 .Identification_pro{
 	margin-top:-180px;
 	margin-left:300px;
-	
-	
 }
 
 section#form_connexion{
 	padding-left:200px;	
-	padding-bottom:40%;/  
+	padding-bottom:40%;
 }
 
-/* MEDIA QUERIES */
+div#btns_connexion input[type=checkbox]:checked ~ #menu_choix{
+	display: block; /*quand bouton coché, fait apparaître le menu*/
+	visibility: visible;
+}
+
+footer{
+	background: rgb(247,0,198);
+	background: radial-gradient(circle, rgba(247,0,198,0.7155813008797269) 8%, rgba(36,0,26,1) 100%);
+	height:100px;
+	display: block;
+	padding:20px;
+	position:sticky;
+}
+
+footer p{
+	color: white;
+	
+}
+
+footer p a#lien_site{
+	text-decoration:none;
+	color :white;
+}
+footer p a#lien_site:hover{
+	color: rgba(106,144,255,0.58);
+}
+
+#Id_parent,#mdp_parent,#Id_pro{
+	padding-right: 50px;
+}
+
+#mdp_pro{
+	width:94%;
+}
+#btns_connexion img#logoBandB{
+	width:20%;
+	height:20%;
+	margin-bottom: -20px;
+	padding-bottom:20px;
+	padding-top:20px;
+}
+#menu_choix{
+	margin-top:-65px;
+}
+
+#Corps{
+	font-family: Supermarketed;
+}
+/* MEDIA QUERIES */	
+@media screen and (min-width:5064px){
+	#Connexion_parents{
+		margin-left: 4500px;
+	}
+	#menu_choix input{
+		font-size:40px;
+	}
+	footer p{
+		font-size:40px;	
+	}
+	footer{
+		 padding-bottom:110px; 
+	}
+}
+@media screen and (min-width:3798px) and (max-width:5064px){
+	#Connexion_parents{
+		margin-left: 3000px;
+	}
+	#menu_choix input{
+		font-size:30px;
+	}
+	footer p{
+		font-size:30px;	
+	}
+	footer{
+		 padding-bottom:100px; 
+	}
+	
+}
+
+@media screen and (min-width:3038.4px) and (max-width:3798px){
+	#Connexion_parents{
+		margin-left: 2600px;
+	}
+	#menu_choix input{
+		font-size:25px;
+	}
+	footer p{
+		font-size:30px;	
+	}
+	footer{
+		 padding-bottom:100px; 
+	}
+}
+@media screen and (min-width:2532px) and (max-width:3038.4px){
+	#Connexion_parents{
+		margin-left: 2200px;
+		
+	}
+	#menu_choix input{
+		font-size:20px;
+	}
+	footer p{
+		font-size:30px;	
+	}
+	footer{
+		 padding-bottom:100px; 
+	}
+	
+}
+@media screen and (min-width:2183.85px) and (max-width:2532px){
+	#Connexion_parents{
+		margin-left: 1850px;
+	}
+	footer p{
+		font-size:30px;	
+	}
+	footer{
+		 padding-bottom:100px; 
+	}
+}
+@media screen and (min-width:1899px) and (max-width:2183.85px){
+	#Connexion_parents{
+		margin-left: 1550px;
+	}
+	
+	footer p{
+		font-size:25px;
+	}
+	footer{
+		 padding-bottom:50px; 
+	}
+}
+/* LIMITE ENTRE ZOOM ET DEZOOM */
 
 @media screen and (max-width:1408px) {
 	#Connexion_parents{
@@ -69,6 +200,13 @@ section#form_connexion{
 @media screen and (max-width:1088px) {
 	#Connexion_parents{
 		margin-left: 750px;
+	}
+	#btns_connexion img#logoBandB{
+		width:30%;
+		height:30%;
+		margin-bottom: -20px;
+		padding-bottom:20px;
+		padding-top:20px;
 	}
 }
 
@@ -113,19 +251,31 @@ section#form_connexion{
 	section#form_connexion{
 		padding-left:20px;	
 	}
-	
-	
 }
+
+
+
 @media screen and (max-width:538.05px) {
 	#Connexion_parents{
-		margin-left: 100px;
+		margin-left: 250px;
 	}
 	.Identification_pro{
 		margin:0;
 	}
-	
 }
-
+@media screen and (max-width:492px){
+	#Connexion_parents{
+		margin-left: 140px;
+	}	
+}	
+@media screen and (max-width:408.15px) {
+	#Connexion_parents{
+		margin-left: 110px;
+	}
+	.Identification_pro{
+		margin:0;
+	}
+}
 @media screen and (max-width:352px) {
 	#Connexion_parents,#Connexion_pro{
 		visibility: hidden;
@@ -139,12 +289,18 @@ section#form_connexion{
     	color: #ccc;
     	text-align: center;
     	padding: 12px 10px;
-    	
     	background: rgb(247,0,198);
 		background: linear-gradient(90deg, rgba(247,0,198,1) 0%, rgba(161,0,255,1) 48%, rgba(247,0,198,1) 100%);
     	position: fixed;
     	z-index: 2;
    		margin-top: 0;
+	}
+}
+
+@media screen and (max-width:260px){
+
+	#logoBandB {
+	 	margin-left: 170px;
 	}
 }
 
@@ -154,20 +310,5 @@ section#form_connexion{
 	}
 }
 
-div#btns_connexion input[type=checkbox]:checked ~ #menu_choix{
-	display: block; /*quand bouton coché, fait apparaître le menu*/
-	visibility: visible;
-}
 
-footer{
-	background: rgb(247,0,198);
-	background: radial-gradient(circle, rgba(247,0,198,0.7155813008797269) 8%, rgba(36,0,26,1) 100%);
-	height:100px;
-	display: block;
-	padding:20px;
-	position:sticky;
-}
 
-footer p{
-		
-}
