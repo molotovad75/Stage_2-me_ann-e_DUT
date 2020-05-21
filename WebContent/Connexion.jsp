@@ -39,7 +39,7 @@
 					<input type="text" id="Id_pro" placeholder="Nom d'utilisateur pro"/><br><br>
 					<input type="password" id="mdp_pro" placeholder="Mot de passe utilisateur pro"/><br><br>
 					<input type="submit" id="Se_connecter" placeholder="Se connecter"/>
-					<a href="" id="mdp_oubli">Mot de passe oublié</a>
+					<a href="" id="mdp_oubli">Mot de passe pro oublié</a>
 				</div>
 			</section>
 		</div>

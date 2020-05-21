@@ -3,7 +3,7 @@
 html,body{
 	margin: 0;
 	height: 100%;
-	
+	font-family: Supermarketed;
 }
 
 #Connexion_parents,#Connexion_pro{
@@ -44,8 +44,13 @@ html,body{
 	width:200px;
 }
 .Identification_pro{
-	margin-top:-180px;
+	margin-top:-210px;
 	margin-left:300px;
+}
+
+#mdp_oubli{
+	 width: 300px;
+	display: block;
 }
 
 section#form_connexion{
@@ -99,7 +104,7 @@ footer p a#lien_site:hover{
 }
 
 #Corps{
-	font-family: Supermarketed;
+	
 }
 /* MEDIA QUERIES */	
 @media screen and (min-width:5064px){
@@ -158,7 +163,8 @@ footer p a#lien_site:hover{
 		font-size:30px;	
 	}
 	footer{
-		 padding-bottom:100px; 
+		 padding-bottom:110px; 
+		 height: 5%;
 	}
 	
 }
@@ -185,7 +191,7 @@ footer p a#lien_site:hover{
 		 padding-bottom:50px; 
 	}
 }
-/* LIMITE ENTRE ZOOM ET DEZOOM */
+/* LIMITE ENTRE ZOOM ET DEZOOM (100%) */
 
 @media screen and (max-width:1408px) {
 	#Connexion_parents{
@@ -197,7 +203,7 @@ footer p a#lien_site:hover{
 		margin-left: 900px;
 	}
 }
-@media screen and (max-width:1088px) {
+@media screen and (min-width:608.4px) and (max-width:1088px) {
 	#Connexion_parents{
 		margin-left: 750px;
 	}
@@ -207,7 +213,26 @@ footer p a#lien_site:hover{
 		margin-bottom: -20px;
 		padding-bottom:20px;
 		padding-top:20px;
+		margin-left: 110px;
 	}
+	
+	#Corps{
+		margin-left: 110px;
+	}
+	
+	footer p{
+		margin-left: 110px;
+	}
+	
+	#menu_choix input#Connexion_parents{
+		margin-left: 500px;
+	}
+	
+	html,body{
+		margin-right: -110px;
+	}
+	
+	
 }
 
 @media screen and (max-width:960px) {
@@ -235,6 +260,9 @@ footer p a#lien_site:hover{
 	section#form_connexion{
 		padding-left:100px;	
 	}
+	html,body{
+		margin-left: -51px;
+	}
 	
 }
 @media screen and (max-width:640px) {
@@ -251,6 +279,23 @@ footer p a#lien_site:hover{
 	section#form_connexion{
 		padding-left:20px;	
 	}
+	
+	#Corps{
+		margin-left: 110px;
+	}
+	
+	footer p{
+		margin-left: 110px;
+	}
+	
+	#btns_connexion img#logoBandB{
+		width:30%;
+		height:30%;
+		margin-bottom: -20px;
+		padding-bottom:20px;
+		padding-top:20px;
+		margin-left: 110px;
+	}
 }
 
 
@@ -266,6 +311,10 @@ footer p a#lien_site:hover{
 @media screen and (max-width:492px){
 	#Connexion_parents{
 		margin-left: 140px;
+	}
+	
+	html,body{
+		margin-right: -110px;
 	}	
 }	
 @media screen and (max-width:408.15px) {
@@ -312,3 +361,32 @@ footer p a#lien_site:hover{
 
 
 
+
+@media screnn and (min-width:1047px) and (max-width:2498.67px){
+	#Corps{
+		margin-bottom: 30%;
+	}
+}
+
+ @media screen and (min-width:581.967px) and (max-width:827.683px){
+ 	html,body{
+ 		margin-right: -110px;
+ 	}
+ 
+ }
+ 
+ @media screen and (min-width:316.483px) and (max-width:550.733px) {
+ 	html,body{
+ 		margin-right: -51px;
+ 	}
+ 	#Connexion_parents{
+ 		margin-left:200px;
+ 	}
+ }
+ 
+ @media screen and (min-width:249.867px) and (max-width:316.483px){
+ 	html,body{
+ 		margin-right: -51px;
+ 	}
+ }
+ 
