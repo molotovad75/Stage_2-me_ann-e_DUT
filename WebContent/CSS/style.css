@@ -4,6 +4,13 @@ html,body{
 	margin: 0;
 	height: 100%;
 	font-family: Supermarketed;
+	/*Il faut ajouter une (des) image(s) de fond */
+	background-image:url("../Images/Canva%20-%20Colored%20Pencils.jpg");
+	background-attachment: fixed;
+	background-position: inherit;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
 }
 
 #Connexion_parents,#Connexion_pro{
@@ -103,9 +110,6 @@ footer p a#lien_site:hover{
 	margin-top:-65px;
 }
 
-#Corps{
-	
-}
 /* MEDIA QUERIES */	
 @media screen and (min-width:5064px){
 	#Connexion_parents{
