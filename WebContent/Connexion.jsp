@@ -27,19 +27,19 @@
 				<div class="Identification_parents">
 					<p>J'ai un compte parent</p>
 					<p id="ident">Je m'identifie</p>
-					<input type="text" id="Id_parent" placeholder="Nom d'utilisateur"/><br><br>
+					<p><input type="text" id="Id_parent" placeholder="Nom d'utilisateur"/><br><br>
 					<input type="password" id="mdp_parent" placeholder="Mot de passe utilisateur"/><br><br>
 					<input type="submit" id="Se_connecter" placeholder="Se connecter"/>
-					<a href="" id="mdp_oubli">Mot de passe oublié</a>
+					<a href="" id="mdp_oubli">Mot de passe oublié</a></p>
 				</div>	
 			
 				<div class="Identification_pro">
 					<p>J'ai un compte pro</p>
 					<p id="ident">Je m'identifie</p>
-					<input type="text" id="Id_pro" placeholder="Nom d'utilisateur pro"/><br><br>
+					<p><input type="text" id="Id_pro" placeholder="Nom d'utilisateur pro"/><br><br>
 					<input type="password" id="mdp_pro" placeholder="Mot de passe utilisateur pro"/><br><br>
 					<input type="submit" id="Se_connecter" placeholder="Se connecter"/>
-					<a href="" id="mdp_oubli">Mot de passe pro oublié</a>
+					<a href="" id="mdp_oubli">Mot de passe pro oublié</a></p>
 				</div>
 			</section>
 		</div>
