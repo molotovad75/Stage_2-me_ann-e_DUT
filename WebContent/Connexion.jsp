@@ -25,7 +25,7 @@
 			<div id="Corps">
 				<h1>Espace de Connexion</h1>
 				<section id="form_connexion">
-					<div class="Identification_parents">
+					<div id="Identification_parents">
 						<p>J'ai un compte parent</p>
 						<p id="ident">Je m'identifie</p>
 						<p><input type="text" id="Id_parent" placeholder="Nom d'utilisateur"/><br><br>
@@ -34,7 +34,7 @@
 						<a href="" id="mdp_oubli">Mot de passe oublié</a></p>
 					</div>	
 				
-					<div class="Identification_pro">
+					<div id="Identification_pro">
 						<p>J'ai un compte pro</p>
 						<p id="ident">Je m'identifie</p>
 						<p><input type="text" id="Id_pro" placeholder="Nom d'utilisateur pro"/><br><br>
