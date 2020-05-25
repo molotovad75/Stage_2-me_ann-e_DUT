@@ -46,8 +46,13 @@
 			</div>
 		</div>	
 		<footer>
-			<p>Bottines et botillons Services  © </p>
-			<p>Pour en savoir plus sur nous visitez notre site<a href="https://www.bottinesetbottillons.fr" id="lien_site"> Bottines & Bottilons</a>.</p>
+			<p> Bonjour, OuiCrèches est une plateforme dédiée à la réservation de places occasionnelles en crèche.<br><br>
+ Notre mission ? <br>Rendre la réservation plus simple, plus juste et plus sécurisée pour les parents et les gestionnaires établissements.
+ </p>
+			<p>A Propos    :<br><br>
+<a href="https://www.bottinesetbottillons.fr" id="lien_site"> Qui sommes nous ?</a><br>
+<a href="https://www.bottinesetbottillons.fr" id="lien_site"> Comment ça marche ?</a><br>
+<a href="https://www.bottinesetbottillons.fr" id="lien_site"> Nous contacter</a>.</p><br>
 		</footer>
 			
 	</body>
