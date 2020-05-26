@@ -24,6 +24,8 @@
 		<div id="contenu_page">
 			<div id="Corps">
 				<h1>Espace de Connexion</h1>
+				<p>Besoin d’une garde d’enfant occasionnelle ?  Réservez rapidement au sein de votre crèche partenaire</p>
+				
 				<section id="form_connexion">
 					<div id="Identification_parents">
 						<p>J'ai un compte parent</p>
@@ -46,13 +48,18 @@
 			</div>
 		</div>	
 		<footer>
-			<p> Bonjour, OuiCrèches est une plateforme dédiée à la réservation de places occasionnelles en crèche.<br><br>
- Notre mission ? <br>Rendre la réservation plus simple, plus juste et plus sécurisée pour les parents et les gestionnaires établissements.
+			<p> Bonjour, 
+			<br>OuiCrèches est une plateforme dédiée à la réservation de places occasionnelles en crèche.
+			<br><br>
+ 
+ Notre mission ? 
+ <br><br>Rendre la réservation plus simple, plus juste et plus sécurisée pour les parents et les gestionnaires établissements.
  </p>
 			<p>A Propos    :<br><br>
-<a href="https://www.bottinesetbottillons.fr" id="lien_site"> Qui sommes nous ?</a><br>
-<a href="https://www.bottinesetbottillons.fr" id="lien_site"> Comment ça marche ?</a><br>
-<a href="https://www.bottinesetbottillons.fr" id="lien_site"> Nous contacter</a>.</p><br>
+				<a href="https://www.bottinesetbottillons.fr" id="lien_site"> Qui sommes nous ?</a><br>
+				<a href="https://www.bottinesetbottillons.fr" id="lien_site"> Comment ça marche ?</a><br>
+				<a href="https://www.bottinesetbottillons.fr" id="lien_site"> Nous contacter</a>.
+			</p><br>
 		</footer>
 			
 	</body>
