@@ -54,7 +54,7 @@ html,body{
 	font-weight:bold;
 }
 
-#Identification_parents,#Identification_pro{
+#Identification_parents,#Identification_pro,#Création_parents,#Création_pro{
 	width:200px;
 	padding-left: 20px;	
 	padding-right: 20px;
@@ -68,7 +68,7 @@ html,body{
 	background: linear-gradient(90deg, rgba(247,0,198,1) 0%, rgba(161,0,255,1) 48%, rgba(247,0,198,1) 100%);
 	color: white;
 }
-#Identification_pro{
+#Création_parents{
 	margin-top:-245px;
 	margin-left:300px;
 }
@@ -83,10 +83,7 @@ html,body{
 	text-decoration: none;
 }
 
-section#form_connexion{
-	padding-left:200px;	
-	padding-bottom:40%;
-}
+
 
 div#btns_connexion input[type=checkbox]:checked ~ #menu_choix{
 	display: block; /*quand bouton coché, fait apparaître le menu*/
@@ -115,7 +112,7 @@ footer p a#lien_site:hover{
 	color: rgba(106,144,255,0.58);
 }
 
-#Id_parent,#mdp_parent,#Id_pro{
+#email_parent,#mdp_parent,#Id_pro,#tel_parent{
 	padding-right: 50px;
 	margin-left: 20px;
 }
@@ -133,9 +130,611 @@ footer p a#lien_site:hover{
 #menu_choix{
 	margin-top:-65px;
 }
+#message{
+	max-width: 204px;
+	max-height: 139px;
+	min-width: 204px;
+	min-height: 139px;
+	
+}
 
 /* MEDIA QUERIES */	
-@media screen and (min-width:5064px){ /* De 100% à dézoom total */
+
+/* SEUL MEDIA QUERIES GENERAL */
+@media screen and (min-width:1519.2px) {
+	
+	#form_connexion{
+		padding-bottom: 10%;
+	} 
+	#Création_pro{
+		margin-left: 900px;
+		margin-top: -270px;
+	}
+	#Identification_pro{
+		margin-left: 600px;
+		margin-top: -515px;
+	}
+	
+	footer{
+		height: 270px;
+	}
+}
+/* SANS ZOOM NI DEZOOM Boutons espaces pro et parents***************************************************************************************************************************************/
+@media screen and (max-width:1510.2px){
+	#Connexion_parents{
+		margin-left: 1200px;
+	}
+	
+}
+@media screen and (max-width:1460.2px){
+	#Connexion_parents{
+		margin-left: 1150px;
+	}
+	
+}
+@media screen and (max-width:1407.2px){
+	#Connexion_parents{
+		margin-left: 1100px;
+	}
+	
+}
+@media screen and (max-width:1356.8px){
+	#Connexion_parents{
+		margin-left: 1050px;
+	}
+	
+}
+
+@media screen and (max-width:1310.4px){
+	#Connexion_parents{
+		margin-left: 1000px;
+	}
+
+}
+
+@media screen and (max-width:1268.8px){
+	#Connexion_parents{
+		margin-left: 950px;
+	}
+	
+}
+
+@media screen and (max-width:1209.6px){
+	#Connexion_parents{
+		margin-left: 900px;
+	}
+	
+}
+
+@media screen and (max-width:1158.4px){
+	#Connexion_parents{
+		margin-left: 850px;
+	}
+	
+}
+
+@media screen and (max-width:1110.8px){
+	#Connexion_parents{
+		margin-left: 800px;
+	}
+}
+@media screen and (max-width:1059.2px){
+	#Connexion_parents{
+		margin-left: 750px;
+	}
+}
+
+@media screen and (max-width:1011.2px){
+	#Connexion_parents{
+		margin-left: 700px;
+	}
+}
+
+@media screen and (max-width:956.8px){
+	#Connexion_parents{
+		margin-left: 650px;
+	}
+}
+
+@media screen and (max-width:917.6px){
+	#Connexion_parents{
+		margin-left: 600px;
+	}
+}
+@media screen and (max-width:861.6px){
+	#Connexion_parents{
+		margin-left: 550px;
+	}
+}
+@media screen and (max-width:816.8px){
+	#Connexion_parents{
+		margin-left: 500px;
+	}
+}
+
+@media screen and (max-width:769.6px){
+	#Connexion_parents{
+		margin-left: 450px;
+	}
+}
+
+@media screen and (max-width:716.8px){
+	#Connexion_parents{
+		margin-left: 400px;
+	}
+}
+@media screen and (max-width:660.8px){
+	#Connexion_parents{
+		margin-left: 350px;
+	}
+}
+
+@media screen and (max-width:612.8px){
+	#Connexion_parents{
+		margin-left: 300px;
+	}
+}
+@media screen and (max-width:560px){
+	#Connexion_parents{
+		margin-left: 250px;
+	}
+}
+
+@media screen and (max-width:518.4px){
+	#Connexion_parents{
+		margin-left: 200px;
+	}
+}
+
+@media screen and (max-width:460.8px){
+	#Connexion_parents{
+		margin-left: 150px;
+	}
+}
+/* SANS ZOOM NI DEZOOM Contenu de la page + footer ***************************************************************************************************************************************/
+
+
+@media screen and (max-width:1520.8px){
+	#form_connexion{
+		padding-bottom: 10%;
+	} 
+	#Création_pro{
+		margin-left: 900px;
+		margin-top: -270px;
+	}
+	#Identification_pro{
+		margin-left: 600px;
+		margin-top: -515px;
+	}
+	
+	footer{
+		height: 270px;
+	}
+}
+
+@media screen and (max-width:1174.4px){
+	#form_connexion{
+		padding-bottom: 10%;
+	} 
+	#Création_pro{
+		margin-left: 900px;
+		margin-top: -270px;
+	}
+	#Identification_pro{
+		margin-left: 600px;
+		margin-top: -515px;
+	}
+	
+	footer{
+		height: 270px;
+	}
+	
+	#Création_parents{
+		margin-left: 250px;
+	}
+	
+	#Identification_pro{
+		margin-left: 500px;
+		margin-top: -515px;
+	}
+	#Création_pro{
+		margin-left: 750px;
+		margin-top: -270px;
+	}
+}
+@media screen and (max-width:1024.8px){
+	#form_connexion{
+		padding-bottom: 40%;
+		width: 350.8px;
+	} 
+	footer{
+		height: 270px;
+	}
+	
+	#Création_parents{
+		margin-left: 250px;
+	}
+	
+	#Identification_pro{
+		margin-left: 500px;
+		margin-top: -515px;
+	}
+	#Création_pro{
+		margin-left: 500px;
+		margin-top: 10px;
+	}
+}
+@media screen and (max-width:936.4px){
+	 
+	#Identification_pro{
+		margin-left: 0px;
+		margin-top: -250px;
+	}
+	#Création_pro{
+		margin-left: 0px;
+		margin-top: 10px;
+	}
+	
+	#form_connexion{
+		padding-bottom: 40%;
+		width: 350.8px;
+	}
+}
+
+@media screen and (max-width:779.4px){
+	footer{
+		height: 300px;
+	}
+}
+
+@media screen and (max-width:628.8px){
+	footer{
+		height: 330px;
+	}
+}
+
+@media screen and (max-width:520px){
+	#form_connexion{
+		padding-bottom: 90%;
+		width: 30px;
+	}
+	#Identification_pro{
+		margin-left: 0px;
+		margin-top: 10px;
+	}
+	#Création_pro{
+		margin-left: 0px;
+		margin-top: 10px;
+	}
+	#Création_parents{
+		margin-left: 0px;
+		margin-top: 10px
+	}
+	#Identification_parents{
+		margin-top: 10px;
+		margin-left: 0px;
+	}
+}
+/* AVEC DEZOOM Contenu de la page + footer ***************************************************************************************************************************************/
+@media screen and (min-width:5120px) and (min-height:2501.33px){
+	#form_connexion{
+		padding-bottom: 22%;
+	}
+	footer{
+		padding-bottom: 250px;
+	}
+	footer p{
+		font-size: 30px;
+	}
+	
+	#phrase_accueil{
+		font-size: 30px;
+	}
+	#Corps h1{
+		font-size: 50px;
+	}
+	
+	
+	#Connexion_parents,#Connexion_pro{
+		width: 230px;
+		height: 120px;
+		font-size: 30px;
+	}
+	#Création_parents{
+		margin-top: -500px;
+		margin-left: 400px;
+	}
+	#Identification_pro{
+		margin-top: -1025px;
+		margin-left: 800px;
+	}
+	#Création_pro{
+		margin-top: -525px;
+		margin-left: 1200px;
+	}
+	#Identification_parents,#Création_parents,#Identification_pro,#Création_pro{
+		width: 300px;
+		font-size: 30px;
+	}
+	
+	#Id_parent,#mdp_parent,#Se_connecter,#Nom_père,#Nom_mère,#email_parent,#tel_parent,#Id_pro,#mdp_parent,#Nom,#Prénom,#email_pro,#tel_pro{
+		width: 200px;
+		height: 50px;
+		font-size: 25px;
+	}
+	#message{
+		font-size: 30px;
+	}
+}
+@media screen and (min-width:3798px) and (min-height:1876px){
+	#form_connexion{
+		padding-bottom: 22%;
+	}
+	footer{
+		padding-bottom: 300px;
+	}
+	footer p{
+		font-size: 30px;
+	}
+	
+	#phrase_accueil{
+		font-size: 30px;
+	}
+	#Corps h1{
+		font-size: 50px;
+	}
+	
+	
+	#Connexion_parents,#Connexion_pro{
+		width: 230px;
+		height: 120px;
+		font-size: 30px;
+	}
+	#Création_parents{
+		margin-top: -500px;
+		margin-left: 400px;
+	}
+	#Identification_pro{
+		margin-top: -1005px;
+		margin-left: 800px;
+	}
+	#Création_pro{
+		margin-top: -530px;
+		margin-left: 1200px;
+	}
+	#Identification_parents,#Création_parents,#Identification_pro,#Création_pro{
+		width: 300px;
+		font-size: 30px;
+	}
+	
+	#Id_parent,#mdp_parent,#Se_connecter,#Nom_père,#Nom_mère,#email_parent,#tel_parent,#Id_pro,#mdp_parent,#Nom,#Prénom,#email_pro,#tel_pro{
+		width: 200px;
+		height: 50px;
+		font-size: 25px;
+	}
+	#message{
+		font-size: 30px;
+	}
+}
+
+@media screen and (min-width:3038.4px) and (min-height:1500.8px){
+	#form_connexion{
+		padding-bottom: 22%;
+	}
+	footer{
+		padding-bottom: 350px;
+	}
+	footer p{
+		font-size: 30px;
+	}
+	
+	#phrase_accueil{
+		font-size: 30px;
+	}
+	#Corps h1{
+		font-size: 50px;
+	}
+	
+	#Connexion_parents,#Connexion_pro{
+		width: 230px;
+		height: 120px;
+		font-size: 30px;
+	}
+	#Création_parents{
+		margin-top: -500px;
+		margin-left: 400px;
+	}
+	#Identification_pro{
+		margin-top: -1005px;
+		margin-left: 800px;
+	}
+	#Création_pro{
+		margin-top: -530px;
+		margin-left: 1200px;
+	}
+	#Identification_parents,#Création_parents,#Identification_pro,#Création_pro{
+		width: 300px;
+		font-size: 30px;
+	}
+	
+	#Id_parent,#mdp_parent,#Se_connecter,#Nom_père,#Nom_mère,#email_parent,#tel_parent,#Id_pro,#mdp_parent,#Nom,#Prénom,#email_pro,#tel_pro{
+		width: 200px;
+		height: 50px;
+		font-size: 25px;
+	}
+	#message{
+		font-size: 30px;
+	}
+}
+
+@media screen and (min-width:2532px) and (min-height:1250.67px){
+	#form_connexion{
+		padding-bottom: 22%;
+	}
+	footer{
+		padding-bottom: 350px;
+	}
+	footer p{
+		font-size: 30px;
+	}
+	
+	#phrase_accueil{
+		font-size: 30px;
+	}
+	#Corps h1{
+		font-size: 50px;
+	}
+	
+	
+	#Connexion_parents,#Connexion_pro{
+		width: 230px;
+		height: 120px;
+		font-size: 30px;
+	}
+	#Création_parents{
+		margin-top: -500px;
+		margin-left: 400px;
+	}
+	#Identification_pro{
+		margin-top: -980px;
+		margin-left: 800px;
+	}
+	#Création_pro{
+		margin-top: -525px;
+		margin-left: 1200px;
+	}
+	#Identification_parents,#Création_parents,#Identification_pro,#Création_pro{
+		width: 300px;
+		font-size: 30px;
+	}
+	
+	#Id_parent,#mdp_parent,#Se_connecter,#Nom_père,#Nom_mère,#email_parent,#tel_parent,#Id_pro,#mdp_parent,#Nom,#Prénom,#email_pro,#tel_pro{
+		width: 200px;
+		height: 50px;
+		font-size: 25px;
+	}
+	#message{
+		font-size: 30px;
+	}
+	#email_parent,#tel_parent,#mdp_parent,#Id_pro{
+		margin-left: 0px;
+	}
+}
+@media screen and (min-width:2183.85px) and (min-height:1032.7px){
+	#form_connexion{
+		padding-bottom: 22%;
+	}
+	footer{
+		padding-bottom: 350px;
+	}
+	footer p{
+		font-size: 30px;
+	}
+	
+	#phrase_accueil{
+		font-size: 30px;
+	}
+	#Corps h1{
+		font-size: 50px;
+	}
+	
+	
+	#Connexion_parents,#Connexion_pro{
+		width: 230px;
+		height: 120px;
+		font-size: 30px;
+	}
+	#Création_parents{
+		margin-top: -500px;
+		margin-left: 400px;
+	}
+	#Identification_pro{
+		margin-top: -980px;
+		margin-left: 800px;
+	}
+	#Création_pro{
+		margin-top: -525px;
+		margin-left: 1200px;
+	}
+	#Identification_parents,#Création_parents,#Identification_pro,#Création_pro{
+		width: 300px;
+		font-size: 30px;
+	}
+	
+	#Id_parent,#mdp_parent,#Se_connecter,#Nom_père,#Nom_mère,#email_parent,#tel_parent,#Id_pro,#mdp_parent,#Nom,#Prénom,#email_pro,#tel_pro{
+		width: 200px;
+		height: 50px;
+		font-size: 25px;
+	}
+	#message{
+		font-size: 30px;
+	}
+	#email_parent,#tel_parent,#mdp_parent,#Id_pro{
+		margin-left: 0px;
+	}
+}
+
+@media screen and (min-width:1899px) and (min-height:938px){
+	
+	#email_parent,#tel_parent,#mdp_parent,#Id_pro{
+		margin-left: 0px;
+	}
+}
+
+/* AVEC DEZOOM Boutons espaces parents espaces pro dans le header ***************************************************************************************************************************************/
+
+@media screen and (min-width:1899px) and (max-width:2183.85px) and (min-height:938px) and (max-height:1032.7px){
+	#Connexion_parents{
+		margin-left: 1600px;
+	}
+}
+
+@media screen and (min-width:2183.86px) and (max-width:2532px) and (min-height:1032.8px) and (max-height:1250.67px){
+	#Connexion_parents{
+		margin-left: 1700px;
+	}
+}
+
+@media screen and (min-width:2533px)and (max-width:3038.4px)and (min-height:1251px)and (max-height:1500.8px){
+	#Connexion_parents{
+		margin-left: 1900px;
+	}
+	
+}
+
+@media screen and (min-width:3038.5px) and (max-width:3798px) and (min-height:1500.9px) and (max-height:1876px){
+	#Connexion_parents{
+		margin-left: 4500px;
+	}
+}
+
+@media screen and (min-width:3799px) and (max-width:5064px) and (min-height:1877px) and (max-height:2501.33px){
+	#Connexion_parents{
+		margin-left: 5000px;
+	}
+	
+} 
+
+
+
+
+
+
+/***********************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media screen and (min-width:5064px){ De 100% à dézoom total
 	#Connexion_parents{
 		margin-left: 4500px;
 	}
@@ -161,12 +760,20 @@ footer p a#lien_site:hover{
 		height: 600px;
 		font-size: 40px;
 	}
+	#Identification_pro{
+		margin-left: 1300px;
+		margin-top: -1090px;
+	}
 	
-	#Identification_parents,#Identification_pro{
+	#Création_pro{
+		margin-left: 1900px;
+		margin-top: -1090px;
+	}
+	#Identification_parents,#Identification_pro,#Création_parents,#Création_pro{
 		width: 700px;
 		height: 700px;
 	}
-	#Identification_pro{
+	#Création_parents{
 		margin-top: -124%;
 	}
 	
@@ -185,11 +792,11 @@ footer p a#lien_site:hover{
 	footer{
 		 padding-bottom:500px; 
 	}
-	/* #Identification_pro{
+	#Identification_pro{
 		margin-top: -12.75%;
 		margin-left: 1000px;
 	}
-	 */
+	
 	#form_connexion div{
 		float: left;
 	}
@@ -202,9 +809,18 @@ footer p a#lien_site:hover{
 		height: 600px;
 		font-size: 40px;
 	}
-	#Identification_parents,#Identification_pro{
+	#Identification_parents,#Identification_pro,#Création_parents,#Création_pro{
 		width: 600px;
 		height: 600px;
+	}
+	#Identification_pro{
+		margin-left: 1300px;
+		margin-top: -1090px;
+	}
+	
+	#Création_pro{
+		margin-left: 1900px;
+		margin-top: -1090px;
 	}
 }
 
@@ -235,9 +851,18 @@ footer p a#lien_site:hover{
 		height: 600px;
 		font-size: 40px;
 	}
-	#Identification_parents,#Identification_pro{
+	#Identification_parents,#Identification_pro,#Création_parents,#Création_pro{
 		width: 600px;
 		height: 600px;
+	}
+	#Identification_pro{
+		margin-left: 1300px;
+		margin-top: -1090px;
+	}
+	
+	#Création_pro{
+		margin-left: 1900px;
+		margin-top: -1090px;
 	}
 }
 
@@ -255,14 +880,14 @@ footer p a#lien_site:hover{
 	footer{
 		 padding-bottom:500px; 
 	}
-	/* #Identification_pro{
+	#Identification_pro{
 		margin-top: -26.5%;
 		margin-left: 1000px;
-	} */
+	}
 	
 	#form_connexion div{
 		float: left;
-		/* -26.5% */
+		-26.5%
 	}
 	#Corps h1{
 		font-size: 60px;
@@ -274,7 +899,7 @@ footer p a#lien_site:hover{
 		height: 70px;
 		font-size: 30px;
 	}
-	#Id_parent,#mdp_parent,#Id_pro{
+	#email_parent,#mdp_parent,#Id_pro,#tel_parent{
 		width: 350px;
 		height: 70px;
 		font-size: 30px;
@@ -290,9 +915,23 @@ footer p a#lien_site:hover{
 		height: 600px;
 		font-size: 40px;
 	}
-	#Identification_parents,#Identification_pro{
+	#Identification_parents,#Identification_pro,#Création_parents,#Création_pro{
 		width: 600px;
 		height: 600px;
+	}
+	
+	#Identification_pro{
+		margin-left: 1300px;
+		margin-top: -1090px;
+	}
+	
+	#Création_pro{
+		margin-left: 1900px;
+		margin-top: -1090px;
+	}
+	section#form_connexion {
+		padding-left: 0px;
+		padding-bottom: 90%;
 	}
 }
 
@@ -312,7 +951,7 @@ footer p a#lien_site:hover{
 	
 	#form_connexion div{
 		float: left;
-		/* -26.5% */
+		-26.5%
 	}
 	#Corps h1{
 		font-size: 60px;
@@ -324,7 +963,7 @@ footer p a#lien_site:hover{
 		height: 70px;
 		font-size: 30px;
 	}
-	#Id_parent,#mdp_parent,#Id_pro{
+	#email_parent,#mdp_parent,#Id_pro,#tel_parent{
 		width: 350px;
 		height: 70px;
 		font-size: 30px;
@@ -340,10 +979,11 @@ footer p a#lien_site:hover{
 		height: 600px;
 		font-size: 40px;
 	}
-	#Identification_parents,#Identification_pro{
+	#Identification_parents,#Identification_pro,#Création_parents,#Création_pro{
 		width: 600px;
 		height: 600px;
 	}
+
 }
 
 @media screen and (min-width:1899px){
@@ -352,6 +992,7 @@ footer p a#lien_site:hover{
 	}
 	#menu_choix input{
 		font-size:30px;
+		
 	}
 	footer p{
 		font-size:40px;	
@@ -360,12 +1001,12 @@ footer p a#lien_site:hover{
 		 padding-bottom:500px; 
 	}
 	
-	#Identification_parents,#Identification_pro{
+	#Identification_parents,#Identification_pro,#Création_parents,#Création_pro{
 		width: 600px;
 		height: 600px;
 	}
 	
-	#Id_parent,#mdp_parent,#Id_pro{
+	#email_parent,#mdp_parent,#Id_pro,#tel_parent{
 		width: 350px;
 		height: 70px;
 		font-size: 30px;
@@ -386,7 +1027,7 @@ footer p a#lien_site:hover{
 		height: 70px;
 		font-size: 30px;
 	}
-	#Identification_pro{
+	#Création_parents{
 		margin-left: 700px;
 		margin-top: -103%;
 	}
@@ -394,6 +1035,7 @@ footer p a#lien_site:hover{
 		font-size: 60px;
 		margin-left: 50px;
 	}
+	
 }
 
 @media screen and (min-width:1677.45px) and (max-width:1899px){
@@ -410,12 +1052,12 @@ footer p a#lien_site:hover{
 		 padding-bottom:535px; 
 	}
 	
-	#Identification_parents,#Identification_pro{
+	#Identification_parents,#Identification_pro,#Création_parents,#Création_pro{
 		width: 600px;
 		height: 600px;
 	}
 	
-	#Id_parent,#mdp_parent,#Id_pro{
+	#email_parent,#mdp_parent,#Id_pro,#tel_parent{
 		width: 350px;
 		height: 70px;
 		font-size: 30px;
@@ -436,7 +1078,7 @@ footer p a#lien_site:hover{
 		height: 70px;
 		font-size: 30px;
 	}
-	#Identification_pro{
+	#Création_parents{
 		margin-left: 700px;
 		margin-top: -124%;
 	}
@@ -456,12 +1098,12 @@ footer p a#lien_site:hover{
 		 padding-bottom:580px; 
 	}
 	
-	 #Identification_parents,#Identification_pro{
+	 #Identification_parents,#Identification_pro,#Création_parents,#Création_pro{
 		width: 600px;
 		height: 600px;
 	} 
 	
-	#Id_parent,#mdp_parent,#Id_pro{
+	#email_parent,#mdp_parent,#Id_pro,#tel_parent{
 		width: 350px;
 		height: 70px;
 		font-size: 30px;
@@ -482,7 +1124,7 @@ footer p a#lien_site:hover{
 		height: 70px;
 		font-size: 30px;
 	}
-	#Identification_pro{
+	#Création_parents{
 		margin-left: 700px;
 		margin-top: -103%;
 	}
@@ -505,12 +1147,12 @@ footer p a#lien_site:hover{
 		 padding-bottom:580px; 
 	}
 	
-	 #Identification_parents,#Identification_pro{
+	 #Identification_parents,#Identification_pro,#Création_parents,#Création_pro{
 		width: 600px;
 		height: 600px;
 	} 
 	
-	#Id_parent,#mdp_parent,#Id_pro{
+	#email_parent,#mdp_parent,#Id_pro,#tel_parent{
 		width: 350px;
 		height: 70px;
 		font-size: 30px;
@@ -531,7 +1173,7 @@ footer p a#lien_site:hover{
 		height: 60px;
 		font-size: 25px;
 	}
-	#Identification_pro{
+	#Création_parents{
 		margin-left: 700px;
 		margin-top: -103%;
 	}
@@ -554,12 +1196,12 @@ footer p a#lien_site:hover{
 		 padding-bottom:580px; 
 	}
 	
-	 #Identification_parents,#Identification_pro{
+	 #Identification_parents,#Identification_pro,#Création_parents,#Création_pro{
 		width: 500px;
 		height: 600px;
 	} 
 	
-	#Id_parent,#mdp_parent,#Id_pro{
+	#email_parent,#mdp_parent,#Id_pro,#tel_parent{
 		width: 350px;
 		height: 70px;
 		font-size: 30px;
@@ -580,7 +1222,7 @@ footer p a#lien_site:hover{
 		height: 60px;
 		font-size: 25px;
 	}
-	#Identification_pro{
+	#Création_parents{
 		margin-left: 700px;
 		margin-top: -103%;
 	}
@@ -607,8 +1249,11 @@ footer p a#lien_site:hover{
 		width: 500px;
 		height: 500px;
 	} 
-	
-	#Id_parent,#mdp_parent,#Id_pro{
+	#Création_parents,#Création_pro{
+		width: 500px;
+		height: 1070px;
+	}
+	#email_parent,#mdp_parent,#Id_pro,#Nom_père,#Nom_mère,#tel_parent{
 		width: 350px;
 		height: 70px;
 		font-size: 30px;
@@ -629,7 +1274,7 @@ footer p a#lien_site:hover{
 		height: 60px;
 		font-size: 25px;
 	}
-	#Identification_pro{
+	#Création_parents{
 		margin-left: 600px;
 		margin-top: -103%;
 	}
@@ -637,12 +1282,24 @@ footer p a#lien_site:hover{
 		font-size: 60px;
 		margin-left: 50px;
 	}
+	#phrase_accueil{
+		font-size: 35px;
+	}
+	
+	#Création_pro{
+		height: 700px;
+	}	
+}
+Spéciale
+@media screen and (min-width:1171.05px) and (max-width:3100px){
 	
 	section#form_connexion {
     	padding-left: 0px;
-    	padding-bottom: 40%;
-	}	
+    	padding-bottom: 90%;
+	}
 }
+
+****************************
 
 @media screen and (min-width:538.05px) and (max-width:1171.05px){
 	footer p{
@@ -674,11 +1331,11 @@ footer p a#lien_site:hover{
 		padding-right: -200px;
 	}
 }
-/*************************************************************************************************************/
+***********************************************************************************************************
 
 @media screen and (max-width:1550px){
 	#Connexion_parents{
-		margin-left: 1200px;
+		margin-left: 1000px;
 	}
 }
 
@@ -783,7 +1440,7 @@ footer p a#lien_site:hover{
 		
 	}
 	
-	#Identification_pro{
+	#Création_parents{
 		margin-left: 250px;
 	}
 }
@@ -798,11 +1455,11 @@ footer p a#lien_site:hover{
 		
 	}
 	
-	#Identification_pro{
+	#Création_parents{
 		margin-left: 0px;
 		margin-top: 10px;
 	}
-	#Id_parent,#mdp_parent,#Id_pro{
+	#email_parent,#mdp_parent,#Id_pro,#tel_parent{
 		margin-left: 0px;
 	}
 }
@@ -818,14 +1475,14 @@ footer p a#lien_site:hover{
 		
 	}
 	
-	#Identification_pro{
+	#Création_parents{
 		margin-left: 0px;
 		margin-top: 10px;
 	}
 	#mdp_oubli{
 		width: 200px;
 	}
-	#Id_parent,#mdp_parent,#Id_pro{
+	#email_parent,#mdp_parent,#Id_pro,#tel_parent{
 		margin-left: 0px;
 		padding-right: 0px;
 	}
@@ -846,11 +1503,11 @@ footer p a#lien_site:hover{
 		
 	}
 	
-	#Identification_pro{
+	#Création_parents{
 		margin-left: 0px;
 		margin-top: 10px;
 	}
-	#Id_parent,#mdp_parent,#Id_pro{
+	#email_parent,#mdp_parent,#Id_pro,#tel_parent{
 		margin-left: 0px;
 		padding-right: 0px;
 	}
@@ -860,7 +1517,7 @@ footer p a#lien_site:hover{
 	}	
 }
 
-/***********************************************************************************************************************************/
+*********************************************************************************************************************************
 @media screen and (max-height:2498.67px) and (max-width:2437.33px) {
 	footer{
 		padding-bottom: 600px;
@@ -947,8 +1604,8 @@ footer p a#lien_site:hover{
 		margin-left:190px;
 	}
 }
-/***********************************************************************************************************************************/
-/* @media screen and (max-width:501.067px) and (max-height:249.867px)  { Zoom de 300%
+*********************************************************************************************************************************
+@media screen and (max-width:501.067px) and (max-height:249.867px)  { Zoom de 300%
 	html,body{
 		margin-right: -50px;
 	}
@@ -975,12 +1632,12 @@ footer p a#lien_site:hover{
 	html,body{
 		margin-right: -250px;
 	}
-} */
+}
 
 
 
 
-@media screen and (max-width:510.7px) and (max-height:249.867px)  { /* Zoom de 300%*/
+@media screen and (max-width:510.7px) and (max-height:249.867px)  { Zoom de 300%
 	html,body{
 		margin-right: -20px;
 	}
@@ -1038,8 +1695,8 @@ footer p a#lien_site:hover{
 		margin-right: -200px;
 	}
 }
-/***********************************************************************************************************************************/
-@media screen and (max-width:499.8px) and (max-height:265.483px)  { /* Zoom de 290%-280% */
+*********************************************************************************************************************************
+@media screen and (max-width:499.8px) and (max-height:265.483px)  { Zoom de 290%-280%
 	html,body{
 		margin-right: -20px;
 	}
@@ -1089,8 +1746,8 @@ footer p a#lien_site:hover{
 		margin-right: -180px;
 	}
 }
-/***********************************************************************************************************************************/
-@media screen and (max-width:510.7px) and (max-height:281.1px)  { /* Zoom de 270% -260%*/
+*********************************************************************************************************************************
+@media screen and (max-width:510.7px) and (max-height:281.1px)  { Zoom de 270% -260%
 	html,body{
 		margin-right: -20px;
 	}
@@ -1144,8 +1801,8 @@ footer p a#lien_site:hover{
 	}
 }
 
-/***********************************************************************************************************************************/
-@media screen and (max-width:510.65px) and (max-height:296.717px)  { /* Zoom de 250%*/
+*********************************************************************************************************************************
+@media screen and (max-width:510.65px) and (max-height:296.717px)  { Zoom de 250%
 	html,body{
 		margin-right: -20px;
 	}
@@ -1205,8 +1862,8 @@ footer p a#lien_site:hover{
 	}
 }
 
-/***********************************************************************************************************************************/
- @media screen and (max-width:510.65px) and (max-height:312.333px)  { /* Zoom de 240% */
+*********************************************************************************************************************************
+ @media screen and (max-width:510.65px) and (max-height:312.333px)  { Zoom de 240%
 	html,body{
 		margin-right: -20px;
 	}
@@ -1250,4 +1907,4 @@ footer p a#lien_site:hover{
 	html,body{
 		margin-right: -170px;
 	}
-}
+} */
