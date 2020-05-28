@@ -1,0 +1,50 @@
+
+
+CREATE TABLE crèche(
+	IdCrèche INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Nom VARCHAR(150),
+    Adresse VARCHAR(150),
+    Ville VARCHAR(150),
+    Email VARCHAR(150),
+    Téléphone VARCHAR(10),
+    Type VARCHAR(150),
+    Capacité INT UNSIGNED,
+    Enfant INT UNSIGNED,
+    FOREIGN KEY (Enfant)
+    REFERENCES Enfant(Id_enfant) 
+)
+
+2ème version privilégiée !
+
+CREATE TABLE crèche(
+	IdCrèche INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Nom VARCHAR(150),
+    Adresse VARCHAR(150),
+    Ville VARCHAR(150),
+    code_postal VARCHAR(5),
+    Email VARCHAR(150),
+    Téléphone VARCHAR(10),
+    Type VARCHAR(150),
+    Capacité INT UNSIGNED
+)
+Pour les clés étrangères : 
+
+
+ALTER TABLE `affectation_crèche_enfant` ADD  FOREIGN KEY (`IdCrèche`) REFERENCES `crèche`(`IdCrèche`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `affectation_crèche_enfant` ADD  FOREIGN KEY (`IdEnfant`) REFERENCES `enfants`(`Id_enfant`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+CREATE TABLE affectation(
+    idAffectation INT UNSIGNED,
+    numCrèche INT UNSIGNED,
+    numEnfant INT UNSIGNED,
+    PRIMARY KEY(idAffectation),
+    FOREIGN KEY (numCrèche)
+    REFERENCES crèche(IdCrèche)
+    
+)
+
+Pour éviter que l'erreur #1215 de MySQL se déclenche
+
+Il faut regarder le type des données des futures clés étrangère qu'on déclare dans le code SQL et il faut que 
+ces types de données soit les mêmes que les types de données qu'on a déclaré dans les colonnes des autres tables
+qui sont associés aux donnés qu'on veut déclarer pour l'instant.

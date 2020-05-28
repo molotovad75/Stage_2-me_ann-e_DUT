@@ -42,10 +42,8 @@
 						<p>Je n'ai pas de compte parents</p>
 						<p id="ident">Je souhaite en savoir plus sur la solution OuiCrèches</p>
 						<p>
-							<input type="radio" id="choix_père_mère" name="choix_père_mère" value="père"/><label for="choix_père_mère">Père</label>
-							<input type="radio" id="choix_père_mère" name="choix_père_mère" value="mère"/><label for="choix_père_mère">Mère</label><br><br>
-							<input type="text" id="Nom_père" placeholder="Nom père*" name="Nom_père"/><br><br>
-							<input type="text" id="Nom_mère" placeholder="Nom mère *"name="Nom_mère"/><br><br>
+							<input type="text" id="Nom" placeholder="Nom *" name="Nom"/><br><br>
+							<input type="text" id="Prénom" placeholder="Prénom *"name="Prénom"/><br><br>
 							<input type="email" id="email_parent" placeholder="email *"name="email_parent"/><br><br> <!-- Id_parent -->
 							<input type="tel" id="tel_parent" placeholder="téléphone parents *"name="tel_parent"/><br><br> <!-- tel_parent -->
 							<textarea rows="8" cols="45" maxlength="65525" name="message" id="message" placeholder="Message"></textarea>
