@@ -2,26 +2,33 @@
  * 
  */
 
-var Connexion_parents=document.getElementById('Connexion_parents');
-var Connexion_pro=document.getElementById('Connexion_pro');
 
+function afficher_cacher_div(){
+	/* Connexion pro/gestionnaire qui disparait à moitié*/	
+Identification_pro.style.opacity='50%';
+Création_pro.style.opacity='50%';
+Identification_parents.style.opacity='100%';
+Création_parents.style.opacity='100%';
+Connexion_parents.disabled=true;
+Connexion_pro.disabled=false;
+/* Connexion_parents.style.font-weight='bold'; */
 
-var Identification_parents=document.getElementByID('Identification_parents');
-var Création_parents=document.getElementByID('Création_parents');
-var Identification_pro=document.getElementByID('Identification_pro');
-var Création_pro=document.getElementByID('Création_pro');
-
-
-
-function afficher_cacher_div_parent(){
-	if (getComputedStyle(Identification_parents).visibility==='visible' && getComputedStyle(Création_parents).visibility==='visible') {
-			
-			Identification_parents.style.visibility='hidden';
-			Création_parents.style.visibility='hidden';
-	} else {
-			Identification_parents.style.visibility='visible';
-			Création_parents.style.visibility='visible';
-	}
+var Identification_pro_input = document.getElementById("Identification_pro").getElementsByTagName("input").getElementById("Id_pro");
+var Création_pro_input = document.getElementById("Création_pro").getElementsByTagName("input").getElementById("Nom");
+Identification_pro_input.disabled.maxLength='0'; Création_pro_enfants.input.maxLength='0';
 }
-Connexion_parents.addEventListener('click', afficher_cacher_div_parent);
 
+function afficher_cacher_div2() {
+/* Connexion parent qui disparait à moitié*/	
+Identification_pro.style.opacity='100%';
+Création_pro.style.opacity='100%';
+Identification_parents.style.opacity='50%';
+Création_parents.style.opacity='50%';
+Connexion_parents.disabled=false;	
+Connexion_pro.disabled=true;
+/* Connexion_pro.style.font-weight='bold'; */
+var Identification_parents_input = document.getElementById("Identification_parents").getElementsByTagName("input").getElementById("Id_parent");
+var Création_parents_input = document.getElementById("Création_parents").getElementsByTagName("input").getElementById("Nom");
+Identification_parents_input.maxLength='0';Création_parents_input.maxLength='0';
+
+}

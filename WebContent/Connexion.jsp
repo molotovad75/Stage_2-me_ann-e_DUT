@@ -46,7 +46,7 @@
 		<div id="btns_connexion">
 			<label for="menu_options_co" class="Choix_Espaces">Espaces</label>
 			<input type="checkbox" id="menu_options_co" role="button" />
-			<img alt="" src=".\Images\BOTTINES-BOTTILLONS-LOGO.png" id="logoBandB">
+			<img alt="" src=".\Images\OuiCr%E8chesLogo.png" id="logoBandB">
 			<div id="menu_choix">
 				<input type="button" id="Connexion_parents" value="Espace Parents" onclick="afficher_cacher_div();"/>
 				<input type="button" id="Connexion_pro" value="Espace Pro" onclick="afficher_cacher_div2();" /> 
