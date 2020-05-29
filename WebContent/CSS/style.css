@@ -25,12 +25,18 @@ html,body{
 	padding-bottom: 10px;
 	padding-top: 10px;
 	border-color: rgba(0,0,0,1) 100%;
-	border-width: 1px;
+	border-width: 0px;
 	border-radius:5px;
 	margin-top: 10px;
 	background: rgb(240,240,248);
-	background: linear-gradient(90deg, rgba(240,240,248,1) 0%, rgba(0,156,255,1) 50%, rgba(240,240,248,1) 100%);
+	/* background: linear-gradient(90deg, rgba(240,240,248,1) 0%, rgba(0,156,255,1) 50%, rgba(240,240,248,1) 100%); */
+	background:transparent;
 	color: white;
+}
+
+#Connexion_parents:hover,#Connexion_pro:hover{
+	color: yellow;
+	
 }
 #Connexion_parents{
 	margin-left: 1250px;
