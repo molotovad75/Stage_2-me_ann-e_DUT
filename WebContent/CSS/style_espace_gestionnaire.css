@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+html,body{
+	margin:0;
+	height: 100%;
+	font-family: Supermarketed;
+}
+
+#libellé_espace_pro{
+	margin-top:-65px;
+	margin-left:1350px;
+	
+}
+
+#libellé_espace_pro{
+	color: white;
+	
+}
+#btns_connexion{
+	background: rgb(0,139,255);
+	background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	padding-bottom: 20px;
+}
+#btns_connexion img#logoBandB{
+	width:20%;
+	height:20%;
+	margin-bottom: -20px;
+	padding-bottom:20px;
+	padding-top:20px;
+}
+#contenu_page{
+	padding-bottom: 5%;	
+	
+}
+#choix_site{
+	margin-left: 50px;
+}
+#choix_site,#choix_action{
+	width: 200px;
+	height: 50px;
+}
+#validation{
+	width: 100px;
+	height: 25px;
+}
+footer{
+	background: rgb(0,139,255);
+	background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	height:300px;
+	display: block;
+	padding:20px;
+	margin-top:65px;
+	position:sticky;
+	
+}
+
+footer p{
+	color: white;
+	
+}
+
+footer p a#lien_site{
+	text-decoration:none;
+	color :white;
+}
+footer p a#lien_site:hover{
+	/* color: rgba(106,144,255,0.58); */
+	color: rgba(0,139,255,1);
+}

@@ -16,4 +16,14 @@
 		<url-pattern>/connexion</url-pattern>
 	</servlet-mapping>
 
+	<!-- Page de Espace gestionnaire -->
+	<servlet>
+		<servlet-name>Espace_gestionnaire</servlet-name>
+		<servlet-class>servlets.Test_espace_gestionnaire</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Espace_gestionnaire</servlet-name>
+		<url-pattern>/espace_gestionnaire</url-pattern>
+	</servlet-mapping>
 </web-app>

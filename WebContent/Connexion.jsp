@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Connexion</title>
-		<link href=".\CSS\style.css" rel="stylesheet" type="text/css" />
+		<link href=".\CSS\style_connexion.css" rel="stylesheet" type="text/css" />
 		<script  type="text/javascript" >
 			function afficher_cacher_div(){
 					/* Connexion pro/gestionnaire qui disparait à moitié*/	
@@ -112,12 +112,10 @@
 		</div>	
 		<footer>
 			<p> Bonjour, 
-			<br>OuiCrèches est une plateforme dédiée à la réservation de places occasionnelles en crèche.
-			<br><br>
- 
- Notre mission ? 
- <br><br>Rendre la réservation plus simple, plus juste et plus sécurisée pour les parents et les gestionnaires établissements.
- </p>
+				<br>OuiCrèches est une plateforme dédiée à la réservation de places occasionnelles en crèche.
+				<br><br> Notre mission ? 
+	 			<br><br>Rendre la réservation plus simple, plus juste et plus sécurisée pour les parents et les gestionnaires établissements.
+ 			</p>
 			<p>A Propos    :<br><br>
 				<a href="https://www.bottinesetbottillons.fr" id="lien_site"> Qui sommes nous ?</a><br>
 				<a href="https://www.bottinesetbottillons.fr" id="lien_site"> Comment ça marche ?</a><br>
