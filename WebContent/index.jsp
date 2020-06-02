@@ -1,46 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="UTF-8"%>
-   
 <!DOCTYPE html>
-
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<link href=".\CSS\style_espace_gestionnaire.css" rel="stylesheet" type="text/css" />
-		<title>Espace gestionnaire</title>
+		<link href=".\CSS\style_index.css" rel="stylesheet" type="text/css" />
+		<title>OuiCrèches</title>
 	</head>
-	
-	
 	<body>
 		<div id="btns_connexion">
 			<img alt="" src=".\Images\OuiCr%E8chesLogo.png" id="logoBandB">
-			
-			<div id="libellé_espace_pro">
-				<p>Espace gestionnaire pro</p>
-			</div>
 		</div>
 		
-		<div id="contenu_page">
-			
-				<h1>Espace Pro/gestionnaire</h1>
-				<p id="phrase_accueil">Bienvenue, </p>
-				
-				<section id="choix_site_action">
-					<p id="libellé_enseigne"></p>
-					<select id="choix_site">
-						<option disabled selected>Choisissez votre site *</option>
-						
-					</select>
-					
-					<select id="choix_action" >
-						<option disabled selected>Votre action *</option>
-						<option>MAJ informations sites/créneaux</option>
-						<option>Planification créneaux disponibles</option>
-						<option>Habiliter un parent</option>
-					</select>
-					
-					<input type="submit" id="validation" value="Validation"/>
-				</section>
+		
+		<h2>Besoin d'une garde d'enfant occasionnelle ?  Réservez rapidement au sein de votre crèche partenaire</h2>
+		
+		<section id="parent">
+			<a href=""><img alt="" src=".\Images\p%E8re%20et%20b%E9b%E9%20page%20de%20garde.jpg" id="père_enfant_picture" /></a>
+		</section>
+		<div id="libellé_je_suis_parent">
+			<h1>Je suis parent</h1>
+			<p id="sous-titre_parent">Je réserve via mon compte</p>
+		</div>
+		
+		<section id="pro">
+			<a href=""><img alt="" src=".\Images\Gestionnaire%20page%20de%20garde.jpg" id="gestionnaire_picture" /></a>
+		</section>
+		<div id="libellé_je_suis_pro">
+			<h1>Je suis gestionnaire de crèche</h1>
+			<p id="sous-titre_pro">J'accède à mon compte</p>
 		</div>
 		
 		<footer>

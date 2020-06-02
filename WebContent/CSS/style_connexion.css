@@ -5,9 +5,10 @@ html,body{
 	height: 100%;
 	font-family: Supermarketed;
 }
-#Corps h1{
+#Corps h2{
 	margin-top: 0;
 	padding-top: 20;
+	font-size: 35px;
 }
 
 #contenu_page{
@@ -32,6 +33,7 @@ html,body{
 	/* background: linear-gradient(90deg, rgba(240,240,248,1) 0%, rgba(0,156,255,1) 50%, rgba(240,240,248,1) 100%); */
 	background:transparent;
 	color: white;
+	font-weight: bold;
 }
 
 #Connexion_parents:hover,#Connexion_pro:hover{
@@ -106,7 +108,7 @@ footer{
 
 footer p{
 	color: white;
-	
+	font-weight: bold;
 }
 
 footer p a#lien_site{
@@ -174,7 +176,7 @@ footer p a#lien_site:hover{
 }
 @media screen and (max-width:1460.2px){
 	#Connexion_parents{
-		margin-left: 1150px;
+		margin-left: 1100px;
 	}
 	
 }
@@ -232,7 +234,7 @@ footer p a#lien_site:hover{
 
 @media screen and (max-width:1011.2px){
 	#Connexion_parents{
-		margin-left: 700px;
+		margin-left: 650px;
 	}
 }
 
@@ -244,7 +246,7 @@ footer p a#lien_site:hover{
 
 @media screen and (max-width:917.6px){
 	#Connexion_parents{
-		margin-left: 600px;
+		margin-left: 550px;
 	}
 }
 @media screen and (max-width:861.6px){
@@ -646,7 +648,7 @@ footer p a#lien_site:hover{
 	
 	
 	#Connexion_parents,#Connexion_pro{
-		width: 230px;
+		width: 250px;
 		height: 120px;
 		font-size: 30px;
 	}
@@ -727,7 +729,7 @@ footer p a#lien_site:hover{
 
 @media screen and (min-width:2183.86px) and (max-width:2532px) and (min-height:1032.8px) and (max-height:1250.67px){
 	#Connexion_parents{
-		margin-left: 1700px;
+		margin-left: 1600px;
 	}
 }
 

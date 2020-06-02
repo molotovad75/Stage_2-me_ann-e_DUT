@@ -19,11 +19,22 @@
 	<!-- Page de Espace gestionnaire -->
 	<servlet>
 		<servlet-name>Espace_gestionnaire</servlet-name>
-		<servlet-class>servlets.Test_espace_gestionnaire</servlet-class>
+		<servlet-class>servlets.Espace_gestionnaire</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>Espace_gestionnaire</servlet-name>
 		<url-pattern>/espace_gestionnaire</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Page d'index -->
+	<servlet>
+		<servlet-name>Index</servlet-name>
+		<servlet-class>servlets.Index</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Index</servlet-name>
+		<url-pattern>/index</url-pattern>
 	</servlet-mapping>
 </web-app>
