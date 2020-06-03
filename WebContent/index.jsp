@@ -14,6 +14,9 @@
 		
 		
 		<h2>Besoin d'une garde d'enfant occasionnelle ?  Réservez rapidement au sein de votre crèche partenaire</h2>
+		<div id="">
+			
+		</div>
 		
 		<section id="parent">
 			<a href=""><img alt="" src=".\Images\p%E8re%20et%20b%E9b%E9%20page%20de%20garde.jpg" id="père_enfant_picture" /></a>
@@ -23,6 +26,9 @@
 			<p id="sous-titre_parent">Je réserve via mon compte</p>
 		</div>
 		
+		<div id="">
+		
+		</div>
 		<section id="pro">
 			<a href=""><img alt="" src=".\Images\Gestionnaire%20page%20de%20garde.jpg" id="gestionnaire_picture" /></a>
 		</section>

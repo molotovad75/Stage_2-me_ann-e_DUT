@@ -72,3 +72,21 @@ footer p a#lien_site:hover{
 	color: rgba(0,139,255,1);
 }
 
+@media screen and (max-width:1519.4px){
+	#pro{
+		margin-top:300px;
+		margin-left: 0px;
+	}
+	
+	#parent{
+		margin-left: 750px;
+		width: 730px;
+	}
+	
+	#libellé_je_suis_parent{
+		margin-left: 750px;
+	}
+	#libellé_je_suis_pro{
+		margin-left: 10px;
+	}
+}
