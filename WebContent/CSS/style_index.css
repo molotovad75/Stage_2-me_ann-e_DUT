@@ -30,21 +30,29 @@ html,body{
 }
 
 #pro{
-	margin-top:-222.5px;
+	margin-top:-228px;
 	margin-left: 750px;
 	
 }
 #libellé_je_suis_parent{
 	width: 200px;
 	margin-top: -400px;
+	font-family: Keep Calm Med;
+	width: 250px;
+	
 }
 
 #libellé_je_suis_pro{
-	width: 330px;
+	width: 300px;
 	margin-left: 750px;
 	margin-top: -415px;
+	color: #ff00a9;
+	font-family: Keep Calm Med;
 }
-
+#sous-titre_parent,#sous-titre_pro{
+	font-size: 20px;
+	
+}
 
 footer{
 	background: rgb(0,139,255);
@@ -72,21 +80,409 @@ footer p a#lien_site:hover{
 	color: rgba(0,139,255,1);
 }
 
-@media screen and (max-width:1519.4px){
+@media screen and (min-width:1500px) and (max-width:1519.4px){
 	#pro{
-		margin-top:300px;
+		margin-top:-505px;
 		margin-left: 0px;
 	}
 	
 	#parent{
 		margin-left: 750px;
+		margin-top:-505px;
 		width: 730px;
 	}
 	
 	#libellé_je_suis_parent{
-		margin-left: 750px;
+		margin-left: 500px;
 	}
 	#libellé_je_suis_pro{
-		margin-left: 10px;
+		margin-left: 800px;
+	}
+	#rectangle1{
+		width:740px;
+    	height:504.4px;
+    	margin-left:0;
+    	padding-right:10px;
+    	padding-right: 8.5px;
+	}
+	#rectangle2{
+		width:735px;
+    	height:504.4px;
+    	margin-right:0;
+    	margin-left:750px;
+    	margin-top:310px;
+	}
+	#rectangle1,#rectangle2{
+		background: rgb(0,139,255);
+		background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	}
+	
+	#père_enfant_picture{
+		height: 505px;
+	}
+	#gestionnaire_picture{
+		height: 505px;
+		width: 749px;
 	}
 }
+
+@media screen and (min-width:1452.8px) and (max-width:1500px) {
+	#pro{
+		margin-top:-505px;
+		margin-left: 0px;
+	}
+	
+	#parent{
+		margin-left: 745px;
+		margin-top:-505px;
+		width: 650px;
+	}
+	
+	#libellé_je_suis_parent{
+		margin-left: 500px;
+	}
+	#libellé_je_suis_pro{
+		margin-left: 800px;
+	}
+	#rectangle1{
+		width:700px;
+    	height:504.4px;
+    	margin-left:0;
+    	padding-right:10px;
+    	padding-right: 8.5px;
+	}
+	#rectangle2{
+		width:700px;
+    	height:504.4px;
+    	margin-right:0;
+    	margin-left:700px;
+    	margin-top:310px;
+	}
+	#rectangle1,#rectangle2{
+		background: rgb(0,139,255);
+		background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	}
+	#père_enfant_picture{
+		height: 505px;
+		width: 700px;
+		margin-left: -45px;
+	}
+	#gestionnaire_picture{
+		height: 505px;
+		width: 700px;
+	}
+}
+
+@media screen and (min-width:1413.6px) and (max-width:1452.8px){
+	#pro{
+		margin-top:-505px;
+		margin-left: 0px;
+	}
+	
+	#parent{
+		margin-left: 745px;
+		margin-top:-505px;
+		width: 650px;
+	}
+	
+	#libellé_je_suis_parent{
+		margin-left: 400px;
+	}
+	#libellé_je_suis_pro{
+		margin-left: 800px;
+	}
+	#rectangle1{
+		width:650px;
+    	height:504.4px;
+    	margin-left:0;
+    	padding-right:10px;
+    	padding-right: 8.5px;
+	}
+	#rectangle2{
+		width:650px;
+    	height:504.4px;
+    	margin-right:0;
+    	margin-left:700px;
+    	margin-top:310px;
+	}
+	#rectangle1,#rectangle2{
+		background: rgb(0,139,255);
+		background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	}
+	#père_enfant_picture{
+		height: 505px;
+		width: 650px;
+		margin-left: -45px;
+	}
+	#gestionnaire_picture{
+		height: 505px;
+		width: 650px;
+	}
+}
+
+@media screen and (min-width:1300px) and (max-width:1413.6px) {
+	#pro{
+		margin-top:-505px;
+		margin-left: 0px;
+	}
+	
+	#parent{
+		margin-left: 745px;
+		margin-top:-505px;
+		width: 500px;
+	}
+	
+	#libellé_je_suis_parent{
+		margin-left: 400px;
+	}
+	#libellé_je_suis_pro{
+		margin-left: 800px;
+	}
+	#rectangle1{
+		width:600px;
+    	height:504.4px;
+    	margin-left:0;
+    	padding-right:10px;
+    	padding-right: 8.5px;
+	}
+	#rectangle2{
+		width:600px;
+    	height:504.4px;
+    	margin-right:0;
+    	margin-left:650px;
+    	margin-top:310px;
+	}
+	#rectangle1,#rectangle2{
+		background: rgb(0,139,255);
+		background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	}
+	#père_enfant_picture{
+		height: 505px;
+		width: 600px;
+		margin-left: -100px;
+	}
+	#gestionnaire_picture{
+		height: 505px;
+		width: 600px;
+	}
+	
+}
+
+@media screen and (min-width:1145px) and (max-width:1300px){
+	#pro{
+		margin-top:-505px;
+		margin-left: 0px;
+	}
+	
+	#parent{
+		margin-left: 665px;
+		margin-top:-505px;
+		width: 452px;
+	}
+	
+	#libellé_je_suis_parent{
+		margin-left: 300px;
+	}
+	#libellé_je_suis_pro{
+		margin-left: 800px;
+	}
+	#rectangle1{
+		width:550px;
+    	height:504.4px;
+    	margin-left:0;
+    	padding-right:10px;
+    	padding-right: 8.5px;
+	}
+	#rectangle2{
+		width:550px;
+    	height:504.4px;
+    	margin-right:0;
+    	margin-left:560px;
+    	margin-top:310px;
+	}
+	#rectangle1,#rectangle2{
+		background: rgb(0,139,255);
+		background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	}
+	#père_enfant_picture{
+		height: 505px;
+		width: 550px;
+		margin-left: -100px;
+	}
+	#gestionnaire_picture{
+		height: 505px;
+		width: 550px;
+	}
+	
+}
+
+@media screen and (min-width:870.4px) and (max-width:1145px){
+	
+	#pro{
+		margin-top:-505px;
+		margin-left: 0px;
+	}
+	
+	#parent{
+		margin-left: 665px;
+		margin-top:-505px;
+		width: 0px;
+	}
+	
+	#libellé_je_suis_parent{
+		margin-left: 300px;
+	}
+	#libellé_je_suis_pro{
+		margin-left: 500px;
+	}
+	#rectangle1{
+		width:550px;
+    	height:504.4px;
+    	margin-left:300px;
+    	padding-right:10px;
+    	padding-right: 0px;
+    	margin-bottom: 350px;
+	}
+	#rectangle2{
+		width:550px;
+    	height:504.4px;
+    	margin-right:0;
+    	margin-left:300px;
+    	margin-top:310px;
+	}
+	#rectangle1,#rectangle2{
+		background: rgb(0,139,255);
+		background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	}
+	#père_enfant_picture{
+		height: 505px;
+		width: 550px;
+		margin-left: -365px;
+		margin-top: 200px;
+	}
+	#gestionnaire_picture{
+		height: 505px;
+		width: 550px;
+		margin-top: 550px;
+		margin-left: 300px;
+		
+	}
+}
+
+@media screen and (min-width:770.4px) and (max-width:870.4px) {
+	
+	#pro{
+		margin-top:-505px;
+		margin-left: 0px;
+	}
+	
+	#parent{
+		margin-left: 665px;
+		margin-top:-505px;
+		width: 0px;
+	}
+	
+	#libellé_je_suis_parent{
+		margin-left: 300px;
+	}
+	#libellé_je_suis_pro{
+		margin-left: 300px;
+	}
+	#rectangle1{
+		width:550px;
+    	height:504.4px;
+    	margin-left:150px;
+    	padding-right:10px;
+    	padding-right: 0px;
+    	margin-bottom: 350px;
+	}
+	#rectangle2{
+		width:550px;
+    	height:504.4px;
+    	margin-right:0;
+    	margin-left:150px;
+    	margin-top:310px;
+	}
+	#rectangle1,#rectangle2{
+		background: rgb(0,139,255);
+		background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	}
+	#père_enfant_picture{
+		height: 505px;
+		width: 550px;
+		margin-left:-515px;
+		margin-top: 200px;
+	}
+	#gestionnaire_picture{
+		height: 505px;
+		width: 550px;
+		margin-top: 550px;
+		margin-left: 150px;	
+	}
+	
+}
+
+@media screen and (min-width:770.4px) and (max-width:820.8px){
+	footer{
+		height: 230px;
+	}
+}
+
+@media screen and (min-width:630.8px) and (max-width:770.4px){
+	#pro{
+		margin-top:-505px;
+		margin-left: 0px;
+		width: 0px;
+	}
+	
+	#parent{
+		margin-left: 619px;
+		margin-top:-505px;
+		width: 0px;
+	}
+	
+	#libellé_je_suis_parent{
+		margin-left: 0px;
+	}
+	#libellé_je_suis_pro{
+		margin-left:0px;
+	}
+	#rectangle1{
+		width:550px;
+    	height:504.4px;
+    	margin-left:0px;
+    	padding-right:10px;
+    	padding-right: 0px;
+    	margin-bottom: 350px;
+	}
+	#rectangle2{
+		width:550px;
+    	height:504.4px;
+    	margin-right:0;
+    	margin-left:0px;
+    	margin-top:310px;
+	}
+	#rectangle1,#rectangle2{
+		background: rgb(0,139,255);
+		background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	}
+	#père_enfant_picture{
+		height: 505px;
+		width: 550px;
+		margin-left:-619px;
+		margin-top: 200px;
+	}
+	#gestionnaire_picture{
+		height: 505px;
+		width: 550px;
+		margin-top: 550px;
+		margin-left: 0px;	
+	}
+	h2{
+		width: 500px;
+	}
+	footer{
+		height: 250px;
+	}
+}
+/* 750.4 */
