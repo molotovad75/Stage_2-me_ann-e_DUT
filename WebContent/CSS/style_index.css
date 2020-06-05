@@ -30,7 +30,7 @@ html,body{
 }
 
 #pro{
-	margin-top:-228px;
+	margin-top:-255px;
 	margin-left: 750px;
 	
 }
@@ -233,7 +233,7 @@ footer p a#lien_site:hover{
 	}
 	
 	#libellé_je_suis_parent{
-		margin-left: 400px;
+		margin-left: 300px;
 	}
 	#libellé_je_suis_pro{
 		margin-left: 800px;
@@ -485,4 +485,68 @@ footer p a#lien_site:hover{
 		height: 250px;
 	}
 }
-/* 750.4 */
+
+
+@media screen and (max-width:630.8px){
+	#btns_connexion{
+		width: 640px;
+	}
+	#pro{
+		margin-top:-505px;
+		margin-left: 0px;
+		width: 0px;
+	}
+	
+	#parent{
+		margin-left: 619px;
+		margin-top:-505px;
+		width: 0px;
+	}
+	
+	#libellé_je_suis_parent{
+		margin-left: 0px;
+		width: 50px;
+	}
+	#libellé_je_suis_pro{
+		margin-left:0px;
+		width: 50px;
+	}
+	#rectangle1{
+		width:450px;
+    	height:504.4px;
+    	margin-left:0px;
+    	padding-right:10px;
+    	padding-right: 0px;
+    	margin-bottom: 350px;
+	}
+	#rectangle2{
+		width:450px;
+    	height:504.4px;
+    	margin-right:0;
+    	margin-left:0px;
+    	margin-top:310px;
+	}
+	#rectangle1,#rectangle2{
+		background: rgb(0,139,255);
+		background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	}
+	#père_enfant_picture{
+		height: 505px;
+		width: 450px;
+		margin-left:-619px;
+		margin-top: 200px;
+	}
+	#gestionnaire_picture{
+		height: 505px;
+		width: 450px;
+		margin-top: 550px;
+		margin-left: 0px;	
+	}
+	h2{
+		width: 500px;
+	}
+	footer{
+		height: 250px;
+		width: 600px;
+	}
+}

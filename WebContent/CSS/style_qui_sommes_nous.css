@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+
+html,body{
+	margin:0;
+	height: 100%;
+	font-family: Supermarketed;
+}
+body{
+	background-image:url("../Images/équipe.png");
+	background-attachment: fixed;
+	background-position: inherit;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#btns_connexion{
+	background: rgb(0,139,255);
+	background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	padding-bottom: 20px;
+}
+#btns_connexion img#logoBandB{
+	width:20%;
+	height:20%;
+	margin-bottom: -20px;
+	padding-bottom:20px;
+	padding-top:20px;
+}
+
+
+footer{
+	background: rgb(0,139,255);
+	background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	height:220px;
+	display: block;
+	padding:20px;
+	margin-top:125px;
+	position:sticky;
+	
+}
+
+footer p{
+	color: white;
+	
+}
+
+footer p a#lien_site{
+	text-decoration:none;
+	color :white;
+}

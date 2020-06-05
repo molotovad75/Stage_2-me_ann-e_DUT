@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+html,body{
+	margin:0;
+	height: 100%;
+	font-family: Supermarketed;
+}
+body{
+	background-image:url("../Images/Canva%20-%20Two%20Children%20Sitting%20Down%20Playing%20With%20Lego%20Blocks.jpg");
+	background-attachment: fixed;
+	background-position: inherit;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#Corps{
+	margin-left: 500px;
+	padding: 50px;
+	background: rgb(0,139,255);
+	background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	width: 500px;
+}
+
+#btns_connexion{
+	background: rgb(0,139,255);
+	background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	padding-bottom: 20px;
+}
+#btns_connexion img#logoBandB{
+	width:20%;
+	height:20%;
+	margin-bottom: -20px;
+	padding-bottom:20px;
+	padding-top:20px;
+}
+
+#message{
+	
+	min-width: 384px;
+	min-height: 171px;
+}
+
+
+footer{
+	background: rgb(0,139,255);
+	background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	height:220px;
+	display: block;
+	padding:20px;
+	margin-top:125px;
+	position:sticky;
+	
+}
+
+footer p{
+	color: white;
+	
+}
+
+footer p a#lien_site{
+	text-decoration:none;
+	color :white;
+}
+/*Balise section #Corps*/
+@media screen and (min-width:615.2px) and (max-width:1171.05px){
+	
+	#Corps{
+		margin-left: 0px;
+		padding: 50px;
+		background: rgb(0,139,255);
+		background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+		width: 400px;
+	}
+}
+
+
+@media screen and (min-width:499.2px) and (max-width:615.2px){
+	
+	#Corps{
+		margin-left: 0px;
+		padding: 50px;
+		background: rgb(0,139,255);
+		background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+		width: 400px;
+	}
+}
+
+@media screen and (max-width:499.2px){
+	
+	#Corps{
+		margin-left:0px;
+		padding: 50px;
+		background: rgb(0,139,255);
+		background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+		width: 400px;
+	}
+}
+/************************************************************************/
+/*Balise footer*/
+
+@media screen and (max-width:769.6px){
+	footer{
+		height: 260px;
+	}
+}
+/************************************************************************/
+/*Balise footer en dézommant*/
+@media screen and (min-width:1920px) and (min-height:938px) and (max-width:2183.85px) and (max-height:1078.7px){
+	footer{
+		height: 260px;
+		margin-top: 220px;
+	}
+}
+
+@media screen and (min-width:2183.85px) and (min-height:1078.7px) and (max-width:3072px) and (max-height:1500.8px){
+	footer{
+		margin-top: 400px;
+	}
+}
+
+@media screen and (min-width:3072px) and (min-height:1500.8px) and (max-width:3840px) and (max-height:1876px){
+	
+	#Corps{
+		margin-left: 1000px;
+		padding: 50px;
+	}
+	footer{
+		margin-top: 620px;
+		height: 360px;
+	}
+	section#Corps input#nom,section#Corps input#prénom,section#Corps input#email,section#Corps input#téléphone{
+		width: 200px;
+		height: 50px;
+		font-size: 32px;
+	}
+	footer p{
+		font-size: 25px;
+	}
+	#message{
+		font-size: 32px;
+	}
+	h2{
+		font-size: 52px;
+	}
+	#btn_envoyer_message{
+		width: 190px;
+		height: 50px;
+		font-size: 32px;
+	}
+}
+
+
+@media screen and (min-width:3840px) and (min-height:1876px) and (max-width:5120px) and (max-height:2501.33px){
+	#Corps{
+		margin-left: 1200px;
+		padding: 50px;
+	}
+	
+	footer{
+		margin-top: 950px;
+	}
+	footer p{
+		font-size: 25px;
+	}
+	h2{
+		font-size: 52px;
+	}
+	#message{
+		font-size: 32px;
+	}
+	#btn_envoyer_message{
+		width: 190px;
+		height: 50px;
+		font-size: 32px;
+	}
+}
+ 
+@media screen and (min-width:5120px) and (min-height:2501.33px) {
+	footer{
+		margin-top: 1470px;
+		height: 415px;
+		padding: 50px;
+	}
+	
+	footer p{
+		font-size: 32px;
+	}
+	h2{
+		font-size: 52px;
+	}
+	section#Corps input#nom,section#Corps input#prénom,section#Corps input#email,section#Corps input#téléphone{
+		width: 200px;
+		height: 50px;
+		font-size: 32px;
+	}
+	#message{
+		font-size: 32px;
+	}
+	#btn_envoyer_message{
+		width: 190px;
+		height: 50px;
+		font-size: 32px;
+	}
+}	
+
+/************************************************************************/
+/*Pour message*/
+@media screen and (min-width:506.4px) and (min-height:250.133px){
+	#message{
+		max-width:430.4px;
+		max-height: 485.4px;
+	}
+}
+/************************************************************************/

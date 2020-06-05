@@ -42,7 +42,7 @@
 			<p>
 				<a href="https://www.bottinesetbottillons.fr" id="lien_site"> Qui sommes nous ?</a><br>
 				<a href="https://www.bottinesetbottillons.fr" id="lien_site"> Comment ça marche ?</a><br>
-				<a href="https://www.bottinesetbottillons.fr" id="lien_site"> Nous contacter</a>.
+				<a href="Contact.jsp" id="lien_site"> Nous contacter</a>.
 			</p><br>
 		</footer>
 	</body>
