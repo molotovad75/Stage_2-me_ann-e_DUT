@@ -3,18 +3,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<link href=".\CSS\style_qui_sommes_nous.css" rel="stylesheet" type="text/css" />
-		<title> Qui sommes nous ? - OuiCrèches</title>
+		<meta charset="UTF-8" />
+		<title>Comment ça marche - OuiCrèches</title>
+		<link href=".\CSS\style_comment_ça_marche.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
 		<div id="btns_connexion">
 			<img alt="" src=".\Images\OuiCr%E8chesLogo.png" id="logoBandB">
 		</div>
-		
-		<section id="texte_qui_sommes_nous">
-			<p></p>  <!-- Pour écrire du texte il faut le mettre entre les balises <p></p> -->
-		</section>
 		
 		
 		<footer>
@@ -25,7 +21,7 @@
  			</p>
 			<p>
 				<a href="/Plateforme_web_B_and_B/Qui_sommes_nous" id="lien_site"> Qui sommes nous ?</a><br>
-				<a href="/Plateforme_web_B_and_B" id="lien_site"> Comment ça marche ?</a><br>
+				<a href="#" id="lien_site"> Comment ça marche ?</a><br>
 				<a href="/Plateforme_web_B_and_B/contacter_ouiCreches" id="lien_site"> Nous contacter</a>.
 			</p><br>
 		</footer>

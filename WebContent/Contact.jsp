@@ -30,9 +30,9 @@
 	 			<br>Rendre la réservation plus simple, plus juste et plus sécurisée pour les parents et les gestionnaires d'établissements.
  			</p>
 			<p>
-				<a href="https://www.bottinesetbottillons.fr" id="lien_site"> Qui sommes nous ?</a><br>
-				<a href="https://www.bottinesetbottillons.fr" id="lien_site"> Comment ça marche ?</a><br>
-				<a href="https://www.bottinesetbottillons.fr" id="lien_site"> Nous contacter</a>.
+				<a href="/Plateforme_web_B_and_B/Qui_sommes_nous" id="lien_site"> Qui sommes nous ?</a><br>
+				<a href="/Plateforme_web_B_and_B/comment_%C3%A7a_marche" id="lien_site"> Comment ça marche ?</a><br>
+				<a href="#" id="lien_site"> Nous contacter</a>.
 			</p><br>
 		</footer>
 	</body>

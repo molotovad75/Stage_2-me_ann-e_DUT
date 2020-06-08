@@ -71,4 +71,16 @@
 		<servlet-name>Qui_sommes_nous</servlet-name>
 		<url-pattern>/Qui_sommes_nous</url-pattern>
 	</servlet-mapping>
+	
+	
+	<!-- Page de comment ça marche -->
+	<servlet>
+		<servlet-name>Comment_ca_marche</servlet-name>
+		<servlet-class>servlets.Comment_ca_marche</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Comment_ca_marche</servlet-name>
+		<url-pattern>/comment_ca_marche</url-pattern>
+	</servlet-mapping>
 </web-app>

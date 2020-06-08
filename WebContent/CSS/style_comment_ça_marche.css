@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+html,body{
+	margin:0;
+	height: 100%;
+	font-family: Supermarketed;
+}
+
+#btns_connexion{
+	background: rgb(0,139,255);
+	background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	padding-bottom: 20px;
+}
+#btns_connexion img#logoBandB{
+	width:20%;
+	height:20%;
+	margin-bottom: -20px;
+	padding-bottom:20px;
+	padding-top:20px;
+}
+
+
+
+
+
+footer{
+	background: rgb(0,139,255);
+	background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	height:210px;
+	display: block;
+	padding:20px;
+	margin-top:65px;
+	position:relative;
+	margin-top: 300px;
+	font-weight: bold;
+}
+
+footer p{
+	color: white;
+	
+}
+
+footer p a#lien_site{
+	text-decoration:none;
+	color :white;
+}
+footer p a#lien_site:hover{
+	/* color: rgba(106,144,255,0.58); */
+	color: rgba(0,139,255,1);
+}
