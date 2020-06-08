@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Comment ça marche - OuiCrèches</title>
-		<link href=".\CSS\style_comment_ça_marche.css" rel="stylesheet" type="text/css" />
+		<link href=".\CSS\style_comment_ca_marche.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
 		<div id="btns_connexion">

@@ -7,14 +7,8 @@
 		<meta charset="UTF-8" />
 		<title>Connexion</title>
 		<link href=".\CSS\style_connexion.css" rel="stylesheet" type="text/css" />
-		<script src="//code.jquery.com/jquery-1.12.0.min.js">
-		
-		
-		</script>		
+		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>		
 		<script type="text/javascript" >
-		
-			
-			
 			function afficher_cacher_div(){
 				/* Connexion pro/gestionnaire qui disparait à moitié*/	
 				Identification_pro.style.opacity='30%';
@@ -69,7 +63,7 @@
 				<h2>Besoin d'une garde d'enfant occasionnelle ?  Réservez rapidement au sein de votre crèche partenaire</h2>
 				<section id="form_connexion">
 					<div id="Identification_parents">
-						<form action="">
+						<form action="" method="post">
 							<p id="ident">J'ai un compte parent</p>
 							<p id="ident">Je m'identifie</p>
 							<p>
@@ -83,7 +77,7 @@
 					</div>	
 				
 					<div id="Création_parents">
-						<form action="">
+						<form action="" method="post">
 							<p id="ident">Je n'ai pas de compte parents</p>
 							<p id="ident">Je souhaite en savoir plus sur la solution OuiCrèches</p>
 							<p>
@@ -98,27 +92,27 @@
 					</div>
 					
 					<div id="Identification_pro">
-						<form action="">
+						<form action="" method="post">
 							<p id="ident">J'ai un compte pro/gestionnaire</p>
 							<p id="ident">Je m'identifie</p>
 							<p>
-								<input type="text" id="Id_pro" placeholder="Nom pro"/><br><br>
-								<input type="password" id="mdp_parent" placeholder="Mot de passe pro"/><br><br>
-								<input type="submit" id="Se_connecter_pro" placeholder="Se connecter"/>
+								<input type="text" id="Id_pro" placeholder="Nom pro" name="Id_pro"/><br><br>
+								<input type="password" id="mdp_parent" placeholder="Mot de passe pro" name="mdp_parent"/><br><br>
+								<input type="submit" id="Se_connecter_pro" placeholder="Se connecter" name="Se_connecter_pro"/>
 								<a href="" id="mdp_oubli">Mot de passe oublié</a>
 							</p>
 						</form>
 					</div>
 					
 					<div id="Création_pro">
-						<form action="">
+						<form action="" method="post">
 							<p id="ident">Je n'ai pas de compte pro/gestionnaire</p>
 							<p id="ident">Je souahite en savoir plus sur la solution OuiCrèches Pro</p>
 							<p>
 								<input type="text" id="Nom" placeholder="Nom *" name="Nom"/><br><br>
-								<input type="text" id="Prénom" placeholder="Prénom"name="Prénom"/><br><br>
-								<input type="email" id="email_pro" placeholder="email *"name="email_pro"/><br><br> 
-								<input type="tel" id="tel_pro" placeholder="Téléphone pro *"name="tel_pro"/><br><br>
+								<input type="text" id="Prénom" placeholder="Prénom" name="Prénom"/><br><br>
+								<input type="email" id="email_pro" placeholder="email *" name="email_pro"/><br><br> 
+								<input type="tel" id="tel_pro" placeholder="Téléphone pro *" name="tel_pro"/><br><br>
 								<textarea  rows="8" cols="45" maxlength="65525" name="message" id="message" placeholder="Message *"></textarea>
 								<input type="submit" id="Se_connecter_pro" placeholder="S'inscrire" name="Se_connecter"/>
 							</p>

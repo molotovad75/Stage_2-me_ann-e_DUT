@@ -19,8 +19,6 @@ public class BDD_Connexion {
 
 	    try {
 	    	conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/bdd_ouicrèches","root","");
-//	    	conn= DriverManager.getConnection("jdbc:mysql://databases-auth.000webhost.com/id13165485_miesto?serverTimezone=UTC","id13165485_rooot","!ECY~xt)1oD7H(*b");
-
 	    } catch (SQLException e) {
 	        e.printStackTrace();
 	    }
