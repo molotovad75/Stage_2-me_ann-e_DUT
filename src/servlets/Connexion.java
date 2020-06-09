@@ -19,11 +19,4 @@ public class Connexion extends HttpServlet{
 	}
 	
 	
-	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Gestionnaire gestionnaire=new Gestionnaire();
-		gestionnaire.setNom_user(request.getParameter("Id_pro"));
-		gestionnaire.setMdp(request.getParameter("mdp_parent"));
-		request.setAttribute("gestionnaire", Connexion_pro.vérification_connexion_pro(gestionnaire));
-		
-	}
 }

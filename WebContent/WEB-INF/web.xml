@@ -6,7 +6,7 @@
   version="3.0">
 
 
-
+	<!-- ********************************************************************************* -->
   	
   	<!-- Page de connexion -->
 	<servlet>
@@ -19,7 +19,7 @@
 		<url-pattern>/connexion</url-pattern>
 	</servlet-mapping>
 
-
+	<!-- ********************************************************************************* -->
 
 
 	<!-- Page de Espace gestionnaire -->
@@ -33,7 +33,7 @@
 		<url-pattern>/espace_gestionnaire</url-pattern>
 	</servlet-mapping>
 	
-	
+	<!-- ********************************************************************************* -->
 	
 	<!-- Page d'index -->
 	<servlet>
@@ -46,7 +46,7 @@
 		<url-pattern>/index</url-pattern>
 	</servlet-mapping>
 	
-	
+	<!-- ********************************************************************************* -->
 	
 	<!-- Page de contact OuiCrèches -->
 	<servlet>
@@ -59,7 +59,7 @@
 		<url-pattern>/contacter_ouiCreches</url-pattern>
 	</servlet-mapping>
 	
-	
+	<!-- ********************************************************************************* -->
 	
 	<!-- Page de qui sommes nous -->
 	<servlet>
@@ -73,6 +73,8 @@
 	</servlet-mapping>
 	
 	
+	<!-- ********************************************************************************* -->
+	
 	<!-- Page de comment ça marche -->
 	<servlet>
 		<servlet-name>Comment_ca_marche</servlet-name>
@@ -82,5 +84,31 @@
 	<servlet-mapping>
 		<servlet-name>Comment_ca_marche</servlet-name>
 		<url-pattern>/comment_ca_marche</url-pattern>
+	</servlet-mapping>
+	
+	<!-- ********************************************************************************* -->
+	
+	<!-- Fichier JAVA Connexion Pro envoie à la BDD-->
+	<servlet>
+		<servlet-name>Connexion_pro_envoi_BDD</servlet-name>
+		<servlet-class>servlets.Connexion_pro_envoi_BDD</servlet-class>
+  	</servlet>
+  	
+	<servlet-mapping>
+		<servlet-name>Connexion_pro_envoi_BDD</servlet-name>
+		<url-pattern>/connexionProEnvoiBDD</url-pattern> 
+	</servlet-mapping>
+	
+	
+	<!-- ********************************************************************************* -->
+	<!-- Fichier JAVA Demande d'inscription  -->
+	<servlet>
+		<servlet-name>Demande_inscription_pro</servlet-name>
+		<servlet-class>servlets.Demande_inscription_pro</servlet-class>
+  	</servlet>
+  	
+	<servlet-mapping>
+		<servlet-name>Demande_inscription_pro</servlet-name>
+		<url-pattern>/demande_inscription_pro</url-pattern> 
 	</servlet-mapping>
 </web-app>

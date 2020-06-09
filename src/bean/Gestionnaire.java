@@ -9,7 +9,8 @@ public class Gestionnaire {
 	private String Nom;
 	private String Prénom;
 	private String email;
-	private int[] téléphone=new int [10];
+	private String téléphone;
+	private String message;
 	
 	public String getNom_user() {
 		return nom_user;
@@ -41,10 +42,16 @@ public class Gestionnaire {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int[] getTéléphone() {
+	public String getTéléphone() {
 		return téléphone;
 	}
-	public void setTéléphone(int[] téléphone) {
+	public void setTéléphone(String téléphone) {
 		this.téléphone = téléphone;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
 	}
 }

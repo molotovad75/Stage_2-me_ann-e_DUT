@@ -92,7 +92,7 @@
 					</div>
 					
 					<div id="Identification_pro">
-						<form action="" method="post">
+						<form action="/Plateforme_web_B_and_B/ConnexionProEnvoiBDD" method="post">
 							<p id="ident">J'ai un compte pro/gestionnaire</p>
 							<p id="ident">Je m'identifie</p>
 							<p>
@@ -105,7 +105,7 @@
 					</div>
 					
 					<div id="Création_pro">
-						<form action="" method="post">
+						<form action="/Plateforme_web_B_and_B/demande_inscription_pro" method="post">
 							<p id="ident">Je n'ai pas de compte pro/gestionnaire</p>
 							<p id="ident">Je souahite en savoir plus sur la solution OuiCrèches Pro</p>
 							<p>
@@ -118,6 +118,8 @@
 							</p>
 						</form>
 					</div>
+					
+					<%  %>
 				</section>
 			</div>
 		</div>	
