@@ -14,18 +14,12 @@ public class Connexion_pro extends BDD_Connexion{
 	private static String nom_user="";
 	private static String mdp="";
 	
-	public List<Gestionnaire> recupererGestionnaire(String nom_user,String mdp){
+	public List<Gestionnaire> recupererGestionnaire(String nom_user,String mdp) throws ClassNotFoundException, SQLException{
 		List<Gestionnaire> user=new ArrayList<Gestionnaire>();
 		Connection conn = null;
 		java.sql.ResultSet rs=null;
 		PreparedStatement ps=null;
-		try {
-			conn = BDD_Connexion.getConnexion();
-		} catch (ClassNotFoundException e1) {
-			e1.printStackTrace();
-		} catch (SQLException e1) {
-			e1.printStackTrace();
-		}
+		conn = BDD_Connexion.getConn();
 		try {
 			ps=conn.prepareStatement("SELECT pg.Nom,pg.Mdp FROM pro_gestionnaire AS pg WHERE pg.Nom=? AND pg.Mdp=?");
 			ps.setString(1, nom_user);

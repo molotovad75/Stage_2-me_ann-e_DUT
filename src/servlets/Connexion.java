@@ -7,9 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bean.Gestionnaire;
-import jdbc.Connexion_pro;
-
 public class Connexion extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	

@@ -2,6 +2,12 @@
     <wb-module deploy-name="Plateforme web B&amp;B">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="mysql-connector-java-8.0.19.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Adrien/Desktop/DUT informatique/2nd annee/Semestre 4/STAGE S4/Bottines et Bottillons/Fichiers JAR utiles/mysql-connector-java-8.0.19.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jstl-1.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Adrien/Desktop/DUT informatique/2nd annee/Semestre 4/STAGE S4/Bottines et Bottillons/Fichiers JAR utiles/jstl-1.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="Plateforme_web_B_and_B"/>
         <property name="java-output-path" value="/Plateforme web B&amp;B/build/classes"/>
     </wb-module>
