@@ -3,17 +3,14 @@ package servlets;
 import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import bean.Gestionnaire;
+import bean.Parent;
 import jdbc.BDD_Connexion;
 
-public class Demande_inscription_pro extends HttpServlet {
-
+public class Demande_inscription_parent extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -22,32 +19,33 @@ public class Demande_inscription_pro extends HttpServlet {
 		} catch (SQLException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		Gestionnaire gest=new Gestionnaire();
-		gest.setNom(req.getParameter("Nom"));
-		gest.setPrénom(req.getParameter("Prénom"));
-		gest.setEmail(req.getParameter("email_pro"));
-		gest.setTéléphone(req.getParameter("tel_pro"));
-		gest.setMessage(req.getParameter("message"));
+		Parent parent=new Parent();
+		parent.setNom(req.getParameter("Nom"));
+		parent.setPrénom(req.getParameter("Prénom"));
+		parent.setEmail(req.getParameter("email_parent"));
+		parent.setTéléphone(req.getParameter("tel_parent"));
+		parent.setMessage(req.getParameter("message"));
 		
 		try {
-			ajouter_demande_gestionnaire(gest);
+			ajouter_demande_parent(parent);
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		this.getServletContext().getRequestDispatcher("/WEB-INF/../Connexion.jsp").forward(req, resp);
+	
+
 	}
 	
-	public static void ajouter_demande_gestionnaire(Gestionnaire gestionnaire) throws ClassNotFoundException {
-		String reqSQL="INSERT INTO demande_inscription_gestionnaire VALUES(NULL,?,?,?,?,?,CURDATE());";
+	public static void ajouter_demande_parent(Parent parent) throws ClassNotFoundException {
+		String reqSQL="INSERT INTO demande_inscription_parent VALUES(NULL,?,?,?,?,?,CURDATE());";
 		PreparedStatement ps=null;
 		try {
 			ps=BDD_Connexion.getConn().prepareStatement(reqSQL);
-			ps.setString(1, gestionnaire.getNom());
-			ps.setString(2, gestionnaire.getPrénom());
-			ps.setString(3, gestionnaire.getEmail());
-			ps.setString(4, gestionnaire.getTéléphone());
-			ps.setString(5, gestionnaire.getMessage());
+			ps.setString(1, parent.getNom());
+			ps.setString(2, parent.getPrénom());
+			ps.setString(3, parent.getEmail());
+			ps.setString(4, parent.getTéléphone());
+			ps.setString(5, parent.getMessage());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

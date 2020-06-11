@@ -96,12 +96,12 @@
   	
 	<servlet-mapping>
 		<servlet-name>Connexion_pro_envoi_BDD</servlet-name>
-		<url-pattern>/connexionProEnvoiBDD</url-pattern> 
+		<url-pattern>/Identification_pro</url-pattern> 
 	</servlet-mapping>
 	
 	
 	<!-- ********************************************************************************* -->
-	<!-- Fichier JAVA Demande d'inscription  -->
+	<!-- Fichier JAVA Demande d'inscription gestionnaire -->
 	<servlet>
 		<servlet-name>Demande_inscription_pro</servlet-name>
 		<servlet-class>servlets.Demande_inscription_pro</servlet-class>
@@ -111,4 +111,31 @@
 		<servlet-name>Demande_inscription_pro</servlet-name>
 		<url-pattern>/demande_inscription_pro</url-pattern> 
 	</servlet-mapping>
+	
+	<!-- ********************************************************************************* -->
+	<!-- Fichier JAVA Demande d'inscription parent -->
+	
+	<servlet>
+		<servlet-name>Demande_inscription_parent</servlet-name>
+		<servlet-class>servlets.Demande_inscription_parent</servlet-class>
+  	</servlet>
+  	
+	<servlet-mapping>
+		<servlet-name>Demande_inscription_parent</servlet-name>
+		<url-pattern>/demande_inscription_parent</url-pattern> 
+	</servlet-mapping>
+	
+	<!-- ********************************************************************************* -->
+	<!-- Fichier JAVA Identification pro -->
+	<servlet>
+		<servlet-name>Identification_pro</servlet-name>
+		<servlet-class>servlets.Identification_pro</servlet-class>
+  	</servlet>
+  	
+	<servlet-mapping>
+		<servlet-name>Identification_pro</servlet-name>
+		<url-pattern>/identification_pro</url-pattern> 
+	</servlet-mapping>	
+		
+		
 </web-app>

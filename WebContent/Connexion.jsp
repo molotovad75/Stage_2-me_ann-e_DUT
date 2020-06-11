@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="UTF-8"%>
-    
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -77,7 +78,7 @@
 					</div>	
 				
 					<div id="Création_parents">
-						<form action="" method="post">
+						<form action="/Plateforme_web_B_and_B/demande_inscription_parent" method="post">
 							<p id="ident">Je n'ai pas de compte parents</p>
 							<p id="ident">Je souhaite en savoir plus sur la solution OuiCrèches</p>
 							<p>
@@ -92,7 +93,7 @@
 					</div>
 					
 					<div id="Identification_pro">
-						<form action="/Plateforme_web_B_and_B/ConnexionProEnvoiBDD" method="post">
+						<form action="/Plateforme_web_B_and_B/identification_pro" method="post">
 							<p id="ident">J'ai un compte pro/gestionnaire</p>
 							<p id="ident">Je m'identifie</p>
 							<p>
@@ -113,13 +114,12 @@
 								<input type="text" id="Prénom" placeholder="Prénom" name="Prénom"/><br><br>
 								<input type="email" id="email_pro" placeholder="email *" name="email_pro"/><br><br> 
 								<input type="tel" id="tel_pro" placeholder="Téléphone pro *" name="tel_pro"/><br><br>
-								<textarea  rows="8" cols="45" maxlength="65525" name="message" id="message" placeholder="Message *"></textarea>
+								<textarea  rows="8" cols="45" maxlength="65525" name="message" id="message" placeholder="Bonjour, je souahite en savoir plus sur la solution OuiCrèches, merci de me recontacter."></textarea>
 								<input type="submit" id="Se_connecter_pro" placeholder="S'inscrire" name="Se_connecter"/>
 							</p>
 						</form>
 					</div>
 					
-					<%  %>
 				</section>
 			</div>
 		</div>	

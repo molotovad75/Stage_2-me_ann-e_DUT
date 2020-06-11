@@ -6,8 +6,8 @@ html,body{
 }
 
 #btns_connexion{
-	background: rgb(0,139,255);
-	background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	background: #00AFEE;
+	/* background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%); */
 	padding-bottom: 20px;
 }
 #btns_connexion img#logoBandB{
@@ -55,8 +55,8 @@ html,body{
 }
 
 footer{
-	background: rgb(0,139,255);
-	background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	background: #00AFEE;
+	/* background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%); */
 	height:210px;
 	display: block;
 	padding:20px;
