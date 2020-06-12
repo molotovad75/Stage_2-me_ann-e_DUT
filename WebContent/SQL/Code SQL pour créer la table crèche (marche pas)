@@ -48,3 +48,25 @@ Pour éviter que l'erreur #1215 de MySQL se déclenche
 Il faut regarder le type des données des futures clés étrangère qu'on déclare dans le code SQL et il faut que 
 ces types de données soit les mêmes que les types de données qu'on a déclaré dans les colonnes des autres tables
 qui sont associés aux donnés qu'on veut déclarer pour l'instant.
+
+
+
+12/06/2020
+
+ALTER TABLE pro_gestionnaire
+ADD Id_enseigne INT(11) UNSIGNED NOT NULL
+FOREIGN KEY(Id_enseigne)
+REFERENCES enseigne(Id_enseigne);
+
+Autre requête
+
+ALTER TABLE pro_gestionnaire
+ADD FOREIGN KEY(Id_enseigne)
+REFERENCES enseigne(IdEnseigne)
+
+Autre requête pour ajouter clé étrangère Id-enseigne.
+
+ALTER TABLE pro_gestionnaire
+ADD CONSTRAINT `fk_id-enseigne_pro`
+FOREIGN KEY(Id_enseigne)
+REFERENCES enseigne(IdEnseigne)

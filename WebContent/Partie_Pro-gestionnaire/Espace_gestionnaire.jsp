@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="UTF-8"%>
-   
+  
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 
 <html>
@@ -16,14 +17,22 @@
 			<img alt="" src=".\Images\OuiCr%E8chesLogo.png" id="logoBandB">
 			
 			<div id="libellé_espace_pro">
-				<p>Espace gestionnaire pro</p>
+				<p>Pro
+					<c:forEach var="item" items="${Nom}" >
+						<c:out value="${item}" />
+					</c:forEach>
+				</p>
 			</div>
 		</div>
 		
 		<div id="contenu_page">
 			
 				<h1>Espace Pro/gestionnaire</h1>
-				<p id="phrase_accueil">Bienvenue, </p>
+				<p id="phrase_accueil">Bienvenue, 
+					<c:forEach var="item2" items="${Prenom}" >
+						<c:out value="${item2}" />
+					</c:forEach>
+				</p>
 				
 				<section id="choix_site_action">
 					<p id="libellé_enseigne"></p>

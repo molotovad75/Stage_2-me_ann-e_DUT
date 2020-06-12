@@ -86,7 +86,7 @@
 								<input type="text" id="Prénom" placeholder="Prénom *"name="Prénom"/><br><br>
 								<input type="email" id="email_parent" placeholder="email *"name="email_parent"/><br><br> <!-- Id_parent -->
 								<input type="tel" id="tel_parent" placeholder="téléphone parents *"name="tel_parent"/><br><br> <!-- tel_parent -->
-								<textarea rows="8" cols="45" maxlength="65525" name="message" id="message" placeholder="Message"></textarea>
+								<textarea rows="8" cols="45" maxlength="65525" name="message" id="message" placeholder="Bonjour, je souahite en savoir plus sur la solution OuiCrèches, merci de me recontacter."></textarea>
 								<input type="submit" id="Se_connecter_parent" placeholder="S'inscrire" name="Se_connecter"/>
 							</p>
 						</form>
@@ -102,6 +102,11 @@
 								<input type="submit" id="Se_connecter_pro" placeholder="Se connecter" name="Se_connecter_pro"/>
 								<a href="" id="mdp_oubli">Mot de passe oublié</a>
 							</p>
+							<!-- JSTL -->
+							<c:forEach var="item" items="${auth}" >
+									<c:out value="${item}" />
+							</c:forEach>
+							
 						</form>
 					</div>
 					
@@ -117,6 +122,10 @@
 								<textarea  rows="8" cols="45" maxlength="65525" name="message" id="message" placeholder="Bonjour, je souahite en savoir plus sur la solution OuiCrèches, merci de me recontacter."></textarea>
 								<input type="submit" id="Se_connecter_pro" placeholder="S'inscrire" name="Se_connecter"/>
 							</p>
+							<!-- JSTL -->
+							<c:forEach var="item" items="${err_mail}" >
+									<c:out value="${item}" />
+							</c:forEach>
 						</form>
 					</div>
 					

@@ -18,6 +18,7 @@ public class Identification_pro extends HttpServlet {
 	
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		boolean resultat = false;
 		try {
 			BDD_Connexion.load_database();
 		} catch (SQLException | ClassNotFoundException e) {
@@ -27,17 +28,28 @@ public class Identification_pro extends HttpServlet {
 		gest.setNom_user(req.getParameter("Id_pro"));
 		gest.setMdp(req.getParameter("mdp_parent"));
 		
+		
 		try {
-			vérifier_comtpe_parent(gest,req,resp);
+			try {
+				resultat=vérifier_comtpe_pro(gest,req,resp);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			if (resultat==false) {
+				this.getServletContext().getRequestDispatcher("/WEB-INF/../Connexion.jsp").forward(req, resp);
+			}else if (resultat==true) {
+				gest.setPrénom(req.getParameter(""));
+				this.getServletContext().getRequestDispatcher("/WEB-INF/../Partie_Pro-gestionnaire/Espace_gestionnaire.jsp").forward(req, resp);
+			}
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		this.getServletContext().getRequestDispatcher("/WEB-INF/../index.jsp").forward(req, resp);
+		
 	
 
 	}
 	
-	public static void vérifier_comtpe_parent(Gestionnaire gest,HttpServletRequest req, HttpServletResponse resp) throws ClassNotFoundException {
+	public static boolean vérifier_comtpe_pro(Gestionnaire gest,HttpServletRequest req, HttpServletResponse resp) throws ClassNotFoundException, SQLException {
 		String reqSQL="SELECT pg.Nom, pg.Mdp FROM pro_gestionnaire AS pg WHERE pg.Nom=? AND pg.Mdp=?;";
 		PreparedStatement ps=null;
 		ResultSet resultat=null;
@@ -47,18 +59,27 @@ public class Identification_pro extends HttpServlet {
 			ps.setString(2, gest.getMdp());
 			resultat=ps.executeQuery();
 			
-			if (!resultat.next()) {
-				//Dire qu'il y a une erreur d'authentification
-				String mess_erreur_authentification="Authentification échouée, veuillez rééssayer !";
-				req.setAttribute("erreur_auth", mess_erreur_authentification);
-			}else {
-				//Connection authentifié
-				String mess_authentification="Authentification réussie !";
-				req.setAttribute("auth", mess_authentification);
-			}
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
+		if (!resultat.next()) {
+			//Dire qu'il y a une erreur d'authentification
+			String mess_erreur_authentification="Authentification échouée, veuillez rééssayer !";
+			req.setAttribute("auth", mess_erreur_authentification);
+			return false;
+		}else {
+			//Connection authentifié
+			String mess_authentification="Authentification réussie !";
+			req.setAttribute("auth", mess_authentification);
+			req.setAttribute("Nom", gest.getNom_user());
+			req.setAttribute("Prenom", gest.getPrénom());
+			return true;
+		}
 	}
+	
+//	public static boolean RecupPrénomPro() {
+//		String reqSQL="SELECT pg.Prénom FROM pro_gestionnaire AS pg WHERE pg.";
+//		
+//	}
 }

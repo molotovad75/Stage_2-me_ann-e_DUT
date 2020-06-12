@@ -55,7 +55,7 @@
  			</p>
 			<p>
 				<a href="/Plateforme_web_B_and_B/Qui_sommes_nous" id="lien_site"> Qui sommes nous ?</a><br>
-				<a href="/Plateforme_web_B_and_B" id="lien_site"> Comment ça marche ?</a><br>
+				<a href="/Plateforme_web_B_and_B/comment_ca_marche" id="lien_site"> Comment ça marche ?</a><br>
 				<a href="/Plateforme_web_B_and_B/contacter_ouiCreches" id="lien_site"> Nous contacter</a>.
 			</p><br>
 		</footer>
