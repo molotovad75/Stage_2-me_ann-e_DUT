@@ -13,7 +13,12 @@
 		</div>
 		
 		<section id="texte_qui_sommes_nous">
-			<p></p>  <!-- Pour écrire du texte il faut le mettre entre les balises <p></p> -->
+			<p>
+				La plateforme OuiCrèches est issue de la réflexion de gestionnaires de crèches qui ont fait le constat suivant :  Des places de crèches sont quotidiennement laissées vacantes du fait d’absence planifiée ou imprévue d’enfants réguliers. La vacance de courte durée de ces places ne leur permet pas d’être proposées pour de l’accueil régulier.
+				Proposer ces places disponibles pour de l’accueil occasionnel est la solution proposée par OuiCrèches. La plateforme permet aux établissements partenaires de proposer en ligne les créneaux disponibles qu’elles souhaitent dédier à ce type d’accueil. 
+				Nous aidons d’une part les parents qui souhaitent davantage de flexibilité pour l’accueil en crèche de leurs enfants. 
+				Nous aidons d’autre part les gestionnaires des crèches à mieux organiser l’accueil au quotidien. 
+			</p>  <!-- Pour écrire du texte il faut le mettre entre les balises <p></p> -->
 		</section>
 		
 		

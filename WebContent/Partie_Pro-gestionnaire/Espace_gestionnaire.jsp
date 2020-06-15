@@ -38,7 +38,9 @@
 					<p id="libellé_enseigne"></p>
 					<select id="choix_site">
 						<option disabled selected>Choisissez votre site *</option>
-						
+						<c:forEach items="${ NomEnseigne_site }" var="NomEnseigne_sites">
+							<option><c:out value="${ NomEnseigne_sites }" /></option>
+						</c:forEach>
 					</select>
 					
 					<select id="choix_action" >

@@ -12,6 +12,25 @@
 			<img alt="" src=".\Images\OuiCr%E8chesLogo.png" id="logoBandB">
 		</div>
 		
+		<section id="marche_parent">
+			<h2>Parents</h2>
+			<p id="text_marche_parent">
+				Trouver une place rapidement.
+				Réserver 100% en ligne.
+				Réserver sans engagement.
+				Aucun paiement en ligne.
+			</p>
+		</section>
+		
+		<section id="marche_gestionnaire">
+			<h2>Gestionnaires de crèche</h2>
+			<p id="text_marche_gestionnaire">
+				Quelques minutes seulement pour publier vos places vacantes.
+				Décidez sur la quantité des places disponibles à publier.
+				Gérez facilement les remplacements par des enfants connus.
+				Rester informé en direct des réservations effectuées par les parents.
+			</p>
+		</section>
 		
 		<footer>
 			<p> Bonjour, 
