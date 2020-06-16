@@ -70,3 +70,10 @@ ALTER TABLE pro_gestionnaire
 ADD CONSTRAINT `fk_id-enseigne_pro`
 FOREIGN KEY(Id_enseigne)
 REFERENCES enseigne(IdEnseigne)
+
+
+Pour ajouter des horaires:
+
+INSERT INTO `horaires_crenaux_sites` 
+(`IdEnseigne`, `IdSite`, `Horaires_journée`, `Horaires_fin_journée`, `Horaires_Matin`, `Horaires_fin_matin`, `Horaires_Aprem_midi`, `Horaires_fin_aprem`, `Horaires_début_soirée`, `Horaires_fin_soirée`) 
+VALUES ('2', '2', '8h30', '18h30', '8h30', '12h30', '14h00', '18h30', '18h30', '20h00');

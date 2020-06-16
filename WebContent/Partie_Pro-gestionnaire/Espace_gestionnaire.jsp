@@ -51,16 +51,105 @@
 				
 				
 				<section id="sectionMAJ_site">
-				
+					<section id="">
+						<div id="information_siteCrèche">
+						</div>
+						<div id="horaires_ouvertures">
+							<table>
+								<caption>Horaires d'ouverture</caption>
+								<tr>
+									<td>Lundi</td>
+									
+								</tr>
+								<tr>
+									<td>Mardi</td>
+								</tr>
+								<tr>
+									<td>Mercredi</td>
+								</tr>
+								<tr>
+									<td>Jeudi</td>
+								</tr>
+								<tr>
+									<td>Vendredi</td>
+								</tr>
+								<tr>
+									<td>Samedi</td>
+								</tr>
+								<tr>
+									<td>Dimanche</td>
+								</tr>
+							</table>
+						</div>
+					</section>
+					
+					<section id="">
+					
+					</section>
 				</section>
 				
 				<section id="sectionPlanification_crénaux_dispo">
-					<select id="choix_action" >
-						<option disabled selected>Mois ?</option>
+					<select id="choix_du_mois" >
+						<option disabled selected>Mois ?*</option>
 						<option>Janvier</option>
 						<option>Février</option>
 						<option>Mars</option>
+						<option>Avril</option>
+						<option>Mai</option>
+						<option>Juin</option>
+						<option>Juillet</option>
+						<option>Août</option>
+						<option>Septembre</option>
+						<option>Octobre</option>
+						<option>Novembre</option>
+						<option>Décembre</option>
 					</select>
+					<select id="choix_de_l_année">
+						<option disabled selected>Année ?*</option>
+						<c:forEach begin="1900" end="2020" step="1" var="année">
+							<option><c:out value="${ année }"/></option>
+						</c:forEach>
+					</select>
+					<input type="button" id="validationPlanif" value="Validation"/>
+					<input type="submit" id="confirmation" value="confirmation"/>
+					
+					<!-- CARTE SVG DOIT SUIVANTE -->
+					<table id="grille_saisie">
+						<caption>Grille de saisie des créneaux disponibles à proposer par le gestionnaire</caption>
+						<thead>
+	   						<tr> <!-- AJOUTER LA LES DATES EN DESSOUS AVEC LA JSTL -->
+	       						<td><a></a></td>
+	       						<td>Lundi<br></td>
+	       						<td>Mardi<br></td>
+	       						<td>Mercredi<br></td>
+	       						<td>Jeudi<br></td>
+	       						<td>Vendredi<br></td>
+	       						<td>Samedi<br></td>
+	   						</tr>
+   						</thead>
+   						
+   						<tbody>
+	   						<tr>
+	       						<td>8h00</td><!-- rowspan doit être =4 ou moins -->
+	       						<td rowspan="4">26 ans</td>
+	       						<td rowspan="4">26 ans</td>
+	       						<td rowspan="4">26 ans</td>
+	   						</tr>
+	   						<tr>
+	       						<td>13h00</td><!-- rowspan doit être =3 ou moins -->
+	       						<td rowspan="3">26 ans</td>
+	   						</tr>
+	   						<tr>
+	       						<td>17h00</td> <!-- rowspan doit être =2 ou moins -->
+	       						<td rowspan="2">26 ans</td>
+	   						</tr>
+	   						<tr>
+	       						<td>18h00</td>
+	       						
+	       						
+	   						</tr>
+   						</tbody>
+					</table>
 				</section>
 				
 				<section id="sectionHabiliter_parents">

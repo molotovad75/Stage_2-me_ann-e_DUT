@@ -51,15 +51,34 @@ html,body{
 #choix_site{
 	margin-left: 150px;
 }
-#choix_site,#choix_action{
+#choix_site,#choix_action,#choix_du_mois,#choix_de_l_année{
 	width: 200px;
 	height: 50px;
 }
-#validation{
+#validation,#validationPlanif,#confirmation{
 	width: 100px;
 	height: 25px;
-	opacity: 30%;
+	/* opacity: 30%; */
 }
+
+table
+{
+    border-collapse: collapse;
+    background-color: white;
+}
+td, th /* Mettre une bordure sur les td ET les th */
+{
+    border: 1px solid black;
+}	
+
+
+
+#sectionPlanification_crénaux_dispo{
+	margin-left: 560px;
+	margin-top: -50px;
+	
+}
+
 footer{
 	background: rgb(0,139,255);
 	background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
