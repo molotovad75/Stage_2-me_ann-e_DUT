@@ -26,16 +26,12 @@
 		</div>
 		
 		<div id="contenu_page">
-			
 				<h1>Espace Pro/gestionnaire</h1>
-				<p id="phrase_accueil">Bienvenue, 
-					<c:forEach var="item2" items="${Prenom}" >
-						<c:out value="${item2}" />
-					</c:forEach>
-				</p>
-				
-				<section id="choix_site_action">
-					<p id="libellé_enseigne"></p>
+				<!-- <c:forEach items="${ Prenom }" var="item">
+					<p>Bienvenue, <c:out value="${ item }" /></p>
+				</c:forEach> -->
+				<p id="libellé_enseigne"><c:forEach items="${ NomEnseigne }" var="NomEnseignes"><c:out value="${ NomEnseignes }"/></c:forEach></p>
+				<section id="choix_site_action">					
 					<select id="choix_site">
 						<option disabled selected>Choisissez votre site *</option>
 						<c:forEach items="${ NomEnseigne_site }" var="NomEnseigne_sites">
@@ -50,7 +46,25 @@
 						<option>Habiliter un parent</option>
 					</select>
 					
-					<input type="submit" id="validation" value="Validation"/>
+					<input type="button" id="validation" value="Validation"/>
+				</section>
+				
+				
+				<section id="sectionMAJ_site">
+				
+				</section>
+				
+				<section id="sectionPlanification_crénaux_dispo">
+					<select id="choix_action" >
+						<option disabled selected>Mois ?</option>
+						<option>Janvier</option>
+						<option>Février</option>
+						<option>Mars</option>
+					</select>
+				</section>
+				
+				<section id="sectionHabiliter_parents">
+					
 				</section>
 		</div>
 		
