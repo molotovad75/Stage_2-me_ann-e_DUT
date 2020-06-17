@@ -61,6 +61,16 @@ html,body{
 	/* opacity: 30%; */
 }
 
+#information_siteCrèche{
+	background-color: white;
+	width: 1119.2px;	
+}
+#horaires_ouvertures{
+	width: 169.2px;	
+	margin-left: 1200px;
+	margin-top: -110px;
+}
+
 table#horaires
 {
     border-collapse: collapse;
@@ -76,6 +86,11 @@ table#horaires td, table#horaires th /* Mettre une bordure sur les td ET les th 
 #sectionPlanification_crénaux_dispo{
 	margin-left: 560px;
 	margin-top: -50px;
+	
+}
+
+#grille_saisie{
+	background-color: white;
 	
 }
 

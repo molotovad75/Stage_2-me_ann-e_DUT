@@ -271,7 +271,24 @@
 				</section>
 				
 				<section id="sectionHabiliter_parents">
-					
+					<div id="parent_référence">
+						<p></p>
+						<input type="email" id="mail" placeholder="" name="mail_référent"/>
+					</div>
+					<div id="conjoint">
+						<p></p>
+						<input type="email" id="mail" placeholder="" name="mail_conjoint"/>
+					</div>
+					<div id="enfant1">
+						<p></p>
+						
+					</div>
+					<div id="enfant2">
+						<p></p>
+					</div>
+					<div id="enfant3">
+						<p></p>
+					</div>
 				</section>
 		</div>
 		

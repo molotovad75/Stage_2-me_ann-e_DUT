@@ -200,8 +200,6 @@ public class Identification_pro extends HttpServlet {
 		try {
 			ps=BDD_Connexion.getConn().prepareStatement(reqSQL);
 			resultat=ps.executeQuery();
-			
-			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -254,7 +252,7 @@ public class Identification_pro extends HttpServlet {
 	public static String récupHoraire_jour(Gestionnaire gest, int num_jour) throws ClassNotFoundException, SQLException {
 			String reqSQL="SELECT hcs.Horaires_journée, hcs.Horaires_fin_journée \r\n" + 
 					"FROM `horaires_crenaux_sites` AS hcs, `ouverture_semaine` AS os \r\n" + 
-					"WHERE os.Id_jour="+num_jour+" AND os.IdSiteCreche="+récupIdSite_horaire(gest)+";";
+					"WHERE hcs.Id_jour_semaine="+num_jour+" AND os.IdSiteCreche="+récupIdSite_horaire(gest)+";";
 		PreparedStatement ps=null;
 		ResultSet resultat=null;
 		String Horaires_journées="", Horaires_fin_journée="",Horaire_final="";
@@ -269,7 +267,12 @@ public class Identification_pro extends HttpServlet {
 		if (resultat.next()) {
 			Horaires_journées=resultat.getString(1);
 			Horaires_fin_journée=resultat.getString(2);
-			Horaire_final=Horaires_journées+" à "+Horaires_fin_journée;
+			if (Horaires_journées.equals("fermé")==true) {
+				Horaire_final=Horaires_journées;
+			}else {
+				Horaire_final=Horaires_journées+" à "+Horaires_fin_journée;
+			}
+			
 		}
 		return Horaire_final;
 	}
