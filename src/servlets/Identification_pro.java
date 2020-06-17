@@ -19,6 +19,9 @@ public class Identification_pro extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static Gestionnaire gest=null;
 	private static ArrayList<String> list_nom_enseigne=null;
+	private static String Nom_gestionnaire="";
+	
+//	private static int IdPro=0;
 	
 	public static ArrayList<String> getlist_nom_enseigne() {
 		return list_nom_enseigne;
@@ -36,7 +39,6 @@ public class Identification_pro extends HttpServlet {
 		gest.setNom_user(req.getParameter("Id_pro"));
 		gest.setMdp(req.getParameter("mdp_parent"));
 		
-		
 		try {
 			try {
 				resultat=vérifier_comtpe_pro(gest,req,resp);
@@ -48,10 +50,15 @@ public class Identification_pro extends HttpServlet {
 			}else if (resultat==true) {
 				récup_infos_sites_gestionnaires(gest.getNom_user());
 				récup_nom_enseignes(gest.getNom_user());
-				récupPrénom(gest.getNom_user(),gest.getMdp());
 				req.setAttribute("NomEnseigne_site", récup_infos_sites_gestionnaires(gest.getNom_user()));
 				req.setAttribute("NomEnseigne", récup_nom_enseignes(gest.getNom_user()));
-				req.setAttribute("Prenom", récupPrénom(gest.getNom_user(),gest.getMdp()));
+				req.setAttribute("Horaires_Lundi", récupHoraire_jour(gest,1));
+				req.setAttribute("Horaires_Mardi", récupHoraire_jour(gest,2));
+				req.setAttribute("Horaires_Mercredi", récupHoraire_jour(gest,3));
+				req.setAttribute("Horaires_Jeudi", récupHoraire_jour(gest,4));
+				req.setAttribute("Horaires_Vendredi", récupHoraire_jour(gest,5));
+				req.setAttribute("Horaires_Samedi", récupHoraire_jour(gest,6));
+				req.setAttribute("Horaires_Dimanche", récupHoraire_jour(gest,7));
 				this.getServletContext().getRequestDispatcher("/WEB-INF/../Partie_Pro-gestionnaire/Espace_gestionnaire.jsp").forward(req, resp);
 			}
 		} catch (ClassNotFoundException e) {
@@ -86,10 +93,11 @@ public class Identification_pro extends HttpServlet {
 			String mess_authentification="Authentification réussie !";
 			req.setAttribute("auth", mess_authentification);
 			req.setAttribute("Nom", gest.getNom_user());
-			
+			Nom_gestionnaire=resultat.getString(1);
 			return true;
 		}
 	}
+	
 	
 	
 	
@@ -122,8 +130,6 @@ public class Identification_pro extends HttpServlet {
 		String reqSQL1="SELECT e.NomEnseigne "
 				+ "FROM enseigne AS e,pro_gestionnaire AS pg,site_creche AS sc "
 				+ "WHERE e.NumGestionnaire=pg.IdPro AND sc.Id_Enseigne=e.IdEnseigne AND pg.Nom='"+pgNom+"';";
-		
-		
 		String lsNomEnseigne = "";
 		list_nom_enseigne=new ArrayList<String>();
 		try {
@@ -164,7 +170,117 @@ public class Identification_pro extends HttpServlet {
 		return list_prenom;
 	}
 	
+//	LES 4 REQUETES DE TYPE SELECT SUIVANTES SONT POUR RECUPERER UNE CLE ETRANGERE ASSOCIE DE LOIN A UN GESTIONNAIRE
+	public static int récupIdGestionnaire(Gestionnaire gest) throws ClassNotFoundException, SQLException {
+		String reqSQL="SELECT pg.IdPro FROM pro_gestionnaire AS pg WHERE pg.Nom=? AND pg.Mdp=?;";
+		PreparedStatement ps=null;
+		ResultSet resultat=null;
+		int Id_gestionnaire=0;
+		try {
+			ps=BDD_Connexion.getConn().prepareStatement(reqSQL);
+			ps.setString(1, Nom_gestionnaire);
+			ps.setString(2, gest.getMdp());
+			resultat=ps.executeQuery();
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		if (resultat.next()) {
+			Id_gestionnaire=resultat.getInt(1);
+		}
+		return Id_gestionnaire;
+	}
+	
+	public static int récupIdEnseigne(Gestionnaire gest) throws ClassNotFoundException, SQLException {
+		String reqSQL="SELECT e.IdEnseigne FROM enseigne AS e WHERE e.NumGestionnaire="+récupIdGestionnaire(gest)+";";
+		PreparedStatement ps=null;
+		ResultSet resultat=null;
+		int Id_Enseigne=0;
+		try {
+			ps=BDD_Connexion.getConn().prepareStatement(reqSQL);
+			resultat=ps.executeQuery();
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		if (resultat.next()) {
+			Id_Enseigne=resultat.getInt(1);
+		}
+		return Id_Enseigne;
+	}
+	
+	public static int récupIdCreche(Gestionnaire gest) throws ClassNotFoundException, SQLException {
+		String reqSQL="SELECT sc.IdCrèche FROM site_creche AS sc WHERE sc.Id_Enseigne="+récupIdEnseigne(gest)+";";
+		PreparedStatement ps=null;
+		ResultSet resultat=null;
+		int IdCrèche=0;
+		try {
+			ps=BDD_Connexion.getConn().prepareStatement(reqSQL);
+			resultat=ps.executeQuery();
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		if (resultat.next()) {
+			IdCrèche=resultat.getInt(1);
+		}
+		return IdCrèche;
+	}
+	
+	public static int récupIdSite_horaire(Gestionnaire gest) throws ClassNotFoundException, SQLException {
+		String reqSQL="SELECT hcs.IdSite FROM horaires_crenaux_sites AS hcs WHERE hcs.IdSite="+récupIdCreche(gest)+";";
+		PreparedStatement ps=null;
+		ResultSet resultat=null;
+		int IdSite=0;
+		try {
+			ps=BDD_Connexion.getConn().prepareStatement(reqSQL);
+			resultat=ps.executeQuery();
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		if (resultat.next()) {
+			IdSite=resultat.getInt(1);
+		}
+		return IdSite;
+	}
+	
+	
+	
+	public static String récupHoraire_jour(Gestionnaire gest, int num_jour) throws ClassNotFoundException, SQLException {
+			String reqSQL="SELECT hcs.Horaires_journée, hcs.Horaires_fin_journée \r\n" + 
+					"FROM `horaires_crenaux_sites` AS hcs, `ouverture_semaine` AS os \r\n" + 
+					"WHERE os.Id_jour="+num_jour+" AND os.IdSiteCreche="+récupIdSite_horaire(gest)+";";
+		PreparedStatement ps=null;
+		ResultSet resultat=null;
+		String Horaires_journées="", Horaires_fin_journée="",Horaire_final="";
+		try {
+			ps=BDD_Connexion.getConn().prepareStatement(reqSQL);
+			resultat=ps.executeQuery();
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		if (resultat.next()) {
+			Horaires_journées=resultat.getString(1);
+			Horaires_fin_journée=resultat.getString(2);
+			Horaire_final=Horaires_journées+" à "+Horaires_fin_journée;
+		}
+		return Horaire_final;
+	}
+//	FIN DES 4 REQUETES DE TYPE SELECT **************************************************************************************
+	
+	
 	public static Gestionnaire getGestionnaire() {
 		return gest;
 	}
+
+//	public static int getIdPro() {
+//		return IdPro;
+//	}
 }

@@ -61,12 +61,12 @@ html,body{
 	/* opacity: 30%; */
 }
 
-table
+table#horaires
 {
     border-collapse: collapse;
     background-color: white;
 }
-td, th /* Mettre une bordure sur les td ET les th */
+table#horaires td, table#horaires th /* Mettre une bordure sur les td ET les th */
 {
     border: 1px solid black;
 }	
