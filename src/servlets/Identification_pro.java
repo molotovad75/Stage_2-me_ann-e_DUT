@@ -52,13 +52,13 @@ public class Identification_pro extends HttpServlet {
 				récup_nom_enseignes(gest.getNom_user());
 				req.setAttribute("NomEnseigne_site", récup_infos_sites_gestionnaires(gest.getNom_user()));
 				req.setAttribute("NomEnseigne", récup_nom_enseignes(gest.getNom_user()));
-				req.setAttribute("Horaires_Lundi", récupHoraire_jour(gest,1));
-				req.setAttribute("Horaires_Mardi", récupHoraire_jour(gest,2));
-				req.setAttribute("Horaires_Mercredi", récupHoraire_jour(gest,3));
-				req.setAttribute("Horaires_Jeudi", récupHoraire_jour(gest,4));
-				req.setAttribute("Horaires_Vendredi", récupHoraire_jour(gest,5));
-				req.setAttribute("Horaires_Samedi", récupHoraire_jour(gest,6));
-				req.setAttribute("Horaires_Dimanche", récupHoraire_jour(gest,7));
+//				req.setAttribute("Horaires_Lundi", récupHoraire_jour(gest,1));
+//				req.setAttribute("Horaires_Mardi", récupHoraire_jour(gest,2));
+//				req.setAttribute("Horaires_Mercredi", récupHoraire_jour(gest,3));
+//				req.setAttribute("Horaires_Jeudi", récupHoraire_jour(gest,4));
+//				req.setAttribute("Horaires_Vendredi", récupHoraire_jour(gest,5));
+//				req.setAttribute("Horaires_Samedi", récupHoraire_jour(gest,6));
+//				req.setAttribute("Horaires_Dimanche", récupHoraire_jour(gest,7));
 				this.getServletContext().getRequestDispatcher("/WEB-INF/../Partie_Pro-gestionnaire/Espace_gestionnaire.jsp").forward(req, resp);
 			}
 		} catch (ClassNotFoundException e) {
@@ -116,6 +116,7 @@ public class Identification_pro extends HttpServlet {
 				 lsNomEnseigne = result.getString(1);
 		         lsNomSite=result.getString(2);
 		         ls_site_enseigne=lsNomEnseigne+" - "+lsNomSite;
+		        //ls_site_enseigne=lsNomSite;
 		         list_nom_enseigne.add(ls_site_enseigne);
 	       	 }
 	         

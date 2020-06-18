@@ -51,7 +51,13 @@ html,body{
 #choix_site{
 	margin-left: 150px;
 }
-#choix_site,#choix_action,#choix_du_mois,#choix_de_l_année{
+#choix_site{
+	width: 200px;
+	height: 50px;
+}
+
+/* LES BALISES SECTIONS */
+#choix_action,#choix_du_mois,#choix_de_l_année{
 	width: 200px;
 	height: 50px;
 }
@@ -84,8 +90,8 @@ table#horaires td, table#horaires th /* Mettre une bordure sur les td ET les th 
 
 
 #sectionPlanification_crénaux_dispo{
-	margin-left: 560px;
-	margin-top: -50px;
+	margin-left: 360px;
+	margin-top: 10px;
 	
 }
 
@@ -93,6 +99,36 @@ table#horaires td, table#horaires th /* Mettre une bordure sur les td ET les th 
 	background-color: white;
 	
 }
+/* HABILITER UN PARENT ******************************************************************************************************/
+#parent_référence,#conjoint{
+	background-color: #008bff;
+}
+
+#enfant1,#enfant2,#enfant3{
+	background-color: rgba(0,142,255,78);
+}
+
+#parent_référence,#conjoint,#enfant1,#enfant2,#enfant3{
+	width: 250px;	
+}
+
+#conjoint{
+	margin-top: -253px;
+	margin-left: 270px;
+}
+#enfant1{
+	margin-left: 550px;
+	margin-top: -253px;
+}
+#enfant2{
+	margin-left: 840px;
+	margin-top: -326px;
+}
+#enfant3{
+	margin-left: 1130px;
+	margin-top: -326px;
+}
+/* FIN HABILITER UN PARENT ******************************************************************************************************/
 
 footer{
 	background: rgb(0,139,255);

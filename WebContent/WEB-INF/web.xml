@@ -136,6 +136,17 @@
 		<servlet-name>Identification_pro</servlet-name>
 		<url-pattern>/identification_pro</url-pattern> 
 	</servlet-mapping>	
-		
-		
+	
+	<!-- ********************************************************************************* -->
+	<!-- Fichier JAVA MAJ_infos_site -->
+	<servlet>
+		<servlet-name>Choix_action</servlet-name>
+		<servlet-class>servlets.gestionnaire.Choix_action</servlet-class>
+  	</servlet>
+  	
+	<servlet-mapping>
+		<servlet-name>Choix_action</servlet-name>
+		<url-pattern>/identification_pro/Choix_action</url-pattern> 
+	</servlet-mapping>
+	
 </web-app>
