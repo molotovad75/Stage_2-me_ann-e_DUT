@@ -87,7 +87,9 @@ table#horaires td, table#horaires th /* Mettre une bordure sur les td ET les th 
     border: 1px solid black;
 }	
 
-
+#sectionMAJ_site{
+	margin-top: 100px;
+}
 
 #sectionPlanification_crénaux_dispo{
 	margin-left: 360px;

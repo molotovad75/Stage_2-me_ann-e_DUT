@@ -20,7 +20,7 @@ public class Identification_pro extends HttpServlet {
 	private static Gestionnaire gest=null;
 	private static ArrayList<String> list_nom_enseigne=null;
 	private static String Nom_gestionnaire="";
-	
+	private static String lsNomSite = "";
 //	private static int IdPro=0;
 	
 	public static ArrayList<String> getlist_nom_enseigne() {
@@ -52,13 +52,7 @@ public class Identification_pro extends HttpServlet {
 				récup_nom_enseignes(gest.getNom_user());
 				req.setAttribute("NomEnseigne_site", récup_infos_sites_gestionnaires(gest.getNom_user()));
 				req.setAttribute("NomEnseigne", récup_nom_enseignes(gest.getNom_user()));
-//				req.setAttribute("Horaires_Lundi", récupHoraire_jour(gest,1));
-//				req.setAttribute("Horaires_Mardi", récupHoraire_jour(gest,2));
-//				req.setAttribute("Horaires_Mercredi", récupHoraire_jour(gest,3));
-//				req.setAttribute("Horaires_Jeudi", récupHoraire_jour(gest,4));
-//				req.setAttribute("Horaires_Vendredi", récupHoraire_jour(gest,5));
-//				req.setAttribute("Horaires_Samedi", récupHoraire_jour(gest,6));
-//				req.setAttribute("Horaires_Dimanche", récupHoraire_jour(gest,7));
+				req.setAttribute("Nom", gest.getNom_user());
 				this.getServletContext().getRequestDispatcher("/WEB-INF/../Partie_Pro-gestionnaire/Espace_gestionnaire.jsp").forward(req, resp);
 			}
 		} catch (ClassNotFoundException e) {
@@ -117,6 +111,7 @@ public class Identification_pro extends HttpServlet {
 		         lsNomSite=result.getString(2);
 		         ls_site_enseigne=lsNomEnseigne+" - "+lsNomSite;
 		        //ls_site_enseigne=lsNomSite;
+		         Identification_pro.lsNomSite=lsNomSite;
 		         list_nom_enseigne.add(ls_site_enseigne);
 	       	 }
 	         
@@ -251,14 +246,17 @@ public class Identification_pro extends HttpServlet {
 	
 	
 	public static String récupHoraire_jour(Gestionnaire gest, int num_jour) throws ClassNotFoundException, SQLException {
-			String reqSQL="SELECT hcs.Horaires_journée, hcs.Horaires_fin_journée \r\n" + 
-					"FROM `horaires_crenaux_sites` AS hcs, `ouverture_semaine` AS os \r\n" + 
-					"WHERE hcs.Id_jour_semaine="+num_jour+" AND os.IdSiteCreche="+récupIdSite_horaire(gest)+";";
+		String reqSQL="SELECT hcs.Horaires_journée, hcs.Horaires_fin_journée" + 
+		"FROM `horaires_crenaux_sites` AS hcs, `ouverture_semaine` AS os " + 
+		"WHERE hcs.Id_jour_semaine=? AND os.IdSiteCreche=? AND hcs.IdSite=?;";
 		PreparedStatement ps=null;
 		ResultSet resultat=null;
 		String Horaires_journées="", Horaires_fin_journée="",Horaire_final="";
 		try {
 			ps=BDD_Connexion.getConn().prepareStatement(reqSQL);
+			ps.setInt(1, num_jour);
+			ps.setInt(2, récupIdSite_horaire(gest));
+			ps.setInt(3, récupId_site(lsNomSite));
 			resultat=ps.executeQuery();
 			
 			
@@ -276,6 +274,25 @@ public class Identification_pro extends HttpServlet {
 			
 		}
 		return Horaire_final;
+	}
+	
+	public static int récupId_site(String nom_site) throws ClassNotFoundException, SQLException {
+		String reqSQL="SELECT sc.IdCrèche "
+				+ "FROM `site_creche` AS sc "
+				+ "WHERE sc.`Nom Site`=\""+nom_site+"\";";
+		PreparedStatement ps=null;
+		ResultSet resultat=null;
+		int Idcrèche=0;
+		try {
+			ps=BDD_Connexion.getConn().prepareStatement(reqSQL);
+			resultat=ps.executeQuery();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		if (resultat.next()) {
+			Idcrèche=resultat.getInt(1);
+		}
+		return Idcrèche;
 	}
 //	FIN DES 4 REQUETES DE TYPE SELECT **************************************************************************************
 	

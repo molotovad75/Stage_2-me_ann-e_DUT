@@ -172,8 +172,27 @@
 						</div>
 					</section>
 					
-					<section id="">
-					
+					<section id="paramétrage_créneaux_occasionnels">
+						<div id="journée_entière">
+							<p>Journée entière</p>
+							<input id="" value="" type="text" />
+							<input id="" value="" type="text" />
+						</div>
+						<div id="Matin">
+							<p>Matin</p>
+							<input id="" value="" type="text" />
+							<input id="" value="" type="text" />
+						</div>
+						<div id="Après midi">
+							<p>Après midi</p>
+							<input id="" value="" type="text" />
+							<input id="" value="" type="text" />
+						</div>
+						<div id="Fin de journée">
+							<p>Fin de journée</p>
+							<input id="" value="" type="text" />
+							<input id="" value="" type="text" />
+						</div>
 					</section>
 				</section>
 		
