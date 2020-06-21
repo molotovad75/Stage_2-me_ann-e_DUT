@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import bean.Choix;
-import bean.Gestionnaire;
 import servlets.Identification_pro;
 
 public class Choix_action extends HttpServlet {
@@ -24,16 +23,15 @@ public class Choix_action extends HttpServlet {
 		choix.setNomchoix_site(req.getParameter("choix_site"));
 		nom_choix_action=choix.getNomchoix_action();
 		nom_choix_site=choix.getNomchoix_site();
-//		req.setAttribute("Nom", Identification_pro.getGestionnaire().getNom_user());
 		if (nom_choix_action.equals("MAJ informations sites/créneaux")==true) {
 			try {
-				req.setAttribute("Horaires_Lundi", Identification_pro.récupHoraire_jour(Identification_pro.getGestionnaire(),1));
-				req.setAttribute("Horaires_Mardi", Identification_pro.récupHoraire_jour(Identification_pro.getGestionnaire(),2));
-				req.setAttribute("Horaires_Mercredi", Identification_pro.récupHoraire_jour(Identification_pro.getGestionnaire(),3));
-				req.setAttribute("Horaires_Jeudi", Identification_pro.récupHoraire_jour(Identification_pro.getGestionnaire(),4));
-				req.setAttribute("Horaires_Vendredi", Identification_pro.récupHoraire_jour(Identification_pro.getGestionnaire(),5));
-				req.setAttribute("Horaires_Samedi", Identification_pro.récupHoraire_jour(Identification_pro.getGestionnaire(),6));
-				req.setAttribute("Horaires_Dimanche", Identification_pro.récupHoraire_jour(Identification_pro.getGestionnaire(),7));
+				req.setAttribute("Horaires_Lundi", Identification_pro.récupHoraire_jour(Identification_pro.getGestionnaire(),1,nom_choix_site));
+				req.setAttribute("Horaires_Mardi", Identification_pro.récupHoraire_jour(Identification_pro.getGestionnaire(),2,nom_choix_site));
+				req.setAttribute("Horaires_Mercredi", Identification_pro.récupHoraire_jour(Identification_pro.getGestionnaire(),3,nom_choix_site));
+				req.setAttribute("Horaires_Jeudi", Identification_pro.récupHoraire_jour(Identification_pro.getGestionnaire(),4,nom_choix_site));
+				req.setAttribute("Horaires_Vendredi", Identification_pro.récupHoraire_jour(Identification_pro.getGestionnaire(),5,nom_choix_site));
+				req.setAttribute("Horaires_Samedi", Identification_pro.récupHoraire_jour(Identification_pro.getGestionnaire(),6,nom_choix_site));
+				req.setAttribute("Horaires_Dimanche", Identification_pro.récupHoraire_jour(Identification_pro.getGestionnaire(),7,nom_choix_site));
 				
 			} catch (Exception e) {
 				e.getMessage();

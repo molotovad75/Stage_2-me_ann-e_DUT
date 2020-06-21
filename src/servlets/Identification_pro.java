@@ -20,8 +20,7 @@ public class Identification_pro extends HttpServlet {
 	private static Gestionnaire gest=null;
 	private static ArrayList<String> list_nom_enseigne=null;
 	private static String Nom_gestionnaire="";
-	private static String lsNomSite = "";
-//	private static int IdPro=0;
+	//private static String lsNomSite = "";
 	
 	public static ArrayList<String> getlist_nom_enseigne() {
 		return list_nom_enseigne;
@@ -96,23 +95,23 @@ public class Identification_pro extends HttpServlet {
 	
 	
 	public static ArrayList<String> récup_infos_sites_gestionnaires(String pgNom) throws SQLException {
-		String reqSQL1="SELECT e.NomEnseigne, sc.`Nom Site` "
+		String reqSQL1="SELECT sc.`Nom Site` "
 				+ "FROM enseigne AS e,pro_gestionnaire AS pg,site_creche AS sc "
 				+ "WHERE e.NumGestionnaire=pg.IdPro AND sc.Id_Enseigne=e.IdEnseigne AND pg.Nom='"+pgNom+"';";
 		
 		
-		String lsNomEnseigne = "";String lsNomSite = ""; String ls_site_enseigne="";
+		String lsNomSite = "";
 		list_nom_enseigne=new ArrayList<String>();
 		try {
 			Statement state = BDD_Connexion.load_database().createStatement();
 			 ResultSet result = state.executeQuery(reqSQL1);
 			 while(result.next()) {
-				 lsNomEnseigne = result.getString(1);
-		         lsNomSite=result.getString(2);
-		         ls_site_enseigne=lsNomEnseigne+" - "+lsNomSite;
+			//	 lsNomEnseigne = result.getString(1);
+		         lsNomSite=result.getString(1);
+//		         ls_site_enseigne=lsNomEnseigne+" - "+lsNomSite;
 		        //ls_site_enseigne=lsNomSite;
-		         Identification_pro.lsNomSite=lsNomSite;
-		         list_nom_enseigne.add(ls_site_enseigne);
+		       //  Identification_pro.lsNomSite=lsNomSite;
+		         list_nom_enseigne.add(lsNomSite);
 	       	 }
 	         
 	         result.close();
@@ -245,18 +244,16 @@ public class Identification_pro extends HttpServlet {
 	
 	
 	
-	public static String récupHoraire_jour(Gestionnaire gest, int num_jour) throws ClassNotFoundException, SQLException {
-		String reqSQL="SELECT hcs.Horaires_journée, hcs.Horaires_fin_journée" + 
-		"FROM `horaires_crenaux_sites` AS hcs, `ouverture_semaine` AS os " + 
-		"WHERE hcs.Id_jour_semaine=? AND os.IdSiteCreche=? AND hcs.IdSite=?;";
+	public static String récupHoraire_jour(Gestionnaire gest, int num_jour,String nom_site) throws ClassNotFoundException, SQLException {
+		String reqSQL="SELECT hcs.Horaires_journée, hcs.Horaires_fin_journée " + 
+				"FROM horaires_crenaux_sites AS hcs, ouverture_semaine AS os " + 
+				"WHERE hcs.Id_jour_semaine="+num_jour+" AND os.IdSiteCreche="+récupIdSite_horaire(gest)+" "
+						+ "AND hcs.IdSite="+récupId_site(nom_site)+" ;";
 		PreparedStatement ps=null;
 		ResultSet resultat=null;
 		String Horaires_journées="", Horaires_fin_journée="",Horaire_final="";
 		try {
 			ps=BDD_Connexion.getConn().prepareStatement(reqSQL);
-			ps.setInt(1, num_jour);
-			ps.setInt(2, récupIdSite_horaire(gest));
-			ps.setInt(3, récupId_site(lsNomSite));
 			resultat=ps.executeQuery();
 			
 			
