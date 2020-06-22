@@ -22,7 +22,7 @@
 				</p>
 			</div>
 		</div>
-		
+		<h1>Site :<c:forEach items="${ Nom_site }" var="nomsite"><c:out value="${ nomsite }"></c:out></c:forEach></h1>
 		<section id="sectionHabiliter_parents">
 					<div id="parent_référence">
 						<p>Le parent de référence *</p>
@@ -73,6 +73,26 @@
 					</div>
 		</section>
 		
+		<section id="voir_candidatures_parents">
+			<form action="" method="post">
+				<select id="choix_parent">
+				<option disabled="disabled">Demandes d'habilitations parents</option>
+				<c:forEach items="${ nom_prenom }" var="noms_prenoms">
+					<option><c:out value="${ noms_prenoms }"></c:out> </option>
+				</c:forEach>
+			</select>
+			</form>
+			
+			<input type="submit" id="regarder_message" placeholder="Afficher message des parents" name="regarder_message"/>
+			
+			<div id="bloc_message">
+				<p>
+					<c:forEach items="${ Message }" var="message">
+						<option><c:out value="${ message }"></c:out> </option>
+					</c:forEach>
+				</p>
+			</div>
+		</section>
 		
 		<footer>
 			<p> Bonjour, 

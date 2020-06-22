@@ -1,7 +1,7 @@
 package bean;
 
 public class Gestionnaire {
-//	ATTRIBUTS IDENTIFICATION
+	//	ATTRIBUTS IDENTIFICATION
 	private String nom_user;
 	private String mdp;
 

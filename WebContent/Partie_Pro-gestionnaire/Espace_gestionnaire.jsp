@@ -52,16 +52,13 @@
 		
 		<div id="contenu_page">
 				<h1>Espace Pro/gestionnaire</h1>
-				<!-- <c:forEach items="${ Prenom }" var="item">
-					<p>Bienvenue, <c:out value="${ item }" /></p>
-				</c:forEach> -->
 				<form action="/Plateforme_web_B_and_B/identification_pro/Choix_action" method="post">
-					<p id="libellé_enseigne"><c:forEach items="${ NomEnseigne }" var="NomEnseignes"><c:out value="${ NomEnseignes }"/></c:forEach></p>
+					<p id="libellé_enseigne">Enseigne : <c:forEach items="${ NomEnseigne }" var="NomEnseignes"><c:out value="${ NomEnseignes }"/></c:forEach></p>
 					<section id="choix_site_action">
 										
 						<select id="choix_site" name="choix_site">
 							<option disabled selected>Choisissez votre site *</option>
-							<c:forEach items="${ NomEnseigne_site }" var="NomEnseigne_sites">
+							<c:forEach items="${ NomEnseigne_site }" var="NomEnseigne_sites"> <!-- VA AFFICHER LE NOM DU SITE -->
 								<option><c:out value="${ NomEnseigne_sites }" /></option>
 							</c:forEach>
 						</select>

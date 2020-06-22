@@ -22,12 +22,13 @@
 				</p>
 			</div>
 		</div>
-		
+		<h1>Site : <c:forEach items="${ Nom_site }" var="nomsite"><c:out value="${ nomsite }"></c:out></c:forEach></h1>
 		<section id="sectionMAJ_site">
 					<sql:setDataSource var="dataSource" driver="com.mysql.cj.jdbc.Driver"
   					url="jdbc:mysql://localhost:3306/bdd_ouicreches" user="root" password=""/>
 					<section id="infos+horaires">
 						<div id="information_siteCrèche">
+						
 							<table>
 								<tr>
 									<td>
@@ -35,22 +36,26 @@
 									</td>
 									
 									<td>
-										N°<input type="text" id="numéro" placeholder="" name="numéro"/>
+										N°<input type="text" id="numéro" placeholder="" name="numéro"  value=""/>
+											<c:forEach items="${ Num }" var="nums">
+													<p><c:out value="${ nums }" /></p>
+											</c:forEach>
+											
 									</td>
 									<td>
-										<input type="text" id="rue" placeholder="" name="rue"/>
+										Voie<input type="text" id="voie" placeholder="" name="voie" value=""/>
 									</td>
 									<td>
 										Complément
-										<input type="text" id="complément" placeholder="" name="complément"/>
+										<input type="text" id="complément" placeholder="" name="complément" value=""/>
 									</td>
 									<td>
 										CP
-										<input type="number" id="cp" placeholder="" name="CP"/>
+										<input type="number" id="cp" placeholder="" name="CP" value=""/>
 									</td>
 									<td>
 										Ville
-										<input type="text" id="ville" placeholder="" name="ville"/>										
+										<input type="text" id="ville" placeholder="" name="ville" value=""/>										
 									</td>
 								</tr>
 								<tr>
@@ -59,15 +64,15 @@
 									</td>
 									<td>
 										Tél
-										<input type="tel" id="téléphone" placeholder="" name="telephone"/> 
+										<input type="tel" id="téléphone" placeholder="" name="telephone" value=""/> 
 									</td>
 									<td>
 										Mail contact
-										<input type="email" id="mail" placeholder="" name="mail"/>
+										<input type="email" id="mail" placeholder="" name="mail" value=""/>
 									</td>
 									<td>
 										Nom contact
-										<input type="text" id="nom_contact" placeholder="" name="nom_contact"/>
+										<input type="text" id="nom_contact" placeholder="" name="nom_contact" value=""/>
 									</td>
 								</tr>
 								
@@ -84,7 +89,7 @@
 									</td>
 									<td>
 										Capacité*
-										<input type="number" id="nb_places" placeholder="" name="nb_places"/> 
+										<input type="number" id="nb_places" placeholder="" name="nb_places" value=""/> 
 										places
 									</td>
 								</tr>
@@ -175,23 +180,23 @@
 					<section id="paramétrage_créneaux_occasionnels">
 						<div id="journée_entière">
 							<p>Journée entière</p>
-							<input id="" value="" type="text" />
-							<input id="" value="" type="text" />
+							<p>Début</p><input id="" value="" type="text" name=""/>
+							<p>Fin</p><input id="" value="" type="text" name=""/>
 						</div>
 						<div id="Matin">
 							<p>Matin</p>
-							<input id="" value="" type="text" />
-							<input id="" value="" type="text" />
+							<p>Début</p><input id="" value="" type="text" name=""/>
+							<p>Fin</p><input id="" value="" type="text" name=""/>
 						</div>
-						<div id="Après midi">
+						<div id="Après_midi">
 							<p>Après midi</p>
-							<input id="" value="" type="text" />
-							<input id="" value="" type="text" />
+							<p>Début</p><input id="" value="" type="text" name=""/>
+							<p>Fin</p><input id="" value="" type="text" name=""/>
 						</div>
-						<div id="Fin de journée">
+						<div id="Fin_de_journée">
 							<p>Fin de journée</p>
-							<input id="" value="" type="text" />
-							<input id="" value="" type="text" />
+							<p>Début</p><input id="" value="" type="text" name=""/>
+							<p>Fin</p><input id="" value="" type="text" name=""/>
 						</div>
 					</section>
 				</section>

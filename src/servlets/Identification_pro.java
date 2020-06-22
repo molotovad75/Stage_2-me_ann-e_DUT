@@ -18,13 +18,10 @@ import jdbc.BDD_Connexion;
 public class Identification_pro extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static Gestionnaire gest=null;
-	private static ArrayList<String> list_nom_enseigne=null;
+	private static ArrayList<String> list_nom_enseigne=null,list_horaires_dans_la_journée=null;
 	private static String Nom_gestionnaire="";
-	//private static String lsNomSite = "";
 	
-	public static ArrayList<String> getlist_nom_enseigne() {
-		return list_nom_enseigne;
-	}
+	
 	
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -242,7 +239,24 @@ public class Identification_pro extends HttpServlet {
 		return IdSite;
 	}
 	
-	
+	public static int récupId_site(String nom_site) throws ClassNotFoundException, SQLException {
+		String reqSQL="SELECT sc.IdCrèche "
+				+ "FROM `site_creche` AS sc "
+				+ "WHERE sc.`Nom Site`=\""+nom_site+"\";";
+		PreparedStatement ps=null;
+		ResultSet resultat=null;
+		int Idcrèche=0;
+		try {
+			ps=BDD_Connexion.getConn().prepareStatement(reqSQL);
+			resultat=ps.executeQuery();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		if (resultat.next()) {
+			Idcrèche=resultat.getInt(1);
+		}
+		return Idcrèche;
+	}
 	
 	public static String récupHoraire_jour(Gestionnaire gest, int num_jour,String nom_site) throws ClassNotFoundException, SQLException {
 		String reqSQL="SELECT hcs.Horaires_journée, hcs.Horaires_fin_journée " + 
@@ -273,32 +287,55 @@ public class Identification_pro extends HttpServlet {
 		return Horaire_final;
 	}
 	
-	public static int récupId_site(String nom_site) throws ClassNotFoundException, SQLException {
-		String reqSQL="SELECT sc.IdCrèche "
-				+ "FROM `site_creche` AS sc "
-				+ "WHERE sc.`Nom Site`=\""+nom_site+"\";";
+	public static ArrayList<String> récup_Horaire_matin_aprèm_soir(Gestionnaire gest, int num_jour,String nom_site) throws ClassNotFoundException, SQLException{
+		String reqSQL="SELECT hcs.Horaires_Matin , hcs.Horaires_fin_matin , hcs.Horaires_Aprem_midi , hcs.Horaires_fin_aprem , hcs.Horaires_début_soirée , hcs.Horaires_fin_soirée  " + 
+				"FROM horaires_crenaux_sites AS hcs, ouverture_semaine AS os " + 
+				"WHERE hcs.Id_jour_semaine="+num_jour+" AND os.IdSiteCreche="+récupIdSite_horaire(gest)+" "
+						+ "AND hcs.IdSite="+récupId_site(nom_site)+" ;";
 		PreparedStatement ps=null;
 		ResultSet resultat=null;
-		int Idcrèche=0;
+		String Horaires_Matin="", Horaires_fin_matin="",
+			Horaires_Aprem_midi="",Horaires_fin_aprem="",
+			Horaires_début_soirée="",Horaires_fin_soirée="";
 		try {
 			ps=BDD_Connexion.getConn().prepareStatement(reqSQL);
 			resultat=ps.executeQuery();
+			
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		if (resultat.next()) {
-			Idcrèche=resultat.getInt(1);
+			Horaires_Matin=resultat.getString(1);
+			Horaires_fin_matin=resultat.getString(2);
+			Horaires_Aprem_midi=resultat.getString(3);
+			Horaires_fin_aprem=resultat.getString(4);
+			Horaires_début_soirée=resultat.getString(5);
+			Horaires_fin_soirée=resultat.getString(6);
+			list_horaires_dans_la_journée.add(Horaires_Matin);
+			list_horaires_dans_la_journée.add(Horaires_fin_matin);
+			list_horaires_dans_la_journée.add(Horaires_Aprem_midi);
+			list_horaires_dans_la_journée.add(Horaires_fin_aprem);
+			list_horaires_dans_la_journée.add(Horaires_début_soirée);
+			list_horaires_dans_la_journée.add(Horaires_fin_soirée);
+			
+//			if (Horaires_journées.equals("fermé")==true) {
+//				Horaire_final=Horaires_journées;
+//			}else {
+//				Horaire_final=Horaires_journées+" à "+Horaires_fin_journée;
+//			}
+			
 		}
-		return Idcrèche;
+		return list_horaires_dans_la_journée;
 	}
+	
 //	FIN DES 4 REQUETES DE TYPE SELECT **************************************************************************************
 	
 	
 	public static Gestionnaire getGestionnaire() {
 		return gest;
 	}
-
-//	public static int getIdPro() {
-//		return IdPro;
-//	}
+	public static ArrayList<String> getlist_nom_enseigne() {
+		return list_nom_enseigne;
+	}
 }

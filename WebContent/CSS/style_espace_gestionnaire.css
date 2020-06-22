@@ -99,9 +99,40 @@ table#horaires td, table#horaires th /* Mettre une bordure sur les td ET les th 
 
 #grille_saisie{
 	background-color: white;
+	width: 1000px;
+	height: 500px;	
+}
+
+#journée_entière,#Matin,#Après_midi,#Fin_de_journée{
+	background: rgb(0,139,255);
+	background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	width: 150px;
+	height: 200px;
+}
+
+#paramétrage_créneaux_occasionnels{
+	margin-left: 15px;
+}
+#Matin{
+	margin-left: 200px;
+	margin-top:-215px;
+}
+
+#Après_midi{
+	margin-left: 400px;
+	margin-top: -215px;
+}
+#Fin_de_journée{
+	margin-left: 600px;
+	margin-top: -215px;
+}
+
+/* HABILITER UN PARENT ******************************************************************************************************/
+#sectionHabiliter_parents{
+ margin-left: 15px;	
 	
 }
-/* HABILITER UN PARENT ******************************************************************************************************/
+
 #parent_référence,#conjoint{
 	background-color: #008bff;
 }

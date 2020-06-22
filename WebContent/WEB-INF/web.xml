@@ -138,7 +138,7 @@
 	</servlet-mapping>	
 	
 	<!-- ********************************************************************************* -->
-	<!-- Fichier JAVA MAJ_infos_site -->
+	<!-- Fichier JAVA MAJ_infos_site, Habilitation parents, Planification crénaux -->
 	<servlet>
 		<servlet-name>Choix_action</servlet-name>
 		<servlet-class>servlets.gestionnaire.Choix_action</servlet-class>

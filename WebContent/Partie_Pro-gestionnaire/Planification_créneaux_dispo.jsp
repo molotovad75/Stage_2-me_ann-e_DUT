@@ -53,34 +53,69 @@
 						<caption>Grille de saisie des créneaux disponibles à proposer par le gestionnaire</caption>
 						<thead>
 	   						<tr> <!-- AJOUTER LA LES DATES EN DESSOUS AVEC LA JSTL -->
-	       						<td><a></a></td>
+	       						<td>#</td>
+	       						
+	       						<td>--</td>
 	       						<td>Lundi<br></td>
+	       						<td>--</td>
+	       						
+	       						<td>--</td>
 	       						<td>Mardi<br></td>
+	       						<td>--</td>
+	       						
+	       						<td>--</td>
 	       						<td>Mercredi<br></td>
+	       						<td>--</td>
+	       						
+	       						<td>--</td>
 	       						<td>Jeudi<br></td>
+	       						<td>--</td>
+	       						
+	       						<td>--</td>
 	       						<td>Vendredi<br></td>
+	       						<td>--</td>
+	       						
+	       						<td>--</td>
 	       						<td>Samedi<br></td>
+	       						<td>--</td>
 	   						</tr>
    						</thead>
    						
    						<tbody>
 	   						<tr>
-	       						<td>8h00</td><!-- rowspan doit être =4 ou moins -->
-	       						<td rowspan="4">26 ans</td>
-	       						<td rowspan="4">26 ans</td>
-	       						<td rowspan="4">26 ans</td>
+	       						<td>8h00</td>
+	       							<td rowspan="1">
+	       								<!-- Début bâton journée entière : Lundi -->
+	       							</td> 
+	       							<td rowspan="1">
+	       								<!-- Début bâton Matin : Lundi -->
+	       							</td>
+	       							<td rowspan="1">
+	       								<!-- Début bâton Après-midi : Lundi -->
+	       							</td>
+	       							
 	   						</tr>
 	   						<tr>
-	       						<td>13h00</td><!-- rowspan doit être =3 ou moins -->
-	       						<td rowspan="3">26 ans</td>
+	       						<td>13h00</td>
+		       						<td rowspan="1">
+		       							26 ans
+		       							<!-- Lundi -->
+		       						</td>
+	       							<td rowspan="1"> 
+	       								Viva 
+	       								<!-- Mardi je commence à 13h -->
+	       							</td>	
 	   						</tr>
 	   						<tr>
 	       						<td>17h00</td> <!-- rowspan doit être =2 ou moins -->
-	       						<td rowspan="2">26 ans</td>
+	       							<td rowspan="1">
+	       								26 ans
+	       								<!-- Lundi -->
+	       							</td>
 	   						</tr>
 	   						<tr>
 	       						<td>18h00</td>
-	       						
+	       						<td rowspan="1">26 ans</td><!-- Lundi -->
 	       						
 	   						</tr>
    						</tbody>
