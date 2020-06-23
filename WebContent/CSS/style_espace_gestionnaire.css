@@ -161,6 +161,19 @@ table#horaires td, table#horaires th /* Mettre une bordure sur les td ET les th 
 	margin-left: 1130px;
 	margin-top: -326px;
 }
+
+
+#bloc_message{
+	/* display: none; */
+	background-color: white;
+	width:400px;
+	height: 200px;	
+}
+
+#bloc_message,#choix_parent{
+	margin-left: 20px;
+	
+}
 /* FIN HABILITER UN PARENT ******************************************************************************************************/
 
 footer{

@@ -138,7 +138,7 @@
 	</servlet-mapping>	
 	
 	<!-- ********************************************************************************* -->
-	<!-- Fichier JAVA MAJ_infos_site, Habilitation parents, Planification crénaux -->
+	<!-- Fichier JSP MAJ_infos_site, Habilitation parents, Planification crénaux -->
 	<servlet>
 		<servlet-name>Choix_action</servlet-name>
 		<servlet-class>servlets.gestionnaire.Choix_action</servlet-class>
@@ -147,6 +147,30 @@
 	<servlet-mapping>
 		<servlet-name>Choix_action</servlet-name>
 		<url-pattern>/identification_pro/Choix_action</url-pattern> 
+	</servlet-mapping>
+	
+	<!-- ********************************************************************************* -->
+	<!-- Fichier JAVA Habiliter parent (Afficher message) -->
+	<servlet>
+		<servlet-name>Messages_parents</servlet-name>
+		<servlet-class>servlets.gestionnaire.Messages_parents</servlet-class>
+  	</servlet>
+  	
+	<servlet-mapping>
+		<servlet-name>Messages_parents</servlet-name>
+		<url-pattern>/identification_pro/messages_parents</url-pattern> 
+	</servlet-mapping>
+	
+	<!-- ********************************************************************************* -->
+	<!-- Fichier JAVA Habiliter parent -->
+	<servlet>
+		<servlet-name>Habiliter_parents</servlet-name>
+		<servlet-class>servlets.gestionnaire.Habiliter_parents</servlet-class>
+  	</servlet>
+  	
+	<servlet-mapping>
+		<servlet-name>Habiliter_parents</servlet-name>
+		<url-pattern>/identification_pro/habiliter_parents</url-pattern> 
 	</servlet-mapping>
 	
 </web-app>

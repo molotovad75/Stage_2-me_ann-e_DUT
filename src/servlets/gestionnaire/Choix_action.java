@@ -21,7 +21,9 @@ public class Choix_action extends HttpServlet {
 	private static Choix choix=null;
 	private static String nom_choix_action="",nom_choix_site="";
 	private static Site site=null;
-
+	private static ArrayList<String> Nom_prenom;
+	private static ResultSet resultat=null;
+	
 	
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -113,12 +115,14 @@ public class Choix_action extends HttpServlet {
 			ps=null;
 			resultat=null;
 			ArrayList<String> Nom_et_prenom=new ArrayList<String>();
+			
 			try {
 				ps=BDD_Connexion.getConn().prepareStatement(reqSQL2);
 				resultat=ps.executeQuery();
 				while (resultat.next()) {
 					Nom_et_prenom.add(resultat.getString(1)+" "+resultat.getString(2));
 				}
+				Nom_prenom=Nom_et_prenom;
 				req.setAttribute("nom_prenom", Nom_et_prenom);
 				
 			} catch (ClassNotFoundException e) {
@@ -130,26 +134,19 @@ public class Choix_action extends HttpServlet {
 			
 			this.getServletContext().getRequestDispatcher("/WEB-INF/../Partie_Pro-gestionnaire/Habilitation_parents.jsp").forward(req, resp);
 		}
-//		Le code suivant c pour lire les messages
-		
-//		ps=null;
-//		resultat=null;
-//		ArrayList<String> message=new ArrayList<String>();
-//		try {
-//			String reqSQL3="SELECT dip.Message "
-//					+ " FROM `demande_inscription_parent` AS dip "
-//					+ "WHERE dip.Nom="+resultat.getString(1)+" AND dip.Prénom="+resultat.getString(2)+";";
-//			ps=BDD_Connexion.getConn().prepareStatement(reqSQL3);
-//			resultat=ps.executeQuery();
-//			while (resultat.next()) {
-//				message.add(resultat.getString(1)+" "+resultat.getString(2));
-//			}
-//			req.setAttribute("Message", message);
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		} catch (ClassNotFoundException e) {
-//			e.printStackTrace();
-//		}
 	}
-	
+	public static String getnom_choix_site() {
+		return nom_choix_site;
+	}
+
+	public static ResultSet getResultat() {
+		return Choix_action.resultat;
+	}
+
+	public static void setResultat(ResultSet resultat) {
+		Choix_action.resultat = resultat;
+	}
+	public static ArrayList<String> getNom_prenom() {
+		return Nom_prenom;
+	}
 }

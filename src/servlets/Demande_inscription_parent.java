@@ -25,7 +25,9 @@ public class Demande_inscription_parent extends HttpServlet {
 		parent.setEmail(req.getParameter("email_parent"));
 		parent.setTéléphone(req.getParameter("tel_parent"));
 		parent.setMessage(req.getParameter("message"));
-		
+		if (parent.getMessage().equals("")==true) {
+			parent.setMessage("Bonjour, je souahite en savoir plus sur la solution OuiCrèches, merci de me recontacter.");
+		}
 		try {
 			ajouter_demande_parent(parent);
 		} catch (ClassNotFoundException e) {

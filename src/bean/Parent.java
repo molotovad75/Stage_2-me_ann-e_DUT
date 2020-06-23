@@ -7,6 +7,8 @@ public class Parent {
 	private String mdp;
 	private String téléphone;
 	private String message;
+	private String Civilité;
+	
 	public String getNom() {
 		return nom;
 	}
@@ -42,5 +44,11 @@ public class Parent {
 	}
 	public void setMessage(String message) {
 		this.message = message;
+	}
+	public String getCivilité() {
+		return Civilité;
+	}
+	public void setCivilité(String civilité) {
+		Civilité = civilité;
 	}
 }
