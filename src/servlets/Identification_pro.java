@@ -34,7 +34,7 @@ public class Identification_pro extends HttpServlet {
 		}
 		gest = new Gestionnaire();
 		gest.setNom_user(req.getParameter("Id_pro"));
-		gest.setMdp(req.getParameter("mdp_parent"));
+		gest.setMdp(req.getParameter("mdp_pro"));
 		
 		try {
 			try {
@@ -50,7 +50,6 @@ public class Identification_pro extends HttpServlet {
 				récup_nom_enseignes(gest.getNom_user());
 				req.setAttribute("NomEnseigne_site", récup_infos_sites_gestionnaires(gest.getNom_user()));
 				req.setAttribute("NomEnseigne", récup_nom_enseignes(gest.getNom_user()));
-//				req.setAttribute("Nom", gest.getNom_user());
 				HttpSession session=req.getSession();
 				session.setAttribute("Nom", gest.getNom_user());
 				this.getServletContext().getRequestDispatcher("/WEB-INF/../Partie_Pro-gestionnaire/Espace_gestionnaire.jsp").forward(req, resp);
@@ -298,6 +297,7 @@ public class Identification_pro extends HttpServlet {
 						+ "AND hcs.IdSite="+récupId_site(nom_site)+" ;";
 		PreparedStatement ps=null;
 		ResultSet resultat=null;
+		list_horaires_dans_la_journée=new ArrayList<String>();
 		String Horaires_Matin="", Horaires_fin_matin="",
 			Horaires_Aprem_midi="",Horaires_fin_aprem="",
 			Horaires_début_soirée="",Horaires_fin_soirée="";

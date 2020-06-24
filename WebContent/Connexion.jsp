@@ -64,15 +64,20 @@
 				<h2>Besoin d'une garde d'enfant occasionnelle ?  Réservez rapidement au sein de votre crèche partenaire</h2>
 				<section id="form_connexion">
 					<div id="Identification_parents">
-						<form action="" method="post">
+						<form action="/Plateforme_web_B_and_B/identification_parent" method="post">
 							<p id="ident">J'ai un compte parent</p>
 							<p id="ident">Je m'identifie</p>
 							<p>
-								<input type="text" id="Id_parent" placeholder="Nom d'utilisateur"/><br><br>
-								<input type="password" id="mdp_parent" placeholder="Mot de passe utilisateur"/><br><br>
-								<input type="submit" id="Se_connecter_parent" placeholder="Se connecter"/>
+								<input type="text" id="Id_parent" placeholder="Nom d'utilisateur" name="Id_parent"/><br><br>
+								<input type="password" id="mdp_parent" placeholder="Mot de passe utilisateur" name="mdp_parent"/><br><br>
+								<input type="submit" id="Se_connecter_parent" value="Se connecter"/>
 								<a href="" id="mdp_oubli">Mot de passe oublié</a>
+								
 							</p>
+							<!-- JSTL -->
+							<c:forEach var="message_erreur_auth_parents" items="${message_erreur_auth_parent}" >
+									<c:out value="${message_erreur_auth_parents}" />
+							</c:forEach>
 						</form>
 						
 					</div>	
@@ -87,7 +92,7 @@
 								<input type="email" id="email_parent" placeholder="email *"name="email_parent"/><br><br> <!-- Id_parent -->
 								<input type="tel" id="tel_parent" placeholder="téléphone parents *"name="tel_parent"/><br><br> <!-- tel_parent -->
 								<textarea rows="8" cols="45" maxlength="65525" name="message" id="message" placeholder="Bonjour, je souahite en savoir plus sur la solution OuiCrèches, merci de me recontacter."></textarea>
-								<input type="submit" id="Se_connecter_parent" placeholder="S'inscrire" name="Se_connecter"/>
+								<input type="submit" id="Se_connecter_parent" value="Envoyer au gestionnaire OuiCrèche"  name="Se_connecter"/>
 							</p>
 							<!-- JSTL -->
 							<c:forEach var="item" items="${mess_erreur_nb_caractère}" >
@@ -102,8 +107,8 @@
 							<p id="ident">Je m'identifie</p>
 							<p>
 								<input type="text" id="Id_pro" placeholder="Nom pro" name="Id_pro"/><br><br>
-								<input type="password" id="mdp_parent" placeholder="Mot de passe pro" name="mdp_parent"/><br><br>
-								<input type="submit" id="Se_connecter_pro" placeholder="Se connecter" name="Se_connecter_pro"/>
+								<input type="password" id="mdp_pro" placeholder="Mot de passe pro" name="mdp_pro"/><br><br>
+								<input type="submit" id="Se_connecter_pro" value="Se connecter" name="Se_connecter_pro"/>
 								<a href="" id="mdp_oubli">Mot de passe oublié</a>
 							</p>
 							<!-- JSTL -->
@@ -124,7 +129,7 @@
 								<input type="email" id="email_pro" placeholder="email *" name="email_pro"/><br><br> 
 								<input type="tel" id="tel_pro" placeholder="Téléphone pro *" name="tel_pro"/><br><br>
 								<textarea  rows="8" cols="45" maxlength="65525" name="message" id="message" placeholder="Bonjour, je souahite en savoir plus sur la solution OuiCrèches, merci de me recontacter."></textarea>
-								<input type="submit" id="Se_connecter_pro" placeholder="S'inscrire" name="Se_connecter"/>
+								<input type="submit" id="Se_connecter_pro" value="Envoyer au gestionnaire OuiCrèche" name="Se_connecter"/>
 							</p>
 							<!-- JSTL -->
 							<c:forEach var="item" items="${err_mail}" >

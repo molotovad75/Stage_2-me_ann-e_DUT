@@ -22,8 +22,6 @@ public class Messages_parents extends HttpServlet {
 		PreparedStatement ps=null;
 		ResultSet resultat=null;
 		ArrayList<String> message=new ArrayList<String>();
-//		ArrayList<String> nom=new ArrayList<String>();
-//		ArrayList<String> prénom=new ArrayList<String>();
 		try {
 				
 			String reqSQL3="SELECT dip.Message "
@@ -33,20 +31,14 @@ public class Messages_parents extends HttpServlet {
 			resultat=ps.executeQuery();
 			if (resultat.next()) {
 				message.add(resultat.getString(1));
-				
-//				nom.add(resultat.getString(2));
-//				prénom.add(resultat.getString(3));
-				
 			}
 			req.setAttribute("Message", message);
-//			req.setAttribute("Nom_parent", nom);
-//			req.setAttribute("Prénom_parent", prénom);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		req.setAttribute("Nom", Identification_pro.getGestionnaire().getNom_user());
+		
 		req.setAttribute("Nom_site", Choix_action.getnom_choix_site());
 		req.setAttribute("nom_prenom", Choix_action.getNom_prenom());
 		req.setAttribute("Nom_prénom_parent_selectionné", req.getParameter("choix_parent"));

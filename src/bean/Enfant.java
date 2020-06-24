@@ -1,10 +1,9 @@
 package bean;
 
-import java.sql.Date;
+//import java.sql.Date;
 
 public class Enfant {
-	private String nom,Prénom1,Prénom2;
-	private Date date_naiss;
+	private String nom,Prénom1,Prénom2,date_naiss;
 	public String getNom() {
 		return nom;
 	}
@@ -23,11 +22,11 @@ public class Enfant {
 	public void setPrénom2(String prénom2) {
 		Prénom2 = prénom2;
 	}
-	public Date getDate_naiss() {
+	public String getDate_naiss() {
 		return date_naiss;
 	}
-	public void setDate_naiss(Date date_naiss) {
-		this.date_naiss = date_naiss;
+	public void setDate_naiss(String date_naiss2) {
+		this.date_naiss = date_naiss2;
 	}
 	
 }

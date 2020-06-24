@@ -187,4 +187,33 @@
 		<url-pattern>/identification_pro/habiliter_parents</url-pattern> 
 	</servlet-mapping>
 	
+	
+	<!-- ********************************************************************************* -->
+	<!-- Fichier JAVA Identification parent -->
+	<servlet>
+		<servlet-name>Identification_parent</servlet-name>
+		<servlet-class>servlets.Identification_parent</servlet-class>
+  	</servlet>
+  	
+	<servlet-mapping>
+		<servlet-name>Identification_parent</servlet-name>
+		<url-pattern>/identification_parent</url-pattern> 
+	</servlet-mapping>	
+	
+	
+	<!-- ********************************************************************************* -->
+	<!-- Fichier JAVA compte parent -->
+	<servlet>
+		<servlet-name>Compte_parent</servlet-name>
+		<servlet-class>servlets.parents.Compte_parent</servlet-class>
+  	</servlet>
+  	
+	<servlet-mapping>
+		<servlet-name>Compte_parent</servlet-name>
+		<url-pattern>/identification_parent/compte_parent</url-pattern> 
+	</servlet-mapping>
+	
+	
+	
+	
 </web-app>

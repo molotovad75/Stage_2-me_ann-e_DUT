@@ -30,6 +30,7 @@ public class Habiliter_parents extends HttpServlet {
 		} catch (SQLException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}
+		
 		Parent par=new Parent();
 		Conjoint conj=new Conjoint();
 		Enfant e=new Enfant();
@@ -70,16 +71,9 @@ public class Habiliter_parents extends HttpServlet {
 				}
 				
 			}
-			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-			String date=req.getParameter("date_naiss1");
-			Date date_naiss = null;
-			try {
-				date_naiss = sdf.parse(date);
-			} catch (ParseException e1) {
-				e1.printStackTrace();
-			}
 			
-			e.setDate_naiss((java.sql.Date) date_naiss);
+			
+			e.setDate_naiss(req.getParameter("date_naiss1"));
 			e.setNom(req.getParameter("nom_enfant1"));
 			e.setPrénom1(req.getParameter("prénom_enfant1"));
 			e.setPrénom2(req.getParameter("prénom2_enfant1"));
@@ -283,7 +277,7 @@ public class Habiliter_parents extends HttpServlet {
 			ps.setString(1, enfant.getNom());
 			ps.setString(2, enfant.getPrénom1());
 			ps.setString(3, enfant.getPrénom2());
-			ps.setDate(4, enfant.getDate_naiss());
+			ps.setString(4,	enfant.getDate_naiss());
 			ps.setInt(5, trouver_Idparents_enfants());
 		} catch (Exception e) {
 			e.getMessage();
@@ -291,7 +285,8 @@ public class Habiliter_parents extends HttpServlet {
 	}
 	
 	public static int trouver_Idparents_enfants() {
-		String reqSQLtrouver_Idparents_enfants="SELECT p.IdParent "
+		String reqSQLtrouver_Idparents_enfants=
+				  "SELECT p.IdParent "
 				+ "FROM parents AS p "
 				+ "WHERE p.NomParent_référence="+parent.getNom()+" "
 				+ "AND p.Email="+parent.getEmail()+" "

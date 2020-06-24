@@ -87,13 +87,13 @@ public class Choix_action extends HttpServlet {
 			req.setAttribute("Nom_site", nom_choix_site);
 			
 			try {
-				req.setAttribute("Horaires_Lundi", Identification_pro.récup_Horaire_matin_aprèm_soir(Identification_pro.getGestionnaire(),1,nom_choix_site).get(0));
-				req.setAttribute("Horaires_Mardi", Identification_pro.récup_Horaire_matin_aprèm_soir(Identification_pro.getGestionnaire(),2,nom_choix_site).get(1));
-				req.setAttribute("Horaires_Mercredi", Identification_pro.récup_Horaire_matin_aprèm_soir(Identification_pro.getGestionnaire(),3,nom_choix_site).get(2));
-				req.setAttribute("Horaires_Jeudi", Identification_pro.récup_Horaire_matin_aprèm_soir(Identification_pro.getGestionnaire(),4,nom_choix_site).get(3));
-				req.setAttribute("Horaires_Vendredi", Identification_pro.récup_Horaire_matin_aprèm_soir(Identification_pro.getGestionnaire(),5,nom_choix_site).get(4));
-				req.setAttribute("Horaires_Samedi", Identification_pro.récup_Horaire_matin_aprèm_soir(Identification_pro.getGestionnaire(),6,nom_choix_site).get(5));
-				req.setAttribute("Horaires_Dimanche", Identification_pro.récup_Horaire_matin_aprèm_soir(Identification_pro.getGestionnaire(),7,nom_choix_site).get(6));
+				req.setAttribute("Horaires_Lundi", Identification_pro.récup_Horaire_matin_aprèm_soir(Identification_pro.getGestionnaire(),1,nom_choix_site)); //a la fin des 6 ligne suivantes + celle ci je mettait .get(i) i étant un chiffre
+				req.setAttribute("Horaires_Mardi", Identification_pro.récup_Horaire_matin_aprèm_soir(Identification_pro.getGestionnaire(),2,nom_choix_site));
+				req.setAttribute("Horaires_Mercredi", Identification_pro.récup_Horaire_matin_aprèm_soir(Identification_pro.getGestionnaire(),3,nom_choix_site));
+				req.setAttribute("Horaires_Jeudi", Identification_pro.récup_Horaire_matin_aprèm_soir(Identification_pro.getGestionnaire(),4,nom_choix_site));
+				req.setAttribute("Horaires_Vendredi", Identification_pro.récup_Horaire_matin_aprèm_soir(Identification_pro.getGestionnaire(),5,nom_choix_site));
+				req.setAttribute("Horaires_Samedi", Identification_pro.récup_Horaire_matin_aprèm_soir(Identification_pro.getGestionnaire(),6,nom_choix_site));
+				req.setAttribute("Horaires_Dimanche", Identification_pro.récup_Horaire_matin_aprèm_soir(Identification_pro.getGestionnaire(),7,nom_choix_site));
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			} catch (SQLException e) {

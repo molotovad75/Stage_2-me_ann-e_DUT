@@ -14,13 +14,16 @@
 		<div id="btns_connexion">
 			<img alt="" src=".\..\Images\OuiCr%E8chesLogo.png" id="logoBandB">
 			
-			<div id="libellé_espace_pro">
-				<p>Pro
-					<c:forEach var="item" items="${Nom}" >
-						<c:out value="${item}" />
-					</c:forEach>
-				</p>
-			</div>
+			<nav id="libellé_espace_pro">
+				<ul>
+					<li><a href="#" id="dérouleur_pro">Pro <c:forEach var="item" items="${Nom}" ><c:out value="${item}" /></c:forEach></a>
+						<ul class="sous">
+							<li><a href="" id="mon_compte">Mon compte</a></li>
+							<li><a href="/Plateforme_web_B_and_B/deconnexion" id="se_déconnecter">Se déconnecter</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
 		</div>
 		<h1>Site :<c:forEach items="${ Nom_site }" var="nomsite"><c:out value="${ nomsite }"></c:out></c:forEach></h1>
 		<section id="sectionHabiliter_parents">
@@ -65,14 +68,14 @@
 						</div>
 						<div id="enfant2">
 							<p>Enfant 2</p>
-							<p>Date de naissance *</p><input type="text" id="date_naiss" name="date_naiss2" min="2017-04-01" required>
+							<p>Date de naissance *</p><input type="text" id="date_naiss" name="date_naiss2" >
 							<p>Nom *</p><input type="text" id="Nom" placeholder="" name="nom_enfant2"/>
 							<p>Prénom 1 *</p><input type="text" id="Nom" placeholder="" name="prénom_enfant2"/>
 							<p>Prénom 2</p><input type="text" id="Nom" placeholder="" name="prénom2_enfant2"/>
 						</div>
 						<div id="enfant3">
 							<p>Enfant 3</p>
-							<p>Date de naissance *</p><input type="text" id="date_naiss" name="date_naiss3" min="2017-04-01" required>
+							<p>Date de naissance *</p><input type="text" id="date_naiss" name="date_naiss3" >
 							<p>Nom *</p><input type="text" id="Nom" placeholder="" name="nom_enfant3"/>
 							<p>Prénom 1 *</p><input type="text" id="Nom" placeholder="" name="prénom_enfant3"/>
 							<p>Prénom 2</p><input type="text" id="Nom" placeholder="" name="prénom2_enfant3"/>
