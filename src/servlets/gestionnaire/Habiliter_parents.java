@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -11,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import bean.Conjoint;
+import bean.Enfant;
 import bean.Parent;
 import jdbc.BDD_Connexion;
 import servlets.Identification_pro;
@@ -28,32 +32,72 @@ public class Habiliter_parents extends HttpServlet {
 		}
 		Parent par=new Parent();
 		Conjoint conj=new Conjoint();
+		Enfant e=new Enfant();
 		par.setNom(req.getParameter("Nom_référent"));
 		par.setPrénom(req.getParameter("Prénom_référent"));
 		par.setEmail(req.getParameter("mail_référent"));
 		
 		par.setTéléphone(req.getParameter("Téléphone_référent"));
 		par.setCivilité(req.getParameter("Civilité_parent_ref"));
-		if (par.getNom().equals("")==true ||par.getEmail().equals("")==true ||par.getTéléphone().equals("")==true ||par.getCivilité().equals("")==true ) {
-			String message_erreur="";
-			req.setAttribute("message_erreur", message_erreur);
+		if (par.getNom().equals("")==true 
+			||par.getEmail().equals("")==true 
+			||par.getTéléphone().equals("")==true 
+			||par.getCivilité().equals("")==true ) {
+			
+			String message_erreur_parent="Au moins un champ obligatoire n'a pas été rempli !";
+			req.setAttribute("message_erreur_parent", message_erreur_parent);
 			this.getServletContext().getRequestDispatcher("/WEB-INF/../Partie_Pro-gestionnaire/Habilitation_parents.jsp").forward(req, resp);
-		}else if(par.getNom().equals("")==false ||par.getEmail().equals("")==false ||par.getTéléphone().equals("")==false ||par.getCivilité().equals("")==false ) {
+			
+		}else if(par.getNom().equals("")==false 
+				||par.getEmail().equals("")==false 
+				||par.getTéléphone().equals("")==false 
+				||par.getCivilité().equals("")==false ) {
+			
 			enregister_parent_classique_BDD(par);
 			enregistrer_parent_habilité_BDD();
 			
-			if (req.getParameter("mail_conjoint").equals("")==false) {
+			if (req.getParameter("mail_conjoint").equals("")==false) {//On vérifie oui ou non si l'email a été renseigné.
 				conj.setNom(req.getParameter("Nom_conjoint"));
 				conj.setTéléphone(req.getParameter("Téléphone_conjoint"));
 				conj.setEmail(req.getParameter("mail_conjoint"));
 				conj.setCivilité(req.getParameter("Civilité_conjoint"));
+				if (conj.getCivilité().equals("")==true || conj.getNom().equals("")==true || conj.getTéléphone().equals("")==true) {
+					String message_erreur_conjoint="Au moins un champ obligatoire n'a pas été rempli !";
+					req.setAttribute("message_erreur_conjoint", message_erreur_conjoint);
+					this.getServletContext().getRequestDispatcher("/WEB-INF/../Partie_Pro-gestionnaire/Habilitation_parents.jsp").forward(req, resp);
+				}else if(conj.getCivilité().equals("")==false || conj.getNom().equals("")==false || conj.getTéléphone().equals("")==false) {
+					enregistrer_conjoint(conj,req);
+				}
 				
-				enregistrer_conjoint(conj,req);
+			}
+			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+			String date=req.getParameter("date_naiss1");
+			Date date_naiss = null;
+			try {
+				date_naiss = sdf.parse(date);
+			} catch (ParseException e1) {
+				e1.printStackTrace();
+			}
+			
+			e.setDate_naiss((java.sql.Date) date_naiss);
+			e.setNom(req.getParameter("nom_enfant1"));
+			e.setPrénom1(req.getParameter("prénom_enfant1"));
+			e.setPrénom2(req.getParameter("prénom2_enfant1"));
+			if (e.getDate_naiss().equals("")==true 
+				|| e.getNom().equals("")==true 
+				|| e.getPrénom1().equals("")==true) {
+				String message_erreur_enfant1="Au moins un champ obligatoire n'a pas été rempli !";
+				req.setAttribute("message_erreur_enfant1", message_erreur_enfant1);
+				this.getServletContext().getRequestDispatcher("/WEB-INF/../Partie_Pro-gestionnaire/Habilitation_parents.jsp").forward(req, resp);
+			}else if(e.getDate_naiss().equals("")==false 
+					|| e.getNom().equals("")==false 
+					|| e.getPrénom1().equals("")==false) {
+				enregistrer_enfant1(e,req);
 			}
 		}
 		
 		
-	}
+	}//FIN de la méthode doPost()
 	
 	public static void enregister_parent_classique_BDD(Parent parent) {
 		String reqSQL1="INSERT INTO parents VALUES (?,?,?,?,?,?)";
@@ -192,7 +236,7 @@ public class Habiliter_parents extends HttpServlet {
 	
 	
 	
-	/************************************************************************************************************************/
+	/*** - CONJOINT - *********************************************************************************************************************/
 	
 	public static void enregistrer_conjoint(Conjoint conjoint,HttpServletRequest req) {
 		String reqSQL1="INSERT INTO conjoint VALUES (?,?,?,?,?)";
@@ -209,7 +253,7 @@ public class Habiliter_parents extends HttpServlet {
 		}
 	}
 	
-	private static int trouver_conjoint_Idparent_référent(HttpServletRequest req) {
+	public static int trouver_conjoint_Idparent_référent(HttpServletRequest req) {
 		String reqSQLtrouver_conjoint_Idparent_référent="SELECT p.IdParent "
 				+ "FROM parents AS p "
 				+ "WHERE p.NomParent_référence="+req.getParameter("Nom_référent")+"; ";
@@ -227,4 +271,46 @@ public class Habiliter_parents extends HttpServlet {
 		}
 		return Idparent;
 	}
+	/*** - FIN CONJOINT - *********************************************************************************************************************/
+	
+	/*** - Enfant 1 - *********************************************************************************************************************/
+	public static void enregistrer_enfant1(Enfant enfant,HttpServletRequest req) {
+		String reqSQLenregistrer_enfant1="INSERT INTO `enfants` "
+				+ "VALUES  (?,?,?,?,?)";
+		PreparedStatement ps=null;
+		try {
+			ps=BDD_Connexion.getConn().prepareStatement(reqSQLenregistrer_enfant1);
+			ps.setString(1, enfant.getNom());
+			ps.setString(2, enfant.getPrénom1());
+			ps.setString(3, enfant.getPrénom2());
+			ps.setDate(4, enfant.getDate_naiss());
+			ps.setInt(5, trouver_Idparents_enfants());
+		} catch (Exception e) {
+			e.getMessage();
+		}
+	}
+	
+	public static int trouver_Idparents_enfants() {
+		String reqSQLtrouver_Idparents_enfants="SELECT p.IdParent "
+				+ "FROM parents AS p "
+				+ "WHERE p.NomParent_référence="+parent.getNom()+" "
+				+ "AND p.Email="+parent.getEmail()+" "
+				+ "AND p.Téléphone="+parent.getTéléphone()+"  ;";
+		PreparedStatement ps=null;
+		ResultSet resultat=null;
+		int Idparent_trouvé=0;
+		try {
+			ps=BDD_Connexion.getConn().prepareStatement(reqSQLtrouver_Idparents_enfants);
+			resultat=ps.executeQuery();
+			if (resultat.next()) {
+				Idparent_trouvé=resultat.getInt(1);
+			}
+		} catch (Exception e) {
+			e.getMessage();
+		}
+		return Idparent_trouvé;
+	}
+	
+	/*** - Fin Enfant 1 - *********************************************************************************************************************/
+	
 }

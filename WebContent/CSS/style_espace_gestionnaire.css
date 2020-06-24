@@ -11,7 +11,55 @@ html,body{
 	background-size: cover; 
 	
 }
- 
+
+#dérouleur_pro,#mon_compte,#se_déconnecter{
+	text-decoration: none;	
+	color: white;
+}
+#libellé_espace_pro ul{
+	list-style-type: none;
+}
+
+#libellé_espace_pro ul::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#libellé_espace_pro a{
+	display: block;
+	text-decoration: none;
+	color: white;
+}
+
+#libellé_espace_pro a:hover{
+	color: yellow;
+}
+
+.sous{
+	display: none;
+	color: white;
+	padding-left: 0px;
+}
+
+nav > ul li:hover .sous{
+	display: block;
+}
+
+.sous li{
+	float: none;
+	width: 100%;
+	text-align: left;
+}
+
+.sous a,.sous a:hover{
+	border-bottom: none;
+}
+
+.sous li a{
+	
+}
+
 #libellé_enseigne{
 	margin-top: 70px;	
 }
@@ -146,7 +194,7 @@ table#horaires td, table#horaires th /* Mettre une bordure sur les td ET les th 
 }
 
 #conjoint{
-	margin-top: -253px;
+	margin-top: -327px;
 	margin-left: 270px;
 }
 #enfant1{
@@ -172,6 +220,11 @@ table#horaires td, table#horaires th /* Mettre une bordure sur les td ET les th 
 
 #bloc_message,#choix_parent{
 	margin-left: 20px;
+	
+}
+
+#voir_candidatures_parents{
+	margin-top: 50px;
 	
 }
 /* FIN HABILITER UN PARENT ******************************************************************************************************/
@@ -205,7 +258,7 @@ footer p a#lien_site:hover{
 /* HEADER+FOOTER */
 @media screen and (min-width:1381.2px) and (max-width:1456px) {
 	#libellé_espace_pro{
-		margin-left: 1300px;
+		margin-left: 1200px;
 	}
 	
 	footer{
@@ -215,7 +268,7 @@ footer p a#lien_site:hover{
 
 @media screen and (min-width:1288px) and (max-width:1381.2px){
 	#libellé_espace_pro{
-		margin-left: 1200px;
+		margin-left: 1100px;
 	}
 	
 	footer{
@@ -226,7 +279,7 @@ footer p a#lien_site:hover{
 
 @media screen and (min-width:1230px) and (max-width:1288px) {
 	#libellé_espace_pro{
-		margin-left: 1150px;
+		margin-left: 1050px;
 	}
 	
 	footer{
@@ -237,7 +290,7 @@ footer p a#lien_site:hover{
 
 @media screen and (min-width:1168px)   and (max-width:1230px) {
 	#libellé_espace_pro{
-		margin-left: 1050px;
+		margin-left: 950px;
 	}
 	
 	footer{
@@ -248,7 +301,7 @@ footer p a#lien_site:hover{
 
 @media screen and (min-width:1079.2px) and (max-width:1168px){
 	#libellé_espace_pro{
-		margin-left: 1000px;
+		margin-left: 900px;
 	}
 	
 	footer{
@@ -259,7 +312,7 @@ footer p a#lien_site:hover{
 /* and (min-width:) */
 @media screen and (min-width:1029.2px) and (max-width:1079.2px){
 	#libellé_espace_pro{
-		margin-left: 950px;
+		margin-left: 850px;
 	}
 	
 	footer{
@@ -269,7 +322,7 @@ footer p a#lien_site:hover{
 
 @media screen and (min-width:980.4px) and (max-width:1029.2px) {
 	#libellé_espace_pro{
-		margin-left: 900px;
+		margin-left: 800px;
 	}
 	
 	footer{
@@ -279,7 +332,7 @@ footer p a#lien_site:hover{
 
 @media screen  and (min-width:934.4px) and (max-width:980.4px)  {
 	#libellé_espace_pro{
-		margin-left: 850px;
+		margin-left: 750px;
 	}
 	
 	footer{
@@ -289,7 +342,7 @@ footer p a#lien_site:hover{
 /* and (min-width:872px) */
 @media screen and (min-width:882px) and (max-width:934.4px){
 	#libellé_espace_pro{
-		margin-left: 800px;
+		margin-left: 700px;
 	}
 	
 	footer{
@@ -299,7 +352,7 @@ footer p a#lien_site:hover{
 
 @media screen and (min-width:830px) and (max-width:882px){
 	#libellé_espace_pro{
-		margin-left: 750px;
+		margin-left: 650px;
 	}
 	
 	footer{
@@ -311,7 +364,7 @@ footer p a#lien_site:hover{
 @media screen and (min-width:778.4px) and (max-width:830px){
 	
 	#libellé_espace_pro{
-		margin-left: 700px;
+		margin-left: 600px;
 	}
 	
 	footer{
@@ -322,7 +375,7 @@ footer p a#lien_site:hover{
 @media screen and (min-width:730.2px) and (max-width:778.4px){
 	
 	#libellé_espace_pro{
-		margin-left: 650px;
+		margin-left: 550px;
 	}
 	
 	footer{
@@ -334,7 +387,7 @@ footer p a#lien_site:hover{
 @media screen and (min-width:678.8px) and (max-width:730.2px) {
 	
 	#libellé_espace_pro{
-		margin-left: 600px;
+		margin-left: 500px;
 	}
 	
 	footer{
@@ -345,7 +398,7 @@ footer p a#lien_site:hover{
 @media screen and (min-width:626.4px) and (max-width:678.8px) {
 	
 	#libellé_espace_pro{
-		margin-left: 550px;
+		margin-left: 450px;
 	}
 	
 	footer{
@@ -357,7 +410,7 @@ footer p a#lien_site:hover{
 @media screen and (min-width:582.8px) and (max-width:626.4px){
 	
 	#libellé_espace_pro{
-		margin-left: 500px;
+		margin-left: 400px;
 	}
 	
 	footer{
@@ -369,7 +422,7 @@ footer p a#lien_site:hover{
 @media screen and (min-width:532.4px) and (max-width:582.8px){
 	
 	#libellé_espace_pro{
-		margin-left: 450px;
+		margin-left: 350px;
 	}
 	
 	footer{
@@ -389,7 +442,7 @@ footer p a#lien_site:hover{
 @media screen and (max-width:532.4px){
 	
 	#libellé_espace_pro{
-		margin-left: 350px;
+		margin-left: 300px;
 	}
 	
 	footer{

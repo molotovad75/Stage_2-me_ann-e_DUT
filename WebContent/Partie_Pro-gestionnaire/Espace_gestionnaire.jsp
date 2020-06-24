@@ -41,13 +41,16 @@
 		<div id="btns_connexion">
 			<img alt="" src=".\Images\OuiCr%E8chesLogo.png" id="logoBandB">
 			
-			<div id="libellé_espace_pro">
-				<p>Pro
-					<c:forEach var="item" items="${Nom}" >
-						<c:out value="${item}" />
-					</c:forEach>
-				</p>
-			</div>
+			<nav id="libellé_espace_pro">
+				<ul>
+					<li><a href="#" id="dérouleur_pro">Pro <c:forEach var="item" items="${Nom}" ><c:out value="${item}" /></c:forEach></a>
+						<ul class="sous">
+							<li><a href="" id="mon_compte">Mon compte</a></li>
+							<li><a href="/Plateforme_web_B_and_B/deconnexion" id="se_déconnecter">Se déconnecter</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
 		</div>
 		
 		<div id="contenu_page">
@@ -57,14 +60,12 @@
 					<section id="choix_site_action">
 										
 						<select id="choix_site" name="choix_site">
-							<option disabled selected>Choisissez votre site *</option>
 							<c:forEach items="${ NomEnseigne_site }" var="NomEnseigne_sites"> <!-- VA AFFICHER LE NOM DU SITE -->
 								<option><c:out value="${ NomEnseigne_sites }" /></option>
 							</c:forEach>
 						</select>
 						
 						<select id="choix_action" name="choix_action">
-							<option disabled selected>Votre action *</option>
 							<option>MAJ informations sites/créneaux</option>
 							<option>Planification créneaux disponibles</option>
 							<option>Habiliter un parent</option>
@@ -73,7 +74,7 @@
 						<input type="submit" id="validation" value="Validation"/>
 					</section>
 				</form>
-				
+				<c:forEach var="message_var" items="${ message }"><c:out value="${ message_var }"></c:out></c:forEach>
 		</div>
 		
 		<footer>

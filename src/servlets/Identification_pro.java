@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import bean.Gestionnaire;
 import jdbc.BDD_Connexion;
@@ -44,11 +45,14 @@ public class Identification_pro extends HttpServlet {
 			if (resultat==false) {
 				this.getServletContext().getRequestDispatcher("/WEB-INF/../Connexion.jsp").forward(req, resp);
 			}else if (resultat==true) {
+				
 				récup_infos_sites_gestionnaires(gest.getNom_user());
 				récup_nom_enseignes(gest.getNom_user());
 				req.setAttribute("NomEnseigne_site", récup_infos_sites_gestionnaires(gest.getNom_user()));
 				req.setAttribute("NomEnseigne", récup_nom_enseignes(gest.getNom_user()));
-				req.setAttribute("Nom", gest.getNom_user());
+//				req.setAttribute("Nom", gest.getNom_user());
+				HttpSession session=req.getSession();
+				session.setAttribute("Nom", gest.getNom_user());
 				this.getServletContext().getRequestDispatcher("/WEB-INF/../Partie_Pro-gestionnaire/Espace_gestionnaire.jsp").forward(req, resp);
 			}
 		} catch (ClassNotFoundException e) {

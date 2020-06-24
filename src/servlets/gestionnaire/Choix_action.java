@@ -49,7 +49,6 @@ public class Choix_action extends HttpServlet {
 				req.setAttribute("Horaires_Vendredi", Identification_pro.récupHoraire_jour(Identification_pro.getGestionnaire(),5,nom_choix_site));
 				req.setAttribute("Horaires_Samedi", Identification_pro.récupHoraire_jour(Identification_pro.getGestionnaire(),6,nom_choix_site));
 				req.setAttribute("Horaires_Dimanche", Identification_pro.récupHoraire_jour(Identification_pro.getGestionnaire(),7,nom_choix_site));
-				req.setAttribute("Nom", Identification_pro.getGestionnaire().getNom_user());
 				req.setAttribute("Nom_site", nom_choix_site);
 				
 				ps=BDD_Connexion.getConn().prepareStatement(reqSQL);
@@ -85,7 +84,6 @@ public class Choix_action extends HttpServlet {
 		}
 		
 		else if(nom_choix_action.equals("Planification créneaux disponibles")==true) {
-			req.setAttribute("Nom", Identification_pro.getGestionnaire().getNom_user());
 			req.setAttribute("Nom_site", nom_choix_site);
 			
 			try {
@@ -107,7 +105,6 @@ public class Choix_action extends HttpServlet {
 		}
 		
 		else if(nom_choix_action.equals("Habiliter un parent")==true) {
-			req.setAttribute("Nom", Identification_pro.getGestionnaire().getNom_user());
 			req.setAttribute("Nom_site", nom_choix_site);
 			String reqSQL2="SELECT dip.Nom,dip.Prénom "
 					+ " FROM `demande_inscription_parent` AS dip";
@@ -133,6 +130,12 @@ public class Choix_action extends HttpServlet {
 			
 			
 			this.getServletContext().getRequestDispatcher("/WEB-INF/../Partie_Pro-gestionnaire/Habilitation_parents.jsp").forward(req, resp);
+		}
+		else if(nom_choix_action.equals("Votre action *")==true) {
+			String message="Veuillez choisir un site de votre enseigne et une action qui suit !";
+			//|| nom_choix_site.equals("Choisissez votre site *")==true
+			req.setAttribute("message", message);
+			this.getServletContext().getRequestDispatcher("/WEB-INF/../Partie_Pro-gestionnaire/Espace_gestionnaire.jsp").forward(req, resp);
 		}
 	}
 	public static String getnom_choix_site() {

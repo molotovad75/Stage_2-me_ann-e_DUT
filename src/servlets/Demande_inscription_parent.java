@@ -28,6 +28,14 @@ public class Demande_inscription_parent extends HttpServlet {
 		if (parent.getMessage().equals("")==true) {
 			parent.setMessage("Bonjour, je souahite en savoir plus sur la solution OuiCrèches, merci de me recontacter.");
 		}
+		for (int i = 0; i < parent.getTéléphone().length(); i++) {
+			if (i>10) {
+				String mess_erreur_nb_caractère="Votre numéro de téléphone dépasse les 10 chiffres !";
+				req.setAttribute("mess_erreur_nb_caractère", mess_erreur_nb_caractère);
+				this.getServletContext().getRequestDispatcher("/WEB-INF/../Connexion.jsp").forward(req, resp);
+			}
+		}
+		
 		try {
 			ajouter_demande_parent(parent);
 		} catch (ClassNotFoundException e) {

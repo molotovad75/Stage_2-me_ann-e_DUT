@@ -37,6 +37,7 @@
 							<p>Nom*</p><input type="text" id="Nom" placeholder="" name="Nom_référent"/>
 							<p>Prénom*</p><input type="text" id="Prénom" placeholder="" name="Prénom_référent"/>
 							<p>Téléphone *</p><input type="text" id="Téléphone" placeholder="" name="Téléphone_référent"/>
+							<c:forEach var="message_erreur_parent_var" items="${ message_erreur_parent }"><c:out value="${ message_erreur_parent_var }"></c:out></c:forEach>
 						</div>
 						
 						<div id="conjoint">
@@ -50,26 +51,28 @@
 							</select>
 							<p>Nom *</p><input type="text" id="Nom" placeholder="" name="Nom_conjoint"/>
 							<p>Téléphone *</p><input type="text" id="Téléphone" placeholder="" name="Téléphone_conjoint"/>
+							<c:forEach var="message_erreur_conjoint_var" items="${ message_erreur_conjoint }"><c:out value="${ message_erreur_conjoint_var }"></c:out></c:forEach>
 						</div>
 						
 						<div id="enfant1">
 							<p>Enfant 1*</p>
 							
-							<p>Date de naissance *</p><input type="datetime-local" id="date_naiss" name="date_naiss1" min="2017-04-01" required>
+							<p>Date de naissance *</p><input type="text" id="date_naiss" name="date_naiss1" min="2017-04-01" required>
 							<p>Nom *</p><input type="text" id="Nom" placeholder="" name="nom_enfant1"/>
 							<p>Prénom 1 *</p><input type="text" id="Nom" placeholder="" name="prénom_enfant1"/>
 							<p>Prénom 2</p><input type="text" id="Nom" placeholder="" name="prénom2_enfant1"/>
+							<c:forEach var="message_erreur_enfant1_var" items="${ message_erreur_enfant1 }"><c:out value="${ message_erreur_enfant1_var }"></c:out></c:forEach>
 						</div>
 						<div id="enfant2">
 							<p>Enfant 2</p>
-							<p>Date de naissance *</p><input type="datetime-local" id="date_naiss" name="date_naiss2" min="2017-04-01" required>
+							<p>Date de naissance *</p><input type="text" id="date_naiss" name="date_naiss2" min="2017-04-01" required>
 							<p>Nom *</p><input type="text" id="Nom" placeholder="" name="nom_enfant2"/>
 							<p>Prénom 1 *</p><input type="text" id="Nom" placeholder="" name="prénom_enfant2"/>
 							<p>Prénom 2</p><input type="text" id="Nom" placeholder="" name="prénom2_enfant2"/>
 						</div>
 						<div id="enfant3">
 							<p>Enfant 3</p>
-							<p>Date de naissance *</p><input type="datetime-local" id="date_naiss" name="date_naiss3" min="2017-04-01" required>
+							<p>Date de naissance *</p><input type="text" id="date_naiss" name="date_naiss3" min="2017-04-01" required>
 							<p>Nom *</p><input type="text" id="Nom" placeholder="" name="nom_enfant3"/>
 							<p>Prénom 1 *</p><input type="text" id="Nom" placeholder="" name="prénom_enfant3"/>
 							<p>Prénom 2</p><input type="text" id="Nom" placeholder="" name="prénom2_enfant3"/>

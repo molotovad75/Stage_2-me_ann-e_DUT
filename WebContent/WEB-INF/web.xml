@@ -20,6 +20,20 @@
 	</servlet-mapping>
 
 	<!-- ********************************************************************************* -->
+	
+	<!-- Page de Déconnexion -->	
+	<servlet>
+		<servlet-name>Deconnexion</servlet-name>
+		<servlet-class>servlets.Déconnexion</servlet-class>
+	</servlet>
+
+
+
+	<servlet-mapping>
+		<servlet-name>Deconnexion</servlet-name>
+		<url-pattern>/deconnexion</url-pattern>
+	</servlet-mapping>
+	<!-- ********************************************************************************* -->
 
 
 	<!-- Page de Espace gestionnaire -->
