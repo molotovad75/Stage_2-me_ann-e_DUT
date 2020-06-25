@@ -213,7 +213,16 @@
 		<url-pattern>/identification_parent/compte_parent</url-pattern> 
 	</servlet-mapping>
 	
-	
-	
+	<!-- ********************************************************************************* -->
+	<!-- Fichier JAVA Choix_compte_parent -->
+	<servlet>
+		<servlet-name>Choix_compte_parent</servlet-name>
+		<servlet-class>servlets.parents.Choix_compte_parent</servlet-class>
+  	</servlet>
+  	
+	<servlet-mapping>
+		<servlet-name>Choix_compte_parent</servlet-name>
+		<url-pattern>/identification_parent/choix_compte_parent</url-pattern> 
+	</servlet-mapping>
 	
 </web-app>

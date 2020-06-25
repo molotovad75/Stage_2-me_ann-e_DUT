@@ -90,6 +90,9 @@ html,body{
 	text-decoration: none;
 }
 
+#Se_connecter_parent,#Se_connecter_pro{
+	margin-left: -10px;
+}
 
 
 div#btns_connexion input[type=checkbox]:checked ~ #menu_choix{

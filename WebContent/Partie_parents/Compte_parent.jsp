@@ -27,21 +27,37 @@
 		</div>
 		
 		<section id="page_générale">
-			<div id="partie_moi">
-				<a href="" id="moi">Moi</a>
-			</div>
+				<section id="partie_moi_sec">
+					<a href="/Plateforme_web_B_and_B/" onclick="" id="moi"><img alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_partie_moi"/></a>
+				</section>
+				<div id="partie_moi">
+					<p>Moi</p>
+				</div>
+				
 			
-			<div id="partie_conjoint">
-				<a href="" id="mon_conjoint">Mon conjoint</a>
-			</div>
+				<section id="partie_conjoint_sec">
+					<a href="/Plateforme_web_B_and_B/" onclick="" id="mon_conjoint"><img alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_conjoint" /></a>
+				</section>
+				<div id="partie_conjoint">
+					<p>Mon conjoint</p>
+				</div>
+				
 			
-			<div id="partie_enfants">
-				<a href="" id="mes_enfants">Mes enfants (Connus par OuiCrèches)</a>
-			</div>
-			
-			<div id="partie_modifié_mdp">
-				<a href="" id="modifier_mdp">Modifier mon mot de passe</a>
-			</div>
+				<section id="partie_enfants_sec">
+					<a href="/Plateforme_web_B_and_B/" onclick="" id="mes_enfants"><img alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_enfants_connus" /></a>
+				</section>
+				<div id="partie_enfants">
+					<p>Mes enfants (Connus par OuiCrèches)</p>
+				</div>
+				
+				
+				<section id="partie_modifié_mdp_sec">
+					<a href="/Plateforme_web_B_and_B/" onclick="" id="modifier_mdp"><img alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_mdp"/></a>
+				</section>
+				<div id="partie_modifié_mdp">
+					<p>Modifier mon mot de passe</p>
+				</div>
+				
 		</section>
 		
 		

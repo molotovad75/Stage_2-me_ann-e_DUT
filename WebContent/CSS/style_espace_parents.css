@@ -13,6 +13,163 @@ html,body{
 }
 
 
+#dérouleur_pro,#mon_compte,#se_déconnecter{
+	text-decoration: none;	
+	color: white;
+}
+#libellé_espace_pro ul{
+	list-style-type: none;
+}
+
+#libellé_espace_pro ul::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#libellé_espace_pro a{
+	display: block;
+	text-decoration: none;
+	color: white;
+}
+
+#libellé_espace_pro a:hover{
+	color: yellow;
+}
+
+.sous{
+	display: none;
+	color: white;
+	padding-left: 0px;
+}
+
+nav > ul li:hover .sous{
+	display: block;
+}
+
+.sous li{
+	float: none;
+	width: 100%;
+	text-align: left;
+}
+
+.sous a,.sous a:hover{
+	border-bottom: none;
+}
+
+.sous li a{
+	
+}
+
+#libellé_enseigne{
+	margin-top: 70px;	
+}
+
+#libellé_espace_pro{
+	margin-top:-65px;
+	margin-left:1350px;
+	
+}
+
+#libellé_espace_pro{
+	color: white;
+	font-weight: bold;
+}
+
+#choix_site_action{
+	margin-top: -50px;
+}
+
+#btns_connexion{
+	background: rgb(0,139,255);
+	background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
+	padding-bottom: 20px;	
+}
+
+#btns_connexion img#logoBandB{
+	width:20%;
+	height:20%;
+	margin-bottom: -20px;
+	padding-bottom:20px;
+	padding-top:20px;
+}
+#contenu_page{
+	padding-bottom: 5%;	
+}
+
+#partie_moi a,#partie_conjoint a,#partie_enfants a,#partie_modifié_mdp a{
+	text-decoration: none;
+	color: black;
+	
+}
+
+#partie_moi,#partie_conjoint,#partie_enfants,#partie_modifié_mdp{
+	width: 200px;
+	height: 100px;
+}
+
+
+#gestionnaire_picture{
+	width: 750px;
+	height: 300px;
+}
+#page_générale img{
+	
+	opacity: 30%;	
+}
+
+#gestionnaire_picture.pour_partie_moi{
+	background: rgba(0,242,255,65);
+	
+}
+#gestionnaire_picture.pour_partie_moi:hover,
+#gestionnaire_picture.pour_conjoint:hover,
+#gestionnaire_picture.pour_enfants_connus:hover,
+#gestionnaire_picture.pour_mdp:hover{
+	opacity: 100%;
+}
+
+#partie_moi{
+	margin-top: -255px;
+	
+}
+
+#gestionnaire_picture.pour_conjoint{
+	margin-left: 760px;
+	margin-top: -180px;
+	background: rgba(157,157,157,65);
+	
+}
+#partie_conjoint{
+	margin-left: 760px;
+	margin-top: -200px;
+}
+
+#gestionnaire_picture.pour_enfants_connus{
+	margin-top: 100px;
+	background: rgba(255,195,0,65);
+}
+
+#partie_enfants{
+	margin-top: -250px;
+}
+#gestionnaire_picture.pour_mdp{
+	margin-left: 760px;
+	margin-top: -185px;
+	background: rgba(19,255,0,65);
+}
+
+#partie_modifié_mdp{
+	margin-left: 760px;
+	margin-top: -250px;
+	
+}
+
+#page_générale p{
+	font-weight: bold;
+	font-size: 30px;
+}
+
 footer{
 	background: rgb(0,139,255);
 	background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
@@ -244,3 +401,369 @@ footer p a#lien_site:hover{
 	}
 }
 /* *********************************************************************************************************** */
+/*MEDIAS QUERIES POUR LE CORPS DE LA PAGE COMPTE PARENTS*/
+
+@media screen and (min-width:1249.6px) and (max-width:1530.2px){
+	#gestionnaire_picture.pour_partie_moi{
+		margin-left: 350px;
+	}
+	#partie_moi{
+		 margin-left: 350px;
+	}
+	#gestionnaire_picture.pour_conjoint{
+		margin-left: 350px;
+		margin-top: 150px;
+	}
+	#partie_conjoint{
+		margin-left: 350px;
+	}
+	
+	
+	#gestionnaire_picture.pour_enfants_connus{
+		margin-left: 350px;
+		
+	}
+	#partie_enfants{
+		margin-left: 350px;
+	}
+	
+	#gestionnaire_picture.pour_mdp{
+		margin-left: 350px;
+		margin-top: 150px;
+	}
+	#partie_modifié_mdp{
+		margin-left: 350px;
+	}
+}
+
+@media screen and (min-width:1056px) and (max-width:1249.6px) {
+	#gestionnaire_picture.pour_partie_moi{
+		margin-left: 250px;
+	}
+	#partie_moi{
+		 margin-left: 250px;
+	}
+	#gestionnaire_picture.pour_conjoint{
+		margin-left: 250px;
+		margin-top: 150px;
+	}
+	#partie_conjoint{
+		margin-left: 250px;
+	}
+	
+	
+	#gestionnaire_picture.pour_enfants_connus{
+		margin-left: 250px;
+		
+	}
+	#partie_enfants{
+		margin-left: 250px;
+	}
+	
+	#gestionnaire_picture.pour_mdp{
+		margin-left: 250px;
+		margin-top: 150px;
+	}
+	#partie_modifié_mdp{
+		margin-left: 250px;
+	}
+}
+
+@media screen and (min-width:832px) and (max-width:1056px)  {
+	#gestionnaire_picture.pour_partie_moi{
+		margin-left: 50px;
+	}
+	#partie_moi{
+		 margin-left: 50px;
+	}
+	#gestionnaire_picture.pour_conjoint{
+		margin-left: 50px;
+		margin-top: 150px;
+	}
+	#partie_conjoint{
+		margin-left: 50px;
+	}
+	
+	
+	#gestionnaire_picture.pour_enfants_connus{
+		margin-left: 50px;
+		
+	}
+	#partie_enfants{
+		margin-left: 50px;
+	}
+	
+	#gestionnaire_picture.pour_mdp{
+		margin-left: 50px;
+		margin-top: 150px;
+	}
+	#partie_modifié_mdp{
+		margin-left: 50px;
+	}
+}
+
+@media screen and (min-width:656px) and (max-width:832px) {
+	#gestionnaire_picture.pour_partie_moi{
+		margin-left: 0px;
+		width: 600px;
+		height: 250px;
+	}
+	#partie_moi{
+		 margin-left: 0px;
+	}
+	#gestionnaire_picture.pour_conjoint{
+		margin-left: 0px;
+		margin-top: 150px;
+		width: 600px;
+		height: 250px;
+	}
+	#partie_conjoint{
+		margin-left: 0px;
+	}
+	
+	
+	#gestionnaire_picture.pour_enfants_connus{
+		margin-left: 0px;
+		width: 600px;
+		height: 250px;
+	}
+	#partie_enfants{
+		margin-left: 0px;
+	}
+	
+	#gestionnaire_picture.pour_mdp{
+		margin-left: 0px;
+		margin-top: 150px;
+		width: 600px;
+		height: 250px;
+	}
+	#partie_modifié_mdp{
+		margin-left: 0px;
+	}
+}
+
+@media screen and (min-width:527.2px) and (max-width:656px){
+	#gestionnaire_picture.pour_partie_moi{
+		margin-left: 0px;
+		width: 500px;
+		height: 200px;
+	}
+	#partie_moi{
+		 margin-left: 0px;
+		
+	}
+	
+	#partie_moi p{
+		 margin-top: 50px;
+		 margin-bottom: 0;
+		
+	}
+	#gestionnaire_picture.pour_conjoint{
+		margin-left: 0px;
+		margin-top: 150px;
+		width: 500px;
+		height: 200px;
+	}
+	#partie_conjoint{
+		margin-left: 0px;
+	}
+	
+	
+	#gestionnaire_picture.pour_enfants_connus{
+		margin-left: 0px;
+		width: 500px;
+		height: 200px;
+	}
+	#partie_enfants{
+		margin-left: 0px;
+		margin-top: -230px;
+	}
+	
+	#gestionnaire_picture.pour_mdp{
+		margin-left: 0px;
+		margin-top: 150px;
+		width: 500px;
+		height: 200px;
+	}
+	#partie_modifié_mdp{
+		margin-left: 0px;
+		margin-top: -230px;
+	}
+}
+
+@media screen and (max-width:527.2px){
+	#gestionnaire_picture.pour_partie_moi{
+		margin-left: 0px;
+		width: 400px;
+		height: 150px;
+	}
+	#partie_moi{
+		margin-left: 0px;
+		margin-top: -200px;
+	}
+	
+	#partie_moi p{
+		 margin-top: 50px;
+		 margin-bottom: 0;
+		
+	}
+	#gestionnaire_picture.pour_conjoint{
+		margin-left: 0px;
+		margin-top: 150px;
+		width: 400px;
+		height: 150px;
+	}
+	#partie_conjoint{
+		margin-left: 0px;
+		margin-top: -150px;
+	}
+	
+	
+	#gestionnaire_picture.pour_enfants_connus{
+		margin-left: 0px;
+		width: 400px;
+		height: 150px;
+	}
+	#partie_enfants{
+		margin-left: 0px;
+		margin-top: -190px;
+	}
+	
+	#gestionnaire_picture.pour_mdp{
+		margin-left: 0px;
+		margin-top: 150px;
+		width: 400px;
+		height: 150px;
+	}
+	#partie_modifié_mdp{
+		margin-left: 0px;
+		margin-top: -190px;
+	}
+}
+
+/* MEDIAS QUERIES DANS LE DEZOOM POUR LE CORPS DE LA PAGE  and (max-width:px) and (max-height:px)*/
+
+@media screen and (min-width:1540.2px) and (min-height:750.4px) and (max-width:1700px)  and (max-height:828.567px){
+	#page_générale{
+		margin-left: 50px;
+	}
+	
+}
+
+@media screen and (min-width:1700px)  and (min-height:828.567px) and (max-width:1910px) and (max-height:938px){
+	#page_générale{
+		margin-left: 100px;
+	}
+	
+}
+@media screen and (min-width:1910px)  and (min-height:938px) and (max-width:2200px) and (max-height:1078.7px){
+	#page_générale{
+		margin-left: 150px;
+	}
+	#btns_connexion a{
+		font-size: 30px;
+	}
+}
+
+@media screen and (min-width:2200px)  and (min-height:1078.7px) and (max-width:2560px) and (max-height:1250.67px){
+	#page_générale{
+		margin-left: 200px;
+	}
+	
+	footer p{
+		font-size: 20px;
+		
+	}
+	footer{
+		height: 270px;
+	}
+	#btns_connexion a{
+		font-size: 30px;
+	}
+}
+
+@media screen and (min-width:2560px)  and (min-height:1250.67px) and (max-width:3072px) and (max-height:1500.8px) { /*  */
+	#page_générale{
+		margin-left: 250px;
+	}
+	
+	footer p{
+		font-size: 20px;
+		
+	}
+	footer{
+		height: 300px;
+		margin-top: 200px;
+	}
+	#btns_connexion a{
+		font-size: 30px;
+	}
+}
+
+@media screen and (min-width:3072px)  and (min-height:1500.8px) and (max-width:3840px) and (max-height:1876px) { /*  */
+	#page_générale{
+		margin-left: 300px;
+	}
+	
+	footer p{
+		font-size: 20px;
+		
+	}
+	footer{
+		height: 300px;
+		margin-top: 420px;
+	}
+	#btns_connexion a{
+		font-size: 40px;
+	}
+}
+
+@media screen and (min-width:3840px)  and (min-height:1876px) and (max-width:5120px) and (max-height:2501.33px)  { /*  */
+	#page_générale{
+		margin-left: 350px;
+	}
+	
+	#page_générale p{
+		font-size: 35px;
+	}
+	footer p{
+		font-size: 30px;
+		
+	}
+	footer{
+		height: 400px;
+		margin-top: 620px;
+	}
+	#btns_connexion a{
+		font-size: 40px;
+	}
+}
+
+@media screen and (min-width:5120px)  and (min-height:2501.33px)   { /* and (max-width:px) and (max-height:px) */
+	#page_générale{
+		margin-left: 400px;
+	}
+	
+	#page_générale p{
+		font-size: 45px;
+		color: white;
+	}
+	#partie_enfants{
+		margin-top: -300px;
+	}
+	footer p{
+		font-size: 30px;
+		
+	}
+	footer{
+		height: 450px;
+		margin-top: 1120px;
+	}
+	#btns_connexion a{
+		font-size: 50px;
+	}
+}
+/* FIN DES MEDIAS QUERIES POUR LE CORPS DE LA PAGE COMPTE PARENTS*/
+/* *********************************************************************************************************** */
+
+
