@@ -26,9 +26,11 @@
 			</nav>
 		</div>
 		
-		<section id="page_générale">
+			<section id="page_générale">
 				<section id="partie_moi_sec">
-					<a href="/Plateforme_web_B_and_B/" onclick="" id="moi"><img alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_partie_moi"/></a>
+					<%-- <a href="${pageContext.request.contextPath}/Plateforme_web_B_and_B/identification_parent/choix_compte_parent?name=pour_partie_moi" onclick="" id="moi"><img name="" alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_partie_moi"/></a> --%>
+					<a href="#partie_moi_choisie" onclick="" id="moi"><img name="pour_partie_moi" alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_partie_moi"/></a>
+				
 				</section>
 				<div id="partie_moi">
 					<p>Moi</p>
@@ -36,15 +38,19 @@
 				
 			
 				<section id="partie_conjoint_sec">
-					<a href="/Plateforme_web_B_and_B/" onclick="" id="mon_conjoint"><img alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_conjoint" /></a>
-				</section>
+					<%-- <a href="${pageContext.request.contextPath}/Plateforme_web_B_and_B/identification_parent/choix_compte_parent?name=pour_conjoint" onclick="" id="mon_conjoint"><img name="" alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_conjoint" /></a> --%>			
+ 					<a href="#partie_conjoint_choisie" onclick="" id="mon_conjoint"><img name="pour_conjoint" alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_conjoint" /></a>
+ 					
+ 				</section>
 				<div id="partie_conjoint">
 					<p>Mon conjoint</p>
 				</div>
 				
 			
 				<section id="partie_enfants_sec">
-					<a href="/Plateforme_web_B_and_B/" onclick="" id="mes_enfants"><img alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_enfants_connus" /></a>
+					<%-- <a href="${pageContext.request.contextPath}/Plateforme_web_B_and_B/identification_parent/choix_compte_parent?name=pour_enfants_connus" onclick="" id="mes_enfants"><img name="" alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_enfants_connus" /></a> --%>
+					<a href="#partie_enfants_choisie" onclick="" id="mes_enfants"><img name="pour_enfants_connus" alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_enfants_connus" /></a>
+					
 				</section>
 				<div id="partie_enfants">
 					<p>Mes enfants (Connus par OuiCrèches)</p>
@@ -52,13 +58,52 @@
 				
 				
 				<section id="partie_modifié_mdp_sec">
-					<a href="/Plateforme_web_B_and_B/" onclick="" id="modifier_mdp"><img alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_mdp"/></a>
+					<%-- <a href="${pageContext.request.contextPath}/Plateforme_web_B_and_B/identification_parent/choix_compte_parent?name=pour_mdp"  onclick="" id="modifier_mdp" ><img name="" alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_mdp"/></a> --%>
+					<a href="#partie_modifié_mdp_choisie"  onclick="" id="modifier_mdp" ><img name="pour_mdp" alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_mdp"/></a>
+					
 				</section>
 				<div id="partie_modifié_mdp">
 					<p>Modifier mon mot de passe</p>
 				</div>
 				
-		</section>
+			</section>
+		
+			<section id="Informations_choix">
+					<div id="partie_moi_choisie">
+						<h2>Moi</h2>
+						<p>Mon Mail </p>
+						
+						<p>Mon téléphone </p>
+						
+						<p>Civilité </p>
+					
+						<p>Nom </p>
+					
+						<p>Prénom</p>
+						
+						<p>Adresse </p>
+						<p>Voie </p>
+						
+						<p>Code postal </p>
+						
+						<p>Ville </p>
+						
+						<input type="submit" name="validation" id="validation">
+					</div>
+					
+					
+					<div id="partie_conjoint_choisie">
+					
+					</div>
+					
+					<div id="partie_enfants_choisie"> 
+					
+					</div>
+					
+					<div id="partie_modifié_mdp_choisie">
+					
+					</div>
+			</section>
 		
 		
 		
