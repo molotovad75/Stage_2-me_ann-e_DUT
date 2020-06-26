@@ -1,7 +1,9 @@
+<%@page import="servlets.Identification_parent"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
+  
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,20 +13,24 @@
 	</head>
 	
 	<body>
-		<div id="btns_connexion">
-			<img alt="" src=".\Images\OuiCr%E8chesLogo.png" id="logoBandB">
-			
-			<nav id="libellé_espace_pro">
-				<ul>
-					<li><a href="#" id="dérouleur_pro">Parent <c:forEach var="item" items="${Nom}" ><c:out value="${item}" /></c:forEach></a>
-						<ul class="sous">
-							<li><a href="" id="mon_compte">Mon compte</a></li>
-							<li><a href="/Plateforme_web_B_and_B/deconnexion" id="se_déconnecter">Se déconnecter</a></li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-		</div>
+			<sql:setDataSource var = "bdd_co" driver = "com.mysql.cj.jdbc.Driver"
+         	url = "jdbc:mysql://localhost:3306/bdd_ouicreches?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC"
+         	user = "root"  password = ""/>
+         	
+			<div id="btns_connexion">
+				<img alt="" src=".\Images\OuiCr%E8chesLogo.png" id="logoBandB">
+				
+				<nav id="libellé_espace_pro">
+					<ul>
+						<li><a href="#" id="dérouleur_pro">Parent <c:forEach var="item" items="${Nom}" ><c:out value="${item}" /></c:forEach></a>
+							<ul class="sous">
+								<li><a href="" id="mon_compte">Mon compte</a></li>
+								<li><a href="/Plateforme_web_B_and_B/deconnexion" id="se_déconnecter">Se déconnecter</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
 		
 			<section id="page_générale">
 				<section id="partie_moi_sec">
@@ -67,46 +73,205 @@
 				</div>
 				
 			</section>
-		
+			
+			
+			
 			<section id="Informations_choix">
-					<div id="partie_moi_choisie">
+					<form id="partie_moi_choisie" method="post" action="">
 						<h2>Moi</h2>
 						<p>Mon Mail </p>
 						
+						
+						<c:forEach items="${ result_mail.rows }" var="row">
+							<c:out value="${row.Email}"/>
+						</c:forEach>
+						
 						<p>Mon téléphone </p>
 						
+						
+						<c:forEach  items="${ result_téléphone.rows }" var="row">
+							<input type="text" name="num_téléphone" id="num_téléphone" value="${ row.Téléphone }"/>
+						</c:forEach>
+					
+						
 						<p>Civilité </p>
-					
+						
+						<c:forEach  items="${ result_Civilité.rows }" var="row">
+							<input type="text" name="civilité" id="civilité" value="${ row.Civilité }"/>
+						</c:forEach>
+						
 						<p>Nom </p>
-					
+						
+						<c:forEach  items="${ result_nom.rows }" var="row">
+							<input type="text" name="nom_parent" id="nom_parent"  value="${ row.NomParent_référence }"/>
+						</c:forEach>
 						<p>Prénom</p>
+						
+						<c:forEach  items="${ result_prénom.rows }" var="row">
+							<input type="text" name="prénom_parent" id="prénom_parent" value="${ row.PrénomParent_référence }"/>
+						</c:forEach>
+						
 						
 						<p>Adresse </p>
 						<p>Voie </p>
 						
+						<c:forEach  items="${ result_voie.rows }" var="row">
+							<input type="text" name="voie_parent" id="voie_parent" value="${ row.Voie }"/>
+						</c:forEach>
+						
 						<p>Code postal </p>
 						
-						<p>Ville </p>
+						<c:forEach  items="${ result_cp.rows }" var="row">
+							<input type="text" name="cp_parent" id="cp_parent" value="${ row.Code_postal }"/>
+						</c:forEach>
 						
-						<input type="submit" name="validation" id="validation">
-					</div>
+						<p>Ville </p>
+						 
+						<c:forEach  items="${ result_ville.rows }" var="row">
+							<input type="text" name="ville_parent" id="ville_parent" value="${ row.Ville }"/>
+						</c:forEach>
+						
+						<input type="submit" name="validation" id="validation" value="Validation">
+						<sql:query dataSource="${bdd_co}" var="result_mail">
+							SELECT p.Email FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+						</sql:query>
+						
+						<sql:query dataSource="${bdd_co}" var="result_téléphone">
+							SELECT p.Téléphone FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+						</sql:query>
+									
+						<sql:query dataSource="${bdd_co}" var="result_Civilité">
+							SELECT p.Civilité  FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+						</sql:query>
+							
+						<sql:query dataSource="${bdd_co}" var="result_nom">
+							SELECT p.NomParent_référence  FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+						</sql:query>	
+								
+						<sql:query dataSource="${bdd_co}" var="result_prénom">
+							SELECT p.PrénomParent_référence  FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+						</sql:query>	
+										
+						<sql:query dataSource="${bdd_co}" var="result_voie">
+							SELECT p.Voie  FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+						</sql:query>
+									
+						<sql:query dataSource="${bdd_co}" var="result_cp">
+							SELECT p.Code_postal  FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+						</sql:query>
+									
+						<sql:query dataSource="${bdd_co}" var="result_ville">
+							SELECT p.Ville  FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+					    </sql:query>
+					</form>
 					
 					
-					<div id="partie_conjoint_choisie">
 					
-					</div>
+					<form id="partie_conjoint_choisie" method="post" action="">
+						<h2>Mon(a) conjoint(e)</h2>
+						<p>Son Mail </p>
+						
+						
+						<c:forEach items="${ result_mail.rows }" var="row">
+							<c:out value="${row.Email}"/>
+						</c:forEach>
+						
+						<p>Son téléphone </p>
+						
+						
+						<c:forEach  items="${ result_téléphone.rows }" var="row">
+							<input type="text" name="num_téléphone" id="num_téléphone" value="${ row.Téléphone }"/>
+						</c:forEach>
 					
-					<div id="partie_enfants_choisie"> 
+						
+						<p>Civilité </p>
+						
+						<c:forEach  items="${ result_Civilité.rows }" var="row">
+							<input type="text" name="civilité" id="civilité" value="${ row.Civilité }"/>
+						</c:forEach>
+						
+						<p>Nom </p>
+						
+						<c:forEach  items="${ result_nom.rows }" var="row">
+							<input type="text" name="nom_parent" id="nom_parent"  value="${ row.NomParent_référence }"/>
+						</c:forEach>
+						<p>Prénom</p>
+						
+						<c:forEach  items="${ result_prénom.rows }" var="row">
+							<input type="text" name="prénom_parent" id="prénom_parent" value="${ row.PrénomParent_référence }"/>
+						</c:forEach>
+						
+						
+						<p>Adresse </p>
+						<p>Voie </p>
+						
+						<c:forEach  items="${ result_voie.rows }" var="row">
+							<input type="text" name="voie_parent" id="voie_parent" value="${ row.Voie }"/>
+						</c:forEach>
+						
+						<p>Code postal </p>
+						
+						<c:forEach  items="${ result_cp.rows }" var="row">
+							<input type="text" name="cp_parent" id="cp_parent" value="${ row.Code_postal }"/>
+						</c:forEach>
+						
+						<p>Ville </p>
+						 
+						<c:forEach  items="${ result_ville.rows }" var="row">
+							<input type="text" name="ville_parent" id="ville_parent" value="${ row.Ville }"/>
+						</c:forEach>
+						
+						<input type="submit" name="validation" id="validation" value="Validation">
+						
+						<sql:query dataSource="${bdd_co}" var="result_IdParent">
+							SELECT p.IdParent FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+						</sql:query>
+						
+						<sql:query dataSource="${bdd_co}" var="result_mail_conjoint">
+							SELECT c.Email FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
+						</sql:query>
+						
+						<sql:query dataSource="${bdd_co}" var="result_téléphone_conjoint">
+							SELECT c.Email FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
+						</sql:query>
+									
+						<sql:query dataSource="${bdd_co}" var="result_Civilité_conjoint">
+							SELECT c.Email FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
+						</sql:query>
+							
+						<sql:query dataSource="${bdd_co}" var="result_nom_conjoint">
+							SELECT c.Email FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
+						</sql:query>	
+								
+						<sql:query dataSource="${bdd_co}" var="result_prénom_conjoint">
+							SELECT c.Email FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
+						</sql:query>	
+							
+										
+						<sql:query dataSource="${bdd_co}" var="result_voie_conjoint">
+							SELECT c.Email FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
+						</sql:query>
+									
+						<sql:query dataSource="${bdd_co}" var="result_cp_conjoint">
+							SELECT c.Email FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
+						</sql:query>
+									
+						<sql:query dataSource="${bdd_co}" var="result_ville_conjoint">
+							SELECT c.Email FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
+					    </sql:query>
+					</form>
 					
-					</div>
+					<form id="partie_enfants_choisie" method="post" action=""> 
 					
-					<div id="partie_modifié_mdp_choisie">
+					</form>
 					
-					</div>
+					<form id="partie_modifié_mdp_choisie" method="post" action="">
+					
+					</form>
 			</section>
 		
 		
-		
+		 
 		<footer>
 			<p> Bonjour, 
 				<br>OuiCrèches est une plateforme dédiée à la réservation de places occasionnelles en crèche.

@@ -18,7 +18,14 @@ import jdbc.BDD_Connexion;
 public class Identification_parent extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static Parent parent=null;
+	private static HttpSession session=null;
 	
+	public static Parent getParent_connecté() {
+		return parent;
+	}
+	public static HttpSession getSession() {
+		return session;
+	}
 	
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -43,9 +50,9 @@ public class Identification_parent extends HttpServlet {
 			this.getServletContext().getRequestDispatcher("/WEB-INF/../Connexion.jsp").forward(req, resp);
 		}else if (resultat==true) {
 			
-			HttpSession session=req.getSession();
+			session=req.getSession();
 			session.setAttribute("Nom", parent.getNom());
-//				session.setAttribute("", value); // A changer
+			session.setAttribute("Mdp", parent.getMdp()); // A changer
 			session.setAttribute("NomsEnseigne", trouver_Crèche_NomCrèche());
 			this.getServletContext().getRequestDispatcher("/WEB-INF/../Partie_parents/Compte_parent.jsp").forward(req, resp);
 		}
