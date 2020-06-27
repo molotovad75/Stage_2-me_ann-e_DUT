@@ -172,52 +172,52 @@
 						<p>Son Mail </p>
 						
 						
-						<c:forEach items="${ result_mail.rows }" var="row">
+						<c:forEach items="${ result_mail_conjoint.rows }" var="row">
 							<c:out value="${row.Email}"/>
 						</c:forEach>
 						
 						<p>Son téléphone </p>
 						
 						
-						<c:forEach  items="${ result_téléphone.rows }" var="row">
+						<c:forEach  items="${ result_téléphone_conjoint.rows }" var="row">
 							<input type="text" name="num_téléphone" id="num_téléphone" value="${ row.Téléphone }"/>
 						</c:forEach>
 					
 						
 						<p>Civilité </p>
 						
-						<c:forEach  items="${ result_Civilité.rows }" var="row">
+						<c:forEach  items="${ result_Civilité_conjoint.rows }" var="row">
 							<input type="text" name="civilité" id="civilité" value="${ row.Civilité }"/>
 						</c:forEach>
 						
 						<p>Nom </p>
 						
-						<c:forEach  items="${ result_nom.rows }" var="row">
-							<input type="text" name="nom_parent" id="nom_parent"  value="${ row.NomParent_référence }"/>
+						<c:forEach  items="${ result_nom_conjoint.rows }" var="row">
+							<input type="text" name="nom_parent" id="nom_parent"  value="${ row.Nom }"/>
 						</c:forEach>
 						<p>Prénom</p>
 						
-						<c:forEach  items="${ result_prénom.rows }" var="row">
-							<input type="text" name="prénom_parent" id="prénom_parent" value="${ row.PrénomParent_référence }"/>
+						<c:forEach  items="${ result_prénom_conjoint.rows }" var="row">
+							<input type="text" name="prénom_parent" id="prénom_parent" value="${ row.Prénom }"/>
 						</c:forEach>
 						
 						
 						<p>Adresse </p>
 						<p>Voie </p>
 						
-						<c:forEach  items="${ result_voie.rows }" var="row">
+						<c:forEach  items="${ result_voie_conjoint.rows }" var="row">
 							<input type="text" name="voie_parent" id="voie_parent" value="${ row.Voie }"/>
 						</c:forEach>
 						
 						<p>Code postal </p>
 						
-						<c:forEach  items="${ result_cp.rows }" var="row">
+						<c:forEach  items="${ result_cp_conjoint.rows }" var="row">
 							<input type="text" name="cp_parent" id="cp_parent" value="${ row.Code_postal }"/>
 						</c:forEach>
 						
 						<p>Ville </p>
 						 
-						<c:forEach  items="${ result_ville.rows }" var="row">
+						<c:forEach  items="${ result_ville_conjoint.rows }" var="row">
 							<input type="text" name="ville_parent" id="ville_parent" value="${ row.Ville }"/>
 						</c:forEach>
 						
@@ -232,37 +232,60 @@
 						</sql:query>
 						
 						<sql:query dataSource="${bdd_co}" var="result_téléphone_conjoint">
-							SELECT c.Email FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
+							SELECT c.Téléphone FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
 						</sql:query>
 									
 						<sql:query dataSource="${bdd_co}" var="result_Civilité_conjoint">
-							SELECT c.Email FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
+							SELECT c.Civilité FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
 						</sql:query>
 							
 						<sql:query dataSource="${bdd_co}" var="result_nom_conjoint">
-							SELECT c.Email FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
+							SELECT c.Nom FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
 						</sql:query>	
 								
 						<sql:query dataSource="${bdd_co}" var="result_prénom_conjoint">
-							SELECT c.Email FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
+							SELECT c.Prénom FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
 						</sql:query>	
 							
 										
 						<sql:query dataSource="${bdd_co}" var="result_voie_conjoint">
-							SELECT c.Email FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
+							SELECT c.Voie FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
 						</sql:query>
 									
 						<sql:query dataSource="${bdd_co}" var="result_cp_conjoint">
-							SELECT c.Email FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
+							SELECT c.Code_postal FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
 						</sql:query>
 									
 						<sql:query dataSource="${bdd_co}" var="result_ville_conjoint">
-							SELECT c.Email FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
+							SELECT c.Ville FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
 					    </sql:query>
 					</form>
 					
 					<form id="partie_enfants_choisie" method="post" action=""> 
+						
 					
+						<input type="submit" name="validation" id="validation" value="Validation">
+						
+						<sql:query dataSource="${bdd_co}" var="result_mail_conjoint">
+							SELECT e.Sexe FROM enfants AS e WHERE e.IdParent='${result_IdParent}'
+						</sql:query>
+						
+						<sql:query dataSource="${bdd_co}" var="result_téléphone_conjoint">
+							SELECT e.Date_Naissance FROM enfants AS e WHERE e.IdParent='${result_IdParent}'
+						</sql:query>
+									
+						<sql:query dataSource="${bdd_co}" var="result_Civilité_conjoint">
+							SELECT e.Nom FROM enfants AS e WHERE e.IdParent='${result_IdParent}'
+						</sql:query>
+								
+						<sql:query dataSource="${bdd_co}" var="result_prénom_conjoint">
+							SELECT e.Prénom1 FROM enfants AS e WHERE e.IdParent='${result_IdParent}'
+						</sql:query>	
+							
+										
+						<sql:query dataSource="${bdd_co}" var="result_voie_conjoint">
+							SELECT e.Prénom2  FROM enfants AS e WHERE e.IdParent='${result_IdParent}'
+						</sql:query>
 					</form>
 					
 					<form id="partie_modifié_mdp_choisie" method="post" action="">
