@@ -77,7 +77,40 @@
 			
 			
 			<section id="Informations_choix">
+					<sql:query dataSource="${bdd_co}" var="result_mail">
+							SELECT p.Email FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+					</sql:query>
 					<form id="partie_moi_choisie" method="post" action="">
+						
+						
+						<sql:query dataSource="${bdd_co}" var="result_téléphone">
+							SELECT p.Téléphone FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+						</sql:query>
+									
+						<sql:query dataSource="${bdd_co}" var="result_Civilité">
+							SELECT p.Civilité  FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+						</sql:query>
+							
+						<sql:query dataSource="${bdd_co}" var="result_nom">
+							SELECT p.NomParent_référence  FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+						</sql:query>	
+								
+						<sql:query dataSource="${bdd_co}" var="result_prénom">
+							SELECT p.PrénomParent_référence  FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+						</sql:query>	
+										
+						<sql:query dataSource="${bdd_co}" var="result_voie">
+							SELECT p.Voie  FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+						</sql:query>
+									
+						<sql:query dataSource="${bdd_co}" var="result_cp">
+							SELECT p.Code_postal  FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+						</sql:query>
+									
+						<sql:query dataSource="${bdd_co}" var="result_ville">
+							SELECT p.Ville  FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+					    </sql:query>
+					    
 						<h2>Moi</h2>
 						<p>Mon Mail </p>
 						
@@ -132,47 +165,55 @@
 						</c:forEach>
 						
 						<input type="submit" name="validation" id="validation" value="Validation">
-						<sql:query dataSource="${bdd_co}" var="result_mail">
-							SELECT p.Email FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
-						</sql:query>
 						
-						<sql:query dataSource="${bdd_co}" var="result_téléphone">
-							SELECT p.Téléphone FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
-						</sql:query>
-									
-						<sql:query dataSource="${bdd_co}" var="result_Civilité">
-							SELECT p.Civilité  FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
-						</sql:query>
-							
-						<sql:query dataSource="${bdd_co}" var="result_nom">
-							SELECT p.NomParent_référence  FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
-						</sql:query>	
-								
-						<sql:query dataSource="${bdd_co}" var="result_prénom">
-							SELECT p.PrénomParent_référence  FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
-						</sql:query>	
-										
-						<sql:query dataSource="${bdd_co}" var="result_voie">
-							SELECT p.Voie  FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
-						</sql:query>
-									
-						<sql:query dataSource="${bdd_co}" var="result_cp">
-							SELECT p.Code_postal  FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
-						</sql:query>
-									
-						<sql:query dataSource="${bdd_co}" var="result_ville">
-							SELECT p.Ville  FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
-					    </sql:query>
 					</form>
 					
 					
 					
 					<form id="partie_conjoint_choisie" method="post" action="">
+						<sql:query dataSource="${bdd_co}" var="result_IdParent">
+							SELECT p.IdParent FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+						</sql:query>
+						
+						
+						<sql:query dataSource="${bdd_co}" var="result_mail_conjoint">
+							SELECT c.Email FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent.rows}'
+						</sql:query>
+						
+						<sql:query dataSource="${bdd_co}" var="result_téléphone_conjoint">
+							SELECT c.Téléphone FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent.rows}'
+						</sql:query>
+									
+						<sql:query dataSource="${bdd_co}" var="result_Civilité_conjoint">
+							SELECT c.Civilité FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent.rows}'
+						</sql:query>
+							
+						<sql:query dataSource="${bdd_co}" var="result_nom_conjoint">
+							SELECT c.Nom FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent.rows}'
+						</sql:query>	
+								
+						<sql:query dataSource="${bdd_co}" var="result_prénom_conjoint">
+							SELECT c.Prénom FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent.rows}'
+						</sql:query>	
+							
+										
+						<sql:query 	dataSource="${bdd_co}" var="result_voie_conjoint">
+							SELECT c.Voie FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent.rows}'
+						</sql:query>
+									
+						<sql:query dataSource="${bdd_co}" var="result_cp_conjoint">
+							SELECT c.Code_postal FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent.rows}'
+						</sql:query>
+									
+						<sql:query dataSource="${bdd_co}" var="result_ville_conjoint">
+							SELECT c.Ville FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent.rows}'
+					    </sql:query> 
+					    <!-- FIN DES REQUETES SQL -->
 						<h2>Mon(a) conjoint(e)</h2>
 						<p>Son Mail </p>
 						
 						
-						<c:forEach items="${ result_mail_conjoint.rows }" var="row">
+						<c:forEach items="${row_mail.rows}" var="row">
 							<c:out value="${row.Email}"/>
 						</c:forEach>
 						
@@ -223,73 +264,162 @@
 						
 						<input type="submit" name="validation" id="validation" value="Validation">
 						
-						<sql:query dataSource="${bdd_co}" var="result_IdParent">
-							SELECT p.IdParent FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
-						</sql:query>
 						
-						<sql:query dataSource="${bdd_co}" var="result_mail_conjoint">
-							SELECT c.Email FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
-						</sql:query>
-						
-						<sql:query dataSource="${bdd_co}" var="result_téléphone_conjoint">
-							SELECT c.Téléphone FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
-						</sql:query>
-									
-						<sql:query dataSource="${bdd_co}" var="result_Civilité_conjoint">
-							SELECT c.Civilité FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
-						</sql:query>
-							
-						<sql:query dataSource="${bdd_co}" var="result_nom_conjoint">
-							SELECT c.Nom FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
-						</sql:query>	
-								
-						<sql:query dataSource="${bdd_co}" var="result_prénom_conjoint">
-							SELECT c.Prénom FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
-						</sql:query>	
-							
-										
-						<sql:query dataSource="${bdd_co}" var="result_voie_conjoint">
-							SELECT c.Voie FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
-						</sql:query>
-									
-						<sql:query dataSource="${bdd_co}" var="result_cp_conjoint">
-							SELECT c.Code_postal FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
-						</sql:query>
-									
-						<sql:query dataSource="${bdd_co}" var="result_ville_conjoint">
-							SELECT c.Ville FROM conjoint AS c WHERE c.IdParent_référent='${result_IdParent}'
-					    </sql:query>
 					</form>
 					
 					<form id="partie_enfants_choisie" method="post" action=""> 
-						
-					
-						<input type="submit" name="validation" id="validation" value="Validation">
-						
-						<sql:query dataSource="${bdd_co}" var="result_mail_conjoint">
-							SELECT e.Sexe FROM enfants AS e WHERE e.IdParent='${result_IdParent}'
-						</sql:query>
-						
-						<sql:query dataSource="${bdd_co}" var="result_téléphone_conjoint">
-							SELECT e.Date_Naissance FROM enfants AS e WHERE e.IdParent='${result_IdParent}'
-						</sql:query>
-									
-						<sql:query dataSource="${bdd_co}" var="result_Civilité_conjoint">
-							SELECT e.Nom FROM enfants AS e WHERE e.IdParent='${result_IdParent}'
-						</sql:query>
-								
-						<sql:query dataSource="${bdd_co}" var="result_prénom_conjoint">
-							SELECT e.Prénom1 FROM enfants AS e WHERE e.IdParent='${result_IdParent}'
-						</sql:query>	
+						<div id="fiche_enfant1">
+							<sql:query dataSource="${bdd_co}" var="result_sexe_enfant1">
+								SELECT e.Sexe FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='1'
+							</sql:query>
 							
+							<sql:query dataSource="${bdd_co}" var="result_date_naiss_enfant1">
+								SELECT e.Date_Naissance FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='1'
+							</sql:query>
 										
-						<sql:query dataSource="${bdd_co}" var="result_voie_conjoint">
-							SELECT e.Prénom2  FROM enfants AS e WHERE e.IdParent='${result_IdParent}'
-						</sql:query>
+							<sql:query dataSource="${bdd_co}" var="result_Nom_enfant1">
+								SELECT e.Nom FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='1'
+							</sql:query>
+									
+							<sql:query dataSource="${bdd_co}" var="result_prénom1_enfant1">
+								SELECT e.Prénom1 FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='1'
+							</sql:query>	
+								
+							<sql:query dataSource="${bdd_co}" var="result_prénom2_enfant1">
+								SELECT e.Prénom2  FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='1'
+							</sql:query>
+							
+							<h2>Enfant 1</h2>
+							<p>Garçon/Fille</p>
+							<c:forEach  items="${ result_sexe_enfant1.rows }" var="row">
+								<c:out value="${ row.Sexe }"/>
+							</c:forEach>
+							<p>Date de naissance</p>
+							<c:forEach  items="${ result_date_naiss_enfant1.rows }" var="row">
+								<c:out value="${ row.Date_Naissance }"/>
+							</c:forEach>
+							<p>Nom</p>
+							<c:forEach  items="${ result_Nom_enfant1.rows }" var="row">
+								<c:out value="${ row.Nom }"/>
+							</c:forEach>
+							<p>Prénom 1</p>
+							<c:forEach  items="${ result_prénom1_enfant1.rows }" var="row">
+								<c:out value="${ row.Prénom1 }"/>
+							</c:forEach>
+							<p>Prénom 2</p>
+							<c:forEach  items="${ result_prénom2_enfant1.rows }" var="row">
+								<c:out value="${ row.Prénom2 }"/>
+							</c:forEach>
+						
+							<input type="submit" name="validation" id="validation" value="Validation">
+						
+							
+						</div>
+						
+						<div id="fiche_enfant2">
+							<sql:query dataSource="${bdd_co}" var="result_sexe_enfant2">
+								SELECT e.Sexe FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='2'
+							</sql:query>
+							
+							<sql:query dataSource="${bdd_co}" var="result_date_naiss_enfant2">
+								SELECT e.Date_Naissance FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='2'
+							</sql:query>
+										
+							<sql:query dataSource="${bdd_co}" var="result_Nom_enfant2">
+								SELECT e.Nom FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='2'
+							</sql:query>
+									
+							<sql:query dataSource="${bdd_co}" var="result_prénom1_enfant2">
+								SELECT e.Prénom1 FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='2'
+							</sql:query>	
+								
+							<sql:query dataSource="${bdd_co}" var="result_prénom2_enfant2">
+								SELECT e.Prénom2  FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='2'
+							</sql:query>
+							
+							<h2>Enfant 2</h2>
+							<p>Garçon/Fille</p>
+							<c:forEach  items="${ result_sexe_enfant2.rows }" var="row">
+								<c:out value="${ row.Sexe }"/>
+							</c:forEach>
+							<p>Date de naissance</p>
+							<c:forEach  items="${ result_date_naiss_enfant2.rows }" var="row">
+								<c:out value="${ row.Date_Naissance }"/>
+							</c:forEach>
+							<p>Nom</p>
+							<c:forEach  items="${ result_Nom_enfant2.rows }" var="row">
+								<c:out value="${ row.Nom }"/>
+							</c:forEach>
+							<p>Prénom 1</p>
+							<c:forEach  items="${ result_prénom1_enfant2.rows }" var="row">
+								<c:out value="${ row.Prénom1 }"/>
+							</c:forEach>
+							<p>Prénom 2</p>
+							<c:forEach  items="${ result_prénom2_enfant2.rows }" var="row">
+								<c:out value="${ row.Prénom2 }"/>
+							</c:forEach>
+							
+							
+						</div>
+						
+						<div id="fiche_enfant3">
+						
+							<sql:query dataSource="${bdd_co}" var="result_sexe_enfant3">
+								SELECT e.Sexe FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='3'
+							</sql:query>
+							
+							<sql:query dataSource="${bdd_co}" var="result_date_naiss_enfant3">
+								SELECT e.Date_Naissance FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='3'
+							</sql:query>
+										
+							<sql:query dataSource="${bdd_co}" var="result_Nom_enfant3">
+								SELECT e.Nom FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='3'
+							</sql:query>
+									
+							<sql:query dataSource="${bdd_co}" var="result_prénom1_enfant3">
+								SELECT e.Prénom1 FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='3'
+							</sql:query>	
+								
+							<sql:query dataSource="${bdd_co}" var="result_prénom2_enfant3">
+								SELECT e.Prénom2  FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='3'
+							</sql:query>
+							
+							<h2>Enfant 3</h2>
+							<p>Garçon/Fille</p>
+							<c:forEach  items="${ result_sexe_enfant3.rows }" var="row">
+								<c:out value="${ row.Sexe }"/>
+							</c:forEach>
+							<p>Date de naissance</p>
+							<c:forEach  items="${ result_date_naiss_enfant3.rows }" var="row">
+								<c:out value="${ row.Date_Naissance }"/>
+							</c:forEach>
+							<p>Nom</p>
+							<c:forEach  items="${ result_Nom_enfant3.rows }" var="row">
+								<c:out value="${ row.Nom }"/>
+							</c:forEach>
+							<p>Prénom 1</p>
+							<c:forEach  items="${ result_prénom1_enfant3.rows }" var="row">
+								<c:out value="${ row.Prénom1 }"/>
+							</c:forEach>
+							<p>Prénom 2</p>
+							<c:forEach  items="${ result_prénom2_enfant3.rows }" var="row">
+								<c:out value="${ row.Prénom2 }"/>
+							</c:forEach>
+							
+							
+						</div>
+						
 					</form>
 					
 					<form id="partie_modifié_mdp_choisie" method="post" action="">
-					
+						<h2>Modification du mot de passe</h2>
+						
+						<p>Ancien mot de passe</p>
+						<input type="text" id="ancien_mdp" name="ancien_mdp" value="" />
+						<p>Nouveau mot de passe</p>
+						<input type="text" id="nouveau_mdp" name="nouveau_mdp" value="" />
+
+						<input type="submit" name="modifier_mdp" id="modifier_mdp" value="Mettre à jour le nouveau mot de passe">
 					</form>
 			</section>
 		

@@ -170,6 +170,15 @@ nav > ul li:hover .sous{
 	font-size: 30px;
 }
 
+#partie_moi_choisie,#partie_conjoint_choisie,#fiche_enfant1,#fiche_enfant2,#fiche_enfant3,#partie_modifié_mdp_choisie{
+	background-color: white;
+	width: 300px;
+}
+
+#Informations_choix{
+	margin-top: 155px;
+}
+
 footer{
 	background: rgb(0,139,255);
 	background: linear-gradient(90deg, rgba(0,139,255,1) 0%, rgba(0,203,255,1) 50%, rgba(0,139,255,1) 100%);
@@ -194,6 +203,8 @@ footer p a#lien_site:hover{
 	/* color: rgba(106,144,255,0.58); */
 	color: rgba(0,139,255,1);
 }
+
+
 
 
 /* MEDIA QUERIES */
