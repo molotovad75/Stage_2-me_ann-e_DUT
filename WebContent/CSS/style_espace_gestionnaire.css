@@ -4,11 +4,12 @@ html,body{
 	margin:0;
 	height: 100%;
 	font-family: Supermarketed;
+	
 	background-image:url("../Images/Gestionnaire%20page%20de%20garde.jpg");
 	background-attachment: fixed;
 	background-position: inherit;
 	background-repeat: no-repeat;
-	background-size: cover; 
+	background-size: cover;
 	
 }
 
@@ -92,9 +93,7 @@ nav > ul li:hover .sous{
 	padding-bottom:20px;
 	padding-top:20px;
 }
-#contenu_page{
-	padding-bottom: 5%;	
-}
+
 
 #choix_site{
 	margin-left: 150px;
@@ -105,6 +104,15 @@ nav > ul li:hover .sous{
 }
 
 /* LES BALISES SECTIONS */
+/* #corps{
+	background-image:url("../Images/Gestionnaire%20page%20de%20garde.jpg");
+	background-attachment: fixed;
+	background-position: inherit;
+	background-repeat: no-repeat;
+	background-size: cover; 
+	padding-bottom: 5%;	 
+} */
+
 #choix_action,#choix_du_mois,#choix_de_l_année{
 	width: 200px;
 	height: 50px;
@@ -235,7 +243,7 @@ footer{
 	height:220px;
 	display: block;
 	padding:20px;
-	margin-top:150px;
+	margin-top:200px;
 	position:sticky;
 	
 }
@@ -250,7 +258,6 @@ footer p a#lien_site{
 	color :white;
 }
 footer p a#lien_site:hover{
-	/* color: rgba(106,144,255,0.58); */
 	color: rgba(0,139,255,1);
 }
 

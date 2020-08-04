@@ -97,6 +97,7 @@ nav > ul li:hover .sous{
 	padding-bottom: 5%;	
 }
 
+
 #partie_moi a,#partie_conjoint a,#partie_enfants a,#partie_modifié_mdp a{
 	text-decoration: none;
 	color: black;
@@ -178,6 +179,12 @@ nav > ul li:hover .sous{
 #Informations_choix{
 	margin-top: 155px;
 }
+
+#Informations_choix p{
+	font-weight: bold;
+}
+
+
 
 footer{
 	background: rgb(0,139,255);

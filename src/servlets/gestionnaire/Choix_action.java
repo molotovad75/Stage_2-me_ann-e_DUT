@@ -79,6 +79,8 @@ public class Choix_action extends HttpServlet {
 			} catch (Exception e) {
 				e.getMessage();
 			}
+			
+			
 			this.getServletContext().getRequestDispatcher("/WEB-INF/../Partie_Pro-gestionnaire/MAJ_infos_sites_crénaux.jsp").forward(req, resp);
 			
 		}
@@ -138,6 +140,9 @@ public class Choix_action extends HttpServlet {
 			this.getServletContext().getRequestDispatcher("/WEB-INF/../Partie_Pro-gestionnaire/Espace_gestionnaire.jsp").forward(req, resp);
 		}
 	}
+	
+	
+	
 	public static String getnom_choix_site() {
 		return nom_choix_site;
 	}

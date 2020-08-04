@@ -7,44 +7,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Connexion</title>
-		<link href=".\CSS\style_connexion.css" rel="stylesheet" type="text/css" />
-		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>		
-		<script type="text/javascript" >
-			function afficher_cacher_div(){
-				/* Connexion pro/gestionnaire qui disparait à moitié*/	
-				Identification_pro.style.opacity='30%';
-				Création_pro.style.opacity='30%';
-				Identification_parents.style.opacity='100%';
-				Création_parents.style.opacity='100%';
-				Connexion_parents.disabled=true;
-				Connexion_pro.disabled=false;
-				/* Connexion_parents.style.font-weight='bold'; */
-				Se_connecter_pro.style.disabled=true;
-				Se_connecter_parent.style.disabled=false;
-				
-				var Identification_pro_input = document.getElementById("Identification_pro").getElementsByTagName("input").getElementById("Id_pro");
-				var Création_pro_input = document.getElementById("Création_pro").getElementsByTagName("input").getElementById("Nom");
-				Identification_pro_input.disabled.maxLength='0'; Création_pro_enfants.input.maxLength='0';
-			}
-		
-			function afficher_cacher_div2() {
-				/* Connexion parent qui disparait à moitié*/	
-				Identification_pro.style.opacity='100%';
-				Création_pro.style.opacity='100%';
-				Identification_parents.style.opacity='30%';
-				Création_parents.style.opacity='30%';
-				Connexion_parents.disabled=false;	
-				Connexion_pro.disabled=true;
-				/* Connexion_pro.style.font-weight='bold'; */
-				Se_connecter_pro.style.disabled=false;
-				Se_connecter_parent.style.disabled=true;
-				
-				var Identification_parents_input = document.getElementById("Identification_parents").getElementsByTagName("input").getElementById("Id_parent");
-				var Création_parents_input = document.getElementById("Création_parents").getElementsByTagName("input").getElementById("Nom");
-				Identification_parents_input.maxLength='0';Création_parents_input.maxLength='0';
-			
-			}
-		</script>
+		<link href=".\CSS\style_connexion.css" rel="stylesheet" type="text/css" />	
+		<script type="text/javascript" src="JS/script.js"></script>
 	</head>
 	
 	<body>
@@ -63,6 +27,7 @@
 			<div id="Corps">
 				<h2>Besoin d'une garde d'enfant occasionnelle ?  Réservez rapidement au sein de votre crèche partenaire</h2>
 				<section id="form_connexion">
+				
 					<div id="Identification_parents">
 						<form action="/Plateforme_web_B_and_B/identification_parent" method="post">
 							<p id="ident">J'ai un compte parent</p>
@@ -76,23 +41,31 @@
 							</p>
 							<!-- JSTL -->
 							<c:forEach var="message_erreur_auth_parents" items="${message_erreur_auth_parent}" >
-									<c:out value="${message_erreur_auth_parents}" />
+								<c:out value="${message_erreur_auth_parents}" />
 							</c:forEach>
-						</form>
+							
+							<c:forEach items="${confirmation_changement_mdp}" var="confirmation">
+								<c:out value="${confirmation}"/>
+							</c:forEach>
 						
+							<c:forEach items="${message_erreur_ancien_mdp}" var="erreur">
+								<c:out value="${erreur}"/>
+							</c:forEach>
+			
+						</form>
 					</div>	
 				
-					<div id="Création_parents">
+					<div id="Creation_parents">
 						<form action="/Plateforme_web_B_and_B/demande_inscription_parent" method="post">
 							<p id="ident">Je n'ai pas de compte parents</p>
 							<p id="ident">Je souhaite en savoir plus sur la solution OuiCrèches</p>
 							<p>
 								<input type="text" id="Nom" placeholder="Nom *" name="Nom"/><br><br>
-								<input type="text" id="Prénom" placeholder="Prénom *"name="Prénom"/><br><br>
+								<input type="text" id="Prenom" placeholder="Prénom *"name="Prénom"/><br><br>
 								<input type="email" id="email_parent" placeholder="email *"name="email_parent"/><br><br> <!-- Id_parent -->
 								<input type="tel" id="tel_parent" placeholder="téléphone parents *"name="tel_parent"/><br><br> <!-- tel_parent -->
 								<textarea rows="8" cols="45" maxlength="65525" name="message" id="message" placeholder="Bonjour, je souahite en savoir plus sur la solution OuiCrèches, merci de me recontacter."></textarea>
-								<input type="submit" id="Se_connecter_parent" value="Envoyer au gestionnaire OuiCrèche"  name="Se_connecter"/>
+								<input type="submit" id="envoyer_parent" value="Envoyer au gestionnaire OuiCrèche"  name="Se_connecter"/>
 							</p>
 							<!-- JSTL -->
 							<c:forEach var="item" items="${mess_erreur_nb_caractère}" >
@@ -119,17 +92,17 @@
 						</form>
 					</div>
 					
-					<div id="Création_pro">
+					<div id="Creation_pro">
 						<form action="/Plateforme_web_B_and_B/demande_inscription_pro" method="post">
 							<p id="ident">Je n'ai pas de compte pro/gestionnaire</p>
 							<p id="ident">Je souahite en savoir plus sur la solution OuiCrèches Pro</p>
 							<p>
 								<input type="text" id="Nom" placeholder="Nom *" name="Nom"/><br><br>
-								<input type="text" id="Prénom" placeholder="Prénom" name="Prénom"/><br><br>
+								<input type="text" id="Prenom" placeholder="Prénom" name="Prénom"/><br><br>
 								<input type="email" id="email_pro" placeholder="email *" name="email_pro"/><br><br> 
 								<input type="tel" id="tel_pro" placeholder="Téléphone pro *" name="tel_pro"/><br><br>
 								<textarea  rows="8" cols="45" maxlength="65525" name="message" id="message" placeholder="Bonjour, je souahite en savoir plus sur la solution OuiCrèches, merci de me recontacter."></textarea>
-								<input type="submit" id="Se_connecter_pro" value="Envoyer au gestionnaire OuiCrèche" name="Se_connecter"/>
+								<input type="submit" id="envoyer_pro" value="Envoyer au gestionnaire OuiCrèche" name="Se_connecter"/>
 							</p>
 							<!-- JSTL -->
 							<c:forEach var="item" items="${err_mail}" >
@@ -139,6 +112,8 @@
 					</div>
 					
 				</section>
+				
+				
 			</div>
 		</div>	
 		<footer>

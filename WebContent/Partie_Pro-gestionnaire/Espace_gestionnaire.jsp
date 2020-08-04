@@ -53,7 +53,7 @@
 			</nav>
 		</div>
 		
-		<div id="contenu_page">
+		<div id="corps">
 				<h1>Espace Pro/gestionnaire</h1>
 				<form action="/Plateforme_web_B_and_B/identification_pro/Choix_action" method="post">
 					<p id="libellé_enseigne">Enseigne : <c:forEach items="${ NomEnseigne }" var="NomEnseignes"><c:out value="${ NomEnseignes }"/></c:forEach></p>

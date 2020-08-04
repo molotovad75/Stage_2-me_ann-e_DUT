@@ -61,7 +61,7 @@ html,body{
 	font-weight:bold;
 }
 
-#Identification_parents,#Identification_pro,#Création_parents,#Création_pro{
+#Identification_parents,#Identification_pro,#Creation_parents,#Creation_pro{
 	width:200px;
 	padding-left: 20px;	
 	padding-right: 20px;
@@ -75,7 +75,7 @@ html,body{
 
 	color: white;
 }
-#Création_parents{
+#Creation_parents{
 	margin-top:-245px;
 	margin-left:300px;
 }
@@ -90,13 +90,16 @@ html,body{
 	text-decoration: none;
 }
 
-#Se_connecter_parent,#Se_connecter_pro{
+#Se_connecter_parent,#Se_connecter_pro,#envoyer_parent,#envoyer_pro{
 	margin-left: -10px;
+	background-color: #67fe6e;
+	border: none;
+	border-radius: 5px;
 }
 
 
 div#btns_connexion input[type=checkbox]:checked ~ #menu_choix{
-	display: block; /*quand bouton coché, fait apparaître le menu*/
+	display: block; /*quand bouton cochÃ©, fait apparaÃ®tre le menu*/
 	visibility: visible;
 }
 
@@ -157,7 +160,7 @@ footer p a#lien_site:hover{
 	#form_connexion{
 		padding-bottom: 10%;
 	} 
-	#Création_pro{
+	#CrÃ©ation_pro{
 		margin-left: 900px;
 		margin-top: -270px;
 	}
@@ -309,7 +312,7 @@ footer p a#lien_site:hover{
 	#form_connexion{
 		padding-bottom: 10%;
 	} 
-	#Création_pro{
+	#CrÃ©ation_pro{
 		margin-left: 900px;
 		margin-top: -270px;
 	}
@@ -327,7 +330,7 @@ footer p a#lien_site:hover{
 	#form_connexion{
 		padding-bottom: 10%;
 	} 
-	#Création_pro{
+	#CrÃ©ation_pro{
 		margin-left: 900px;
 		margin-top: -270px;
 	}
@@ -340,7 +343,7 @@ footer p a#lien_site:hover{
 		height: 270px;
 	}
 	
-	#Création_parents{
+	#Creation_parents{
 		margin-left: 250px;
 	}
 	
@@ -348,7 +351,7 @@ footer p a#lien_site:hover{
 		margin-left: 500px;
 		margin-top: -515px;
 	}
-	#Création_pro{
+	#CrÃ©ation_pro{
 		margin-left: 750px;
 		margin-top: -270px;
 	}
@@ -362,7 +365,7 @@ footer p a#lien_site:hover{
 		height: 270px;
 	}
 	
-	#Création_parents{
+	#Creation_parents{
 		margin-left: 250px;
 	}
 	
@@ -370,7 +373,7 @@ footer p a#lien_site:hover{
 		margin-left: 500px;
 		margin-top: -515px;
 	}
-	#Création_pro{
+	#CrÃ©ation_pro{
 		margin-left: 500px;
 		margin-top: 10px;
 	}
@@ -381,7 +384,7 @@ footer p a#lien_site:hover{
 		margin-left: 0px;
 		margin-top: -250px;
 	}
-	#Création_pro{
+	#CrÃ©ation_pro{
 		margin-left: 0px;
 		margin-top: 10px;
 	}
@@ -413,11 +416,11 @@ footer p a#lien_site:hover{
 		margin-left: 0px;
 		margin-top: 10px;
 	}
-	#Création_pro{
+	#Creation_pro{
 		margin-left: 0px;
 		margin-top: 10px;
 	}
-	#Création_parents{
+	#Creation_parents{
 		margin-left: 0px;
 		margin-top: 10px
 	}
@@ -451,7 +454,7 @@ footer p a#lien_site:hover{
 		height: 120px;
 		font-size: 30px;
 	}
-	#Création_parents{
+	#Creation_parents{
 		margin-top: -500px;
 		margin-left: 400px;
 	}
@@ -459,16 +462,16 @@ footer p a#lien_site:hover{
 		margin-top: -1025px;
 		margin-left: 800px;
 	}
-	#Création_pro{
+	#Creation_pro{
 		margin-top: -525px;
 		margin-left: 1200px;
 	}
-	#Identification_parents,#Création_parents,#Identification_pro,#Création_pro{
+	#Identification_parents,#Creation_parents,#Identification_pro,#Creation_pro{
 		width: 300px;
 		font-size: 30px;
 	}
 	
-	#Id_parent,#mdp_parent,#Se_connecter,#Nom_père,#Nom_mère,#email_parent,#tel_parent,#Id_pro,#mdp_parent,#Nom,#Prénom,#email_pro,#tel_pro{
+	#Id_parent,#mdp_parent,#Se_connecter,#Nom_pÃ¨re,#Nom_mÃ¨re,#email_parent,#tel_parent,#Id_pro,#mdp_parent,#Nom,#Prenom,#email_pro,#tel_pro,#mdp_pro{
 		width: 200px;
 		height: 50px;
 		font-size: 25px;
@@ -501,7 +504,7 @@ footer p a#lien_site:hover{
 		height: 120px;
 		font-size: 30px;
 	}
-	#Création_parents{
+	#Creation_parents{
 		margin-top: -500px;
 		margin-left: 400px;
 	}
@@ -509,16 +512,16 @@ footer p a#lien_site:hover{
 		margin-top: -1005px;
 		margin-left: 800px;
 	}
-	#Création_pro{
+	#Creation_pro{
 		margin-top: -530px;
 		margin-left: 1200px;
 	}
-	#Identification_parents,#Création_parents,#Identification_pro,#Création_pro{
+	#Identification_parents,#Creation_parents,#Identification_pro,#Creation_pro{
 		width: 300px;
 		font-size: 30px;
 	}
 	
-	#Id_parent,#mdp_parent,#Se_connecter,#Nom_père,#Nom_mère,#email_parent,#tel_parent,#Id_pro,#mdp_parent,#Nom,#Prénom,#email_pro,#tel_pro{
+	#Id_parent,#mdp_parent,#Se_connecter,#Nom_pÃ¨re,#Nom_mÃ¨re,#email_parent,#tel_parent,#Id_pro,#mdp_parent,#Nom,#Prenom,#email_pro,#tel_pro,#mdp_pro{
 		width: 200px;
 		height: 50px;
 		font-size: 25px;
@@ -551,7 +554,7 @@ footer p a#lien_site:hover{
 		height: 120px;
 		font-size: 30px;
 	}
-	#Création_parents{
+	#Creation_parents{
 		margin-top: -500px;
 		margin-left: 400px;
 	}
@@ -559,16 +562,16 @@ footer p a#lien_site:hover{
 		margin-top: -1005px;
 		margin-left: 800px;
 	}
-	#Création_pro{
+	#Creation_pro{
 		margin-top: -530px;
 		margin-left: 1200px;
 	}
-	#Identification_parents,#Création_parents,#Identification_pro,#Création_pro{
+	#Identification_parents,#Creation_parents,#Identification_pro,#Creation_pro{
 		width: 300px;
 		font-size: 30px;
 	}
 	
-	#Id_parent,#mdp_parent,#Se_connecter,#Nom_père,#Nom_mère,#email_parent,#tel_parent,#Id_pro,#mdp_parent,#Nom,#Prénom,#email_pro,#tel_pro{
+	#Id_parent,#mdp_parent,#Se_connecter,#Nom_pÃ¨re,#Nom_mÃ¨re,#email_parent,#tel_parent,#Id_pro,#mdp_parent,#Nom,#Prenom,#email_pro,#tel_pro,#mdp_pro{
 		width: 200px;
 		height: 50px;
 		font-size: 25px;
@@ -602,7 +605,7 @@ footer p a#lien_site:hover{
 		height: 120px;
 		font-size: 30px;
 	}
-	#Création_parents{
+	#Creation_parents{
 		margin-top: -500px;
 		margin-left: 400px;
 	}
@@ -610,16 +613,16 @@ footer p a#lien_site:hover{
 		margin-top: -980px;
 		margin-left: 800px;
 	}
-	#Création_pro{
+	#CrÃ©ation_pro{
 		margin-top: -525px;
 		margin-left: 1200px;
 	}
-	#Identification_parents,#Création_parents,#Identification_pro,#Création_pro{
+	#Identification_parents,#Creation_parents,#Identification_pro,#Creation_pro{
 		width: 300px;
 		font-size: 30px;
 	}
 	
-	#Id_parent,#mdp_parent,#Se_connecter,#Nom_père,#Nom_mère,#email_parent,#tel_parent,#Id_pro,#mdp_parent,#Nom,#Prénom,#email_pro,#tel_pro{
+	#Id_parent,#mdp_parent,#Se_connecter,#Nom_pÃ¨re,#Nom_mÃ¨re,#email_parent,#tel_parent,#Id_pro,#mdp_parent,#Nom,#Prenom,#email_pro,#tel_pro,#mdp_pro{
 		width: 200px;
 		height: 50px;
 		font-size: 25px;
@@ -655,21 +658,21 @@ footer p a#lien_site:hover{
 		height: 120px;
 		font-size: 30px;
 	}
-	#Création_parents{
+	#Creation_parents{
 		margin-top: -500px;
 		margin-left: 400px;
 	}
 	
-	#Création_pro{
+	#Creation_pro{
 		margin-top: -525px;
 		margin-left: 1200px;
 	}
-	#Identification_parents,#Création_parents,#Identification_pro,#Création_pro{
+	#Identification_parents,#Creation_parents,#Identification_pro,#Creation_pro{
 		width: 300px;
 		font-size: 30px;
 	}
 	
-	#Id_parent,#mdp_parent,#Se_connecter,#Nom_père,#Nom_mère,#email_parent,#tel_parent,#Id_pro,#mdp_parent,#Nom,#Prénom,#email_pro,#tel_pro{
+	#Id_parent,#mdp_parent,#Se_connecter,#Nom_pÃ¨re,#Nom_mÃ¨re,#email_parent,#tel_parent,#Id_pro,#mdp_parent,#Nom,#Prenom,#email_pro,#tel_pro,#mdp_pro{
 		width: 200px;
 		height: 50px;
 		font-size: 25px;
@@ -681,7 +684,7 @@ footer p a#lien_site:hover{
 		margin-left: 0px;
 	}
 }
-/*Média queries spécialement fait pour <div id="Identification_pro">*/
+/*MÃ©dia queries spÃ©cialement fait pour <div id="Identification_pro">*/
 @media screen and (min-width:2190px) and (min-height:1050px){
 	
 	#Identification_pro{

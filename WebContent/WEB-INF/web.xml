@@ -201,32 +201,32 @@
 	</servlet-mapping>	
 	
 	
+	
+	
+	
 	<!-- ********************************************************************************* -->
-	<!-- Fichier JAVA compte parent -->
+	<!-- Fichier JAVA Mettre_à_jour_mdp -->
 	<servlet>
-		<servlet-name>Compte_parent</servlet-name>
-		<servlet-class>servlets.parents.Compte_parent</servlet-class>
+		<servlet-name>Mettre_a_jour_mdp_parents</servlet-name>
+		<servlet-class>servlets.parents.Mettre_à_jour_mdp</servlet-class>
   	</servlet>
   	
 	<servlet-mapping>
-		<servlet-name>Compte_parent</servlet-name>
-		<url-pattern>/identification_parent/compte_parent</url-pattern> 
+		<servlet-name>Mettre_a_jour_mdp_parents</servlet-name>
+		<url-pattern>/identification_parent/mettre_a_jour_mdp_parents</url-pattern> 
 	</servlet-mapping>
 	
 	<!-- ********************************************************************************* -->
-	<!-- Fichier JAVA Choix_compte_parent -->
+	<!-- Fichier JAVA Mon_compte (C'est pour accéder au compte parent) -->
 	<servlet>
-		<servlet-name>Choix_compte_parent</servlet-name>
-		<servlet-class>servlets.parents.Choix_compte_parent</servlet-class>
+		<servlet-name>Mon_compte</servlet-name>
+		<servlet-class>servlets.parents.Mon_compte</servlet-class>
   	</servlet>
   	
 	<servlet-mapping>
-		<servlet-name>Choix_compte_parent</servlet-name>
-		<url-pattern>/identification_parent/choix_compte_parent</url-pattern> 
+		<servlet-name>Mon_compte</servlet-name>
+		<url-pattern>/identification_parent/mon_compte</url-pattern> 
 	</servlet-mapping>
 	
-	
-	<!-- ********************************************************************************* -->
-	<!-- Fichier JAVA Choix_compte_parent -->
 	
 </web-app>

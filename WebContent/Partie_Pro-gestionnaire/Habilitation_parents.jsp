@@ -25,8 +25,10 @@
 				</ul>
 			</nav>
 		</div>
-		<h1>Site :<c:forEach items="${ Nom_site }" var="nomsite"><c:out value="${ nomsite }"></c:out></c:forEach></h1>
-		<section id="sectionHabiliter_parents">
+		
+		<div id="corps">
+			<h1>Site :<c:forEach items="${ Nom_site }" var="nomsite"><c:out value="${ nomsite }"></c:out></c:forEach></h1>
+			<section id="sectionHabiliter_parents">
 					<form action="/Plateforme_web_B_and_B/identification_pro/habiliter_parents" method="post">
 						<div id="parent_référence">
 							<p>Le parent de référence *</p>
@@ -110,6 +112,8 @@
 				</p>
 			</div>
 		</section>
+		</div>
+		
 		
 		<div id="message_erreur">
 			<p><c:forEach items="${ message_erreur }" var="Message_erreur"><c:out value="${ Message_erreur }"></c:out></c:forEach></p>

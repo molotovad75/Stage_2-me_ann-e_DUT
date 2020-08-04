@@ -26,7 +26,8 @@
 			</nav>
 		</div>
 		
-		<section id="sectionPlanification_crénaux_dispo">
+		<div id="corps">
+			<section id="sectionPlanification_crénaux_dispo">
 					<select id="choix_du_mois" >
 						<option disabled selected>Mois ?*</option>
 						<option>Janvier</option>
@@ -124,6 +125,9 @@
    						</tbody>
 					</table>
 				</section>
+		</div>
+		
+		
 		
 		<footer>
 			<p> Bonjour, 

@@ -34,7 +34,6 @@
 		
 			<section id="page_générale">
 				<section id="partie_moi_sec">
-					<%-- <a href="${pageContext.request.contextPath}/Plateforme_web_B_and_B/identification_parent/choix_compte_parent?name=pour_partie_moi" onclick="" id="moi"><img name="" alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_partie_moi"/></a> --%>
 					<a href="#partie_moi_choisie" onclick="" id="moi"><img name="pour_partie_moi" alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_partie_moi"/></a>
 				
 				</section>
@@ -43,8 +42,7 @@
 				</div>
 				
 			
-				<section id="partie_conjoint_sec">
-					<%-- <a href="${pageContext.request.contextPath}/Plateforme_web_B_and_B/identification_parent/choix_compte_parent?name=pour_conjoint" onclick="" id="mon_conjoint"><img name="" alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_conjoint" /></a> --%>			
+				<section id="partie_conjoint_sec">	
  					<a href="#partie_conjoint_choisie" onclick="" id="mon_conjoint"><img name="pour_conjoint" alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_conjoint" /></a>
  					
  				</section>
@@ -54,7 +52,6 @@
 				
 			
 				<section id="partie_enfants_sec">
-					<%-- <a href="${pageContext.request.contextPath}/Plateforme_web_B_and_B/identification_parent/choix_compte_parent?name=pour_enfants_connus" onclick="" id="mes_enfants"><img name="" alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_enfants_connus" /></a> --%>
 					<a href="#partie_enfants_choisie" onclick="" id="mes_enfants"><img name="pour_enfants_connus" alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_enfants_connus" /></a>
 					
 				</section>
@@ -64,7 +61,6 @@
 				
 				
 				<section id="partie_modifié_mdp_sec">
-					<%-- <a href="${pageContext.request.contextPath}/Plateforme_web_B_and_B/identification_parent/choix_compte_parent?name=pour_mdp"  onclick="" id="modifier_mdp" ><img name="" alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_mdp"/></a> --%>
 					<a href="#partie_modifié_mdp_choisie"  onclick="" id="modifier_mdp" ><img name="pour_mdp" alt="" src=".\Images\transparent2.png" id="gestionnaire_picture" class="pour_mdp"/></a>
 					
 				</section>
@@ -112,14 +108,14 @@
 					    </sql:query>
 					    
 						<h2>Moi</h2>
-						<p>Mon Mail </p>
+						<p>Mon Mail :</p>
 						
 						
 						<c:forEach items="${ result_mail.rows }" var="row">
 							<c:out value="${row.Email}"/>
 						</c:forEach>
 						
-						<p>Mon téléphone </p>
+						<p>Mon téléphone :</p>
 						
 						
 						<c:forEach  items="${ result_téléphone.rows }" var="row">
@@ -127,18 +123,23 @@
 						</c:forEach>
 					
 						
-						<p>Civilité </p>
+						<p>Civilité :</p>
 						
-						<c:forEach  items="${ result_Civilité.rows }" var="row">
-							<input type="text" name="civilité" id="civilité" value="${ row.Civilité }"/>
-						</c:forEach>
+						<select name="civilité" id="civilité">
+							<c:forEach  items="${ result_Civilité.rows }" var="row">
+								<option value="${ row.Civilité }"/>							
+							</c:forEach>
+							<option>Mlle</option>
+							<option>Mr</option>
+							<option>Mme</option>
+						</select>
 						
-						<p>Nom </p>
+						<p>Nom :</p>
 						
 						<c:forEach  items="${ result_nom.rows }" var="row">
 							<input type="text" name="nom_parent" id="nom_parent"  value="${ row.NomParent_référence }"/>
 						</c:forEach>
-						<p>Prénom</p>
+						<p>Prénom:</p>
 						
 						<c:forEach  items="${ result_prénom.rows }" var="row">
 							<input type="text" name="prénom_parent" id="prénom_parent" value="${ row.PrénomParent_référence }"/>
@@ -146,19 +147,19 @@
 						
 						
 						<p>Adresse </p>
-						<p>Voie </p>
+						<p>Voie :</p>
 						
 						<c:forEach  items="${ result_voie.rows }" var="row">
 							<input type="text" name="voie_parent" id="voie_parent" value="${ row.Voie }"/>
 						</c:forEach>
 						
-						<p>Code postal </p>
+						<p>Code postal :</p>
 						
 						<c:forEach  items="${ result_cp.rows }" var="row">
 							<input type="text" name="cp_parent" id="cp_parent" value="${ row.Code_postal }"/>
 						</c:forEach>
 						
-						<p>Ville </p>
+						<p>Ville :</p>
 						 
 						<c:forEach  items="${ result_ville.rows }" var="row">
 							<input type="text" name="ville_parent" id="ville_parent" value="${ row.Ville }"/>
@@ -226,14 +227,14 @@
 					    </sql:query> 
 					    <!-- FIN DES REQUETES SQL -->
 						<h2>Mon(a) conjoint(e)</h2>
-						<p>Son Mail </p>
+						<p>Son Mail :</p>
 						
 						
 						<c:forEach items="${result_mail_conjoint.rows}" var="row">
 							<c:out value="${row.Email}"/>
 						</c:forEach>
 						
-						<p>Son téléphone </p>
+						<p>Son téléphone: </p>
 						
 						
 						<c:forEach  items="${ result_téléphone_conjoint.rows }" var="row">
@@ -241,18 +242,26 @@
 						</c:forEach>
 					
 						
-						<p>Civilité </p>
+						<p>Civilité: </p>
 						
-						<c:forEach  items="${ result_Civilité_conjoint.rows }" var="row">
-							<input type="text" name="civilité" id="civilité" value="${ row.Civilité }"/>
-						</c:forEach>
 						
-						<p>Nom </p>
+							
+						<select name="civilité" id="civilité">
+							<c:forEach  items="${ result_Civilité_conjoint.rows }" var="row">
+								<option value="${ row.Civilité }"/>							
+							</c:forEach>
+							<option>Mlle</option>
+							<option>Mr</option>
+							<option>Mme</option>
+						</select>
+						
+						
+						<p>Nom :</p>
 						
 						<c:forEach  items="${ result_nom_conjoint.rows }" var="row">
 							<input type="text" name="nom_parent" id="nom_parent"  value="${ row.Nom }"/>
 						</c:forEach>
-						<p>Prénom</p>
+						<p>Prénom:</p>
 						
 						<c:forEach  items="${ result_prénom_conjoint.rows }" var="row">
 							<input type="text" name="prénom_parent" id="prénom_parent" value="${ row.Prénom }"/>
@@ -260,19 +269,19 @@
 						
 						
 						<p>Adresse </p>
-						<p>Voie </p>
+						<p>Voie :</p>
 						
 						<c:forEach  items="${ result_voie_conjoint.rows }" var="row">
 							<input type="text" name="voie_parent" id="voie_parent" value="${ row.Voie }"/>
 						</c:forEach>
 						
-						<p>Code postal </p>
+						<p>Code postal :</p>
 						
 						<c:forEach  items="${ result_cp_conjoint.rows }" var="row">
 							<input type="text" name="cp_parent" id="cp_parent" value="${ row.Code_postal }"/>
 						</c:forEach>
 						
-						<p>Ville </p>
+						<p>Ville: </p>
 						 
 						<c:forEach  items="${ result_ville_conjoint.rows }" var="row">
 							<input type="text" name="ville_parent" id="ville_parent" value="${ row.Ville }"/>
@@ -282,6 +291,8 @@
 						
 						
 					</form>
+					
+					
 					
 					<form id="partie_enfants_choisie" method="post" action=""> 
 						<div id="fiche_enfant1">
@@ -325,23 +336,23 @@
 							</sql:query>
 							
 							<h2>Enfant 1</h2>
-							<p>Garçon/Fille</p>
+							<p>Garçon/Fille:</p>
 							<c:forEach  items="${ result_sexe_enfant1.rows }" var="row">
 								<c:out value="${ row.Sexe }"/>
 							</c:forEach>
-							<p>Date de naissance</p>
+							<p>Date de naissance:</p>
 							<c:forEach  items="${ result_date_naiss_enfant1.rows }" var="row">
 								<c:out value="${ row.Date_Naissance }"/>
 							</c:forEach>
-							<p>Nom</p>
+							<p>Nom:</p>
 							<c:forEach  items="${ result_Nom_enfant1.rows }" var="row">
 								<c:out value="${ row.Nom }"/>
 							</c:forEach>
-							<p>Prénom 1</p>
+							<p>Prénom 1:</p>
 							<c:forEach  items="${ result_prénom1_enfant1.rows }" var="row">
 								<c:out value="${ row.Prénom1 }"/>
 							</c:forEach>
-							<p>Prénom 2</p>
+							<p>Prénom 2:</p>
 							<c:forEach  items="${ result_prénom2_enfant1.rows }" var="row">
 								<c:out value="${ row.Prénom2 }"/>
 							</c:forEach>
@@ -352,44 +363,59 @@
 						</div>
 						
 						<div id="fiche_enfant2">
+							<sql:query dataSource="${bdd_co}" var="result_IdParent">
+								SELECT p.IdParent FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+							</sql:query>
+							
+							
 							<sql:query dataSource="${bdd_co}" var="result_sexe_enfant2">
-								SELECT e.Sexe FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='2'
+								<c:forEach items="${result_IdParent.rows}" var="row">
+									SELECT e.Sexe FROM enfants AS e WHERE e.IdParent='${row.IdParent}' AND e.Rang='2'
+								</c:forEach>
 							</sql:query>
 							
 							<sql:query dataSource="${bdd_co}" var="result_date_naiss_enfant2">
-								SELECT e.Date_Naissance FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='2'
+								<c:forEach items="${result_IdParent.rows}" var="row">
+										SELECT e.Date_Naissance FROM enfants AS e WHERE e.IdParent='${row.IdParent}' AND e.Rang='2'
+								</c:forEach>
 							</sql:query>
 										
 							<sql:query dataSource="${bdd_co}" var="result_Nom_enfant2">
-								SELECT e.Nom FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='2'
+								<c:forEach items="${result_IdParent.rows}" var="row">
+									SELECT e.Nom FROM enfants AS e WHERE e.IdParent='${row.IdParent}' AND e.Rang='2'
+								</c:forEach>
 							</sql:query>
 									
 							<sql:query dataSource="${bdd_co}" var="result_prénom1_enfant2">
-								SELECT e.Prénom1 FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='2'
+								<c:forEach items="${result_IdParent.rows}" var="row">
+									SELECT e.Prénom1 FROM enfants AS e WHERE e.IdParent='${row.IdParent}' AND e.Rang='2'
+								</c:forEach>
 							</sql:query>	
 								
 							<sql:query dataSource="${bdd_co}" var="result_prénom2_enfant2">
-								SELECT e.Prénom2  FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='2'
+								<c:forEach items="${result_IdParent.rows}" var="row">
+									SELECT e.Prénom2  FROM enfants AS e WHERE e.IdParent='${row.IdParent}' AND e.Rang='2'
+								</c:forEach>
 							</sql:query>
 							
 							<h2>Enfant 2</h2>
-							<p>Garçon/Fille</p>
+							<p>Garçon/Fille:</p>
 							<c:forEach  items="${ result_sexe_enfant2.rows }" var="row">
 								<c:out value="${ row.Sexe }"/>
 							</c:forEach>
-							<p>Date de naissance</p>
+							<p>Date de naissance:</p>
 							<c:forEach  items="${ result_date_naiss_enfant2.rows }" var="row">
 								<c:out value="${ row.Date_Naissance }"/>
 							</c:forEach>
-							<p>Nom</p>
+							<p>Nom:</p>
 							<c:forEach  items="${ result_Nom_enfant2.rows }" var="row">
 								<c:out value="${ row.Nom }"/>
 							</c:forEach>
-							<p>Prénom 1</p>
+							<p>Prénom 1:</p>
 							<c:forEach  items="${ result_prénom1_enfant2.rows }" var="row">
 								<c:out value="${ row.Prénom1 }"/>
 							</c:forEach>
-							<p>Prénom 2</p>
+							<p>Prénom 2:</p>
 							<c:forEach  items="${ result_prénom2_enfant2.rows }" var="row">
 								<c:out value="${ row.Prénom2 }"/>
 							</c:forEach>
@@ -398,45 +424,59 @@
 						</div>
 						
 						<div id="fiche_enfant3">
-						
+							<sql:query dataSource="${bdd_co}" var="result_IdParent">
+								SELECT p.IdParent FROM parents AS p WHERE p.NomParent_référence='${Nom}' AND p.Mdp='${Mdp}'
+							</sql:query>
+							
+							
 							<sql:query dataSource="${bdd_co}" var="result_sexe_enfant3">
-								SELECT e.Sexe FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='3'
+								<c:forEach items="${result_IdParent.rows}" var="row">
+									SELECT e.Sexe FROM enfants AS e WHERE e.IdParent='${row.IdParent}' AND e.Rang='3'
+								</c:forEach>
 							</sql:query>
 							
 							<sql:query dataSource="${bdd_co}" var="result_date_naiss_enfant3">
-								SELECT e.Date_Naissance FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='3'
+								<c:forEach items="${result_IdParent.rows}" var="row">
+									SELECT e.Date_Naissance FROM enfants AS e WHERE e.IdParent='${row.IdParent}' AND e.Rang='3'
+								</c:forEach>
 							</sql:query>
 										
 							<sql:query dataSource="${bdd_co}" var="result_Nom_enfant3">
-								SELECT e.Nom FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='3'
+								<c:forEach items="${result_IdParent.rows}" var="row">
+									SELECT e.Nom FROM enfants AS e WHERE e.IdParent='${row.IdParent}' AND e.Rang='3'
+								</c:forEach>
 							</sql:query>
 									
 							<sql:query dataSource="${bdd_co}" var="result_prénom1_enfant3">
-								SELECT e.Prénom1 FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='3'
+								<c:forEach items="${result_IdParent.rows}" var="row">
+									SELECT e.Prénom1 FROM enfants AS e WHERE e.IdParent='${row.IdParent}' AND e.Rang='3'
+								</c:forEach>
 							</sql:query>	
 								
 							<sql:query dataSource="${bdd_co}" var="result_prénom2_enfant3">
-								SELECT e.Prénom2  FROM enfants AS e WHERE e.IdParent='${result_IdParent.rows}' AND e.Rang='3'
+								<c:forEach items="${result_IdParent.rows}" var="row">
+									SELECT e.Prénom2  FROM enfants AS e WHERE e.IdParent='${row.IdParent}' AND e.Rang='3'
+								</c:forEach>
 							</sql:query>
 							
 							<h2>Enfant 3</h2>
-							<p>Garçon/Fille</p>
+							<p>Garçon/Fille:</p>
 							<c:forEach  items="${ result_sexe_enfant3.rows }" var="row">
 								<c:out value="${ row.Sexe }"/>
 							</c:forEach>
-							<p>Date de naissance</p>
+							<p>Date de naissance:</p>
 							<c:forEach  items="${ result_date_naiss_enfant3.rows }" var="row">
 								<c:out value="${ row.Date_Naissance }"/>
 							</c:forEach>
-							<p>Nom</p>
+							<p>Nom:</p>
 							<c:forEach  items="${ result_Nom_enfant3.rows }" var="row">
 								<c:out value="${ row.Nom }"/>
 							</c:forEach>
-							<p>Prénom 1</p>
+							<p>Prénom 1:</p>
 							<c:forEach  items="${ result_prénom1_enfant3.rows }" var="row">
 								<c:out value="${ row.Prénom1 }"/>
 							</c:forEach>
-							<p>Prénom 2</p>
+							<p>Prénom 2:</p>
 							<c:forEach  items="${ result_prénom2_enfant3.rows }" var="row">
 								<c:out value="${ row.Prénom2 }"/>
 							</c:forEach>
@@ -446,15 +486,22 @@
 						
 					</form>
 					
-					<form id="partie_modifié_mdp_choisie" method="post" action="">
-						<h2>Modification du mot de passe</h2>
+					<form id="partie_modifié_mdp_choisie" method="post" action="/Plateforme_web_B_and_B/identification_parent/mettre_a_jour_mdp_parents" >
+						<h2>Modification du mot de passe</h2>   <!-- /Plateforme_web_B_and_B/identification_parent/mettre_a_jour_mdp_parents -->
 						
-						<p>Ancien mot de passe</p>
+						<p>Ancien mot de passe :</p>
 						<input type="text" id="ancien_mdp" name="ancien_mdp" value="" />
-						<p>Nouveau mot de passe</p>
+						<p>Nouveau mot de passe :</p>
 						<input type="text" id="nouveau_mdp" name="nouveau_mdp" value="" />
-
+						<c:forEach items="${confirmation_changement_mdp}" var="row">
+							<c:out value="${row}"></c:out>
+						</c:forEach>
+						
+						<c:forEach items="${message_erreur_ancien_mdp}" var="row">
+							<c:out value="${row}"></c:out>
+						</c:forEach>
 						<input type="submit" name="modifier_mdp" id="modifier_mdp" value="Mettre à jour le nouveau mot de passe">
+					
 					</form>
 			</section>
 		
