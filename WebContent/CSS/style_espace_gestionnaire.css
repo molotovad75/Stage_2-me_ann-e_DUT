@@ -183,6 +183,12 @@ table#horaires td, table#horaires th /* Mettre une bordure sur les td ET les th 
 	margin-top: -215px;
 }
 
+#maj_infos,#validation,#validationPlanif,#confirmation,#habiliter_parent,#regarder_message{
+	border: none;
+	border-radius: 5px;
+	background-color:#67fe6e;
+	font-size: 15px;
+}
 /* HABILITER UN PARENT ******************************************************************************************************/
 #sectionHabiliter_parents{
  margin-left: 15px;	

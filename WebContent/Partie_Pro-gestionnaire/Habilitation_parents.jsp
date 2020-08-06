@@ -27,7 +27,7 @@
 		</div>
 		
 		<div id="corps">
-			<h1>Site :<c:forEach items="${ Nom_site }" var="nomsite"><c:out value="${ nomsite }"></c:out></c:forEach></h1>
+			<h1>Habiliter un parent pour le site suivant :<c:forEach items="${ Nom_site }" var="nomsite"><c:out value="${ nomsite }"></c:out></c:forEach></h1>
 			<section id="sectionHabiliter_parents">
 					<form action="/Plateforme_web_B_and_B/identification_pro/habiliter_parents" method="post">
 						<div id="parent_référence">

@@ -26,9 +26,7 @@
 		<servlet-name>Deconnexion</servlet-name>
 		<servlet-class>servlets.Déconnexion</servlet-class>
 	</servlet>
-
-
-
+	
 	<servlet-mapping>
 		<servlet-name>Deconnexion</servlet-name>
 		<url-pattern>/deconnexion</url-pattern>
@@ -228,5 +226,17 @@
 		<url-pattern>/identification_parent/mon_compte</url-pattern> 
 	</servlet-mapping>
 	
+	<!-- ********************************************************************************* -->
+	<!-- Fichier JAVA Maj_infos_remplies_site -->
+	
+	<servlet>
+		<servlet-name>maj_infos_remplies_site</servlet-name>
+		<servlet-class>servlets.gestionnaire.Maj_infos_remplies_site</servlet-class>
+  	</servlet>
+  	
+	<servlet-mapping>
+		<servlet-name>maj_infos_remplies_site</servlet-name>
+		<url-pattern>/identification_pro/maj_infos_infos_remplies</url-pattern> 
+	</servlet-mapping>
 	
 </web-app>

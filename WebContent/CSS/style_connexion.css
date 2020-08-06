@@ -80,6 +80,11 @@ html,body{
 	margin-left:300px;
 }
 
+#Creation_pro{
+	margin-left: 900px;
+	margin-top: -265px;
+}
+
 #mdp_oubli{
 	 width: 400px;
 	display: block;
@@ -160,7 +165,7 @@ footer p a#lien_site:hover{
 	#form_connexion{
 		padding-bottom: 10%;
 	} 
-	#CrÃ©ation_pro{
+	#Creation_pro{
 		margin-left: 900px;
 		margin-top: -270px;
 	}
@@ -312,7 +317,7 @@ footer p a#lien_site:hover{
 	#form_connexion{
 		padding-bottom: 10%;
 	} 
-	#CrÃ©ation_pro{
+	#Creation_pro{
 		margin-left: 900px;
 		margin-top: -270px;
 	}
@@ -330,7 +335,7 @@ footer p a#lien_site:hover{
 	#form_connexion{
 		padding-bottom: 10%;
 	} 
-	#CrÃ©ation_pro{
+	#Creation_pro{
 		margin-left: 900px;
 		margin-top: -270px;
 	}
@@ -351,7 +356,7 @@ footer p a#lien_site:hover{
 		margin-left: 500px;
 		margin-top: -515px;
 	}
-	#CrÃ©ation_pro{
+	#Creation_pro{
 		margin-left: 750px;
 		margin-top: -270px;
 	}
@@ -373,7 +378,7 @@ footer p a#lien_site:hover{
 		margin-left: 500px;
 		margin-top: -515px;
 	}
-	#CrÃ©ation_pro{
+	#Creation_pro{
 		margin-left: 500px;
 		margin-top: 10px;
 	}
@@ -384,7 +389,7 @@ footer p a#lien_site:hover{
 		margin-left: 0px;
 		margin-top: -250px;
 	}
-	#CrÃ©ation_pro{
+	#Creation_pro{
 		margin-left: 0px;
 		margin-top: 10px;
 	}
@@ -653,10 +658,9 @@ footer p a#lien_site:hover{
 	}
 	
 	
-	#Connexion_parents,#Connexion_pro{
-		width: 250px;
-		height: 120px;
-		font-size: 30px;
+	#Se_connecter_parent,#Se_connecter_pro,#envoyer_parent,#envoyer_pro{
+		
+		font-size: 20px;
 	}
 	#Creation_parents{
 		margin-top: -500px;
@@ -670,6 +674,14 @@ footer p a#lien_site:hover{
 	#Identification_parents,#Creation_parents,#Identification_pro,#Creation_pro{
 		width: 300px;
 		font-size: 30px;
+	}
+	
+	#Creation_pro{
+		margin-top: -500px;
+	}
+	
+	#Identification_pro{
+		margin-top: -880px;
 	}
 	
 	#Id_parent,#mdp_parent,#Se_connecter,#Nom_pÃ¨re,#Nom_mÃ¨re,#email_parent,#tel_parent,#Id_pro,#mdp_parent,#Nom,#Prenom,#email_pro,#tel_pro,#mdp_pro{
